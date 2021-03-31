@@ -18,3 +18,4 @@ fastlane/test_output
 Pods/
 node_modules
 xcshareddata
+xcuserdata
