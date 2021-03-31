@@ -1,5 +1,5 @@
 //
-//  LayoutGuidance.swift
+//  Constants.swift
 //  Gas
 //
 //  Created by Strong on 4/1/21.
@@ -13,4 +13,13 @@ enum LayoutGuidance {
     static let offsetDouble: CGFloat = 32
     static let offsetQuarter: CGFloat = 4
     static let offsetAndHalf: CGFloat = 20
+}
+
+enum FontSize {
+    /// 24px
+    static let bigSize: CGFloat = 24
+    /// 16px
+    static let regularSize: CGFloat = 16
+    /// 14px
+    static let smallSize: CGFloat = 14
 }
