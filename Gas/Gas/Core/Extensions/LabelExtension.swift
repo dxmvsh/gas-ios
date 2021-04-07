@@ -22,4 +22,15 @@ extension UILabel {
         self.textColor = textColor
         return self
     }
+    
+    func with(numberOfLines: Int) -> Self {
+        self.numberOfLines = numberOfLines
+        return self
+    }
+    
+    func with(alignment: NSTextAlignment) -> Self {
+        self.textAlignment = alignment
+        return self
+    }
+    
 }
