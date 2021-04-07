@@ -1,0 +1,19 @@
+input_dir: Gas/Resources/
+output_dir: Gas/Generated/
+ 
+xcassets:
+    inputs:
+        Assets.xcassets
+    outputs:
+        # Bundled with SwiftGen template name
+        templateName: swift4
+        output: Assets.swift
+
+strings:
+    inputs: en.lproj/Localizable.strings
+    outputs:
+        # Custom template relative path
+        templatePath: SwiftGenTemplates/StringStructured.stencil
+        output: Text.swift
+        params:
+            enumName: Text

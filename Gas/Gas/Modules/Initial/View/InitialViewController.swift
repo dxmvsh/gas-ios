@@ -24,20 +24,20 @@ class InitialViewController: UIViewController {
     
     private let imageView: UIImageView = {
         let view = UIImageView()
-        view.image = #imageLiteral(resourceName: "initial_image")
+        view.image = Asset.initialImage.image
         return view
     }()
     
     private let titleLabel = LabelFactory.buildTitleLabel()
-                                         .with(text: "Добро пожаловать!")
+        .with(text: Text.welcome)
     
     private let subtitleLabel = LabelFactory.buildSubtitleLabel()
-                                            .with(text: "Войдите или зарегистрируйтесь чтобы продолжить")
+        .with(text: Text.signInOrSignUpToContinue)
                                             .with(numberOfLines: 0)
                                             .with(alignment: .center)
     
-    private let registrationButton = Button.makePrimary(title: "Регистрация")
-    private let signInButton = Button.makeSecondary(title: "Войти в приложение")
+    private let registrationButton = Button.makePrimary(title: Text.registration)
+    private let signInButton = Button.makeSecondary(title: Text.signInToApp)
     
     override func viewDidLoad() {
         super.viewDidLoad()

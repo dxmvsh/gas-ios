@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Gas
+
+  Created by Strong on 4/7/21.
+  
+*/
+"welcome" = "Добро пожаловать!";
+"sign in or sign up to continue" = "Войдите или зарегистрируйтесь чтобы продолжить";
+"registration" = "Регистрация";
+"sign in to app" = "Войти в приложение";

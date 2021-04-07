@@ -25,6 +25,9 @@
 		EF79661626153F810052751C /* MaskedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF79661526153F810052751C /* MaskedTextField.swift */; };
 		EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6B5261D773D00E9ECEA /* Button.swift */; };
 		EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6BA261D778400E9ECEA /* ViewExtension.swift */; };
+		EF92E6DA261D858C00E9ECEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF92E6DC261D858C00E9ECEA /* Localizable.strings */; };
+		EF92E6E6261D86BD00E9ECEA /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6E2261D86BD00E9ECEA /* Assets.swift */; };
+		EF92E6E9261D86BD00E9ECEA /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6E5261D86BD00E9ECEA /* Text.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,11 @@
 		EF79661526153F810052751C /* MaskedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskedTextField.swift; sourceTree = "<group>"; };
 		EF92E6B5261D773D00E9ECEA /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		EF92E6BA261D778400E9ECEA /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		EF92E6D0261D852400E9ECEA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EF92E6DB261D858C00E9ECEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EF92E6E0261D859100E9ECEA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EF92E6E2261D86BD00E9ECEA /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		EF92E6E5261D86BD00E9ECEA /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		F62F2FD548E43B5A7701739C /* Pods-Gas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gas.debug.xcconfig"; path = "Target Support Files/Pods-Gas/Pods-Gas.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,13 +149,14 @@
 		EF18EAE326092B1E00EA1F37 /* Gas */ = {
 			isa = PBXGroup;
 			children = (
+				EF92E6E1261D86BD00E9ECEA /* Generated */,
 				EF79661426153F720052751C /* UIKit */,
 				EF7965FA261533460052751C /* Core */,
 				EF7965E126152D6D0052751C /* Common */,
 				EF1D782426152A5300168CF9 /* Modules */,
+				EF92E6D4261D855800E9ECEA /* Resources */,
 				EF18EAE426092B1E00EA1F37 /* AppDelegate.swift */,
 				EF18EAE626092B1E00EA1F37 /* SceneDelegate.swift */,
-				EF18EAED26092B1F00EA1F37 /* Assets.xcassets */,
 				EF18EAEF26092B1F00EA1F37 /* LaunchScreen.storyboard */,
 				EF18EAF226092B1F00EA1F37 /* Info.plist */,
 			);
@@ -251,6 +260,24 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		EF92E6D4261D855800E9ECEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EF18EAED26092B1F00EA1F37 /* Assets.xcassets */,
+				EF92E6DC261D858C00E9ECEA /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EF92E6E1261D86BD00E9ECEA /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				EF92E6E2261D86BD00E9ECEA /* Assets.swift */,
+				EF92E6E5261D86BD00E9ECEA /* Text.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,6 +365,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = EF18EAD826092B1E00EA1F37;
 			productRefGroup = EF18EAE226092B1E00EA1F37 /* Products */;
@@ -357,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF18EAF126092B1F00EA1F37 /* LaunchScreen.storyboard in Resources */,
+				EF92E6DA261D858C00E9ECEA /* Localizable.strings in Resources */,
 				EF18EAEE26092B1F00EA1F37 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,9 +457,11 @@
 				EF79661626153F810052751C /* MaskedTextField.swift in Sources */,
 				EF796610261536CC0052751C /* SpaceFactory.swift in Sources */,
 				EF1D782826152A9D00168CF9 /* InitialViewController.swift in Sources */,
+				EF92E6E9261D86BD00E9ECEA /* Text.swift in Sources */,
 				EF7965F626152FEC0052751C /* Colors.swift in Sources */,
 				EF7965E326152D800052751C /* Constants.swift in Sources */,
 				EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */,
+				EF92E6E6261D86BD00E9ECEA /* Assets.swift in Sources */,
 				EF7966052615336F0052751C /* LabelFactory.swift in Sources */,
 				EF18EAE526092B1E00EA1F37 /* AppDelegate.swift in Sources */,
 				EF18EAE726092B1E00EA1F37 /* SceneDelegate.swift in Sources */,
@@ -476,8 +507,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				EF18EAF026092B1F00EA1F37 /* Base */,
+				EF92E6D0261D852400E9ECEA /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EF92E6DC261D858C00E9ECEA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF92E6DB261D858C00E9ECEA /* en */,
+				EF92E6E0261D859100E9ECEA /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -487,6 +528,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -548,6 +590,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
