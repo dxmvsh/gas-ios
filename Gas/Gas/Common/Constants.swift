@@ -23,3 +23,7 @@ enum FontSize {
     /// 14px
     static let smallSize: CGFloat = 14
 }
+
+enum ViewSize {
+    static let buttonHeight: CGFloat = 52
+}
