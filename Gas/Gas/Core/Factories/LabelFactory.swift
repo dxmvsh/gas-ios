@@ -10,7 +10,7 @@ import UIKit
 enum LabelFactory {
     static func buildTitleLabel() -> UILabel {
         return UILabel()
-            .with(font: .systemFont(ofSize: FontSize.bigSize))
+            .with(font: .boldSystemFont(ofSize: FontSize.bigSize))
             .with(textColor: Color.darkGray)
     }
     
