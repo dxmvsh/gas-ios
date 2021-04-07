@@ -16,11 +16,15 @@
 		EF18EB0726092B1F00EA1F37 /* GasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF18EB0626092B1F00EA1F37 /* GasUITests.swift */; };
 		EF1D782826152A9D00168CF9 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1D782726152A9D00168CF9 /* InitialViewController.swift */; };
 		EF1D783326152AEF00168CF9 /* InitialViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1D783226152AEF00168CF9 /* InitialViewControllerTests.swift */; };
+		EF2DBAF32619E52F008C2B6E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2DBAF22619E52F008C2B6E /* StringExtension.swift */; };
 		EF7965E326152D800052751C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7965E226152D800052751C /* Constants.swift */; };
 		EF7965F626152FEC0052751C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7965F526152FEC0052751C /* Colors.swift */; };
 		EF7966052615336F0052751C /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7966042615336F0052751C /* LabelFactory.swift */; };
 		EF79660B2615348F0052751C /* LabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF79660A2615348F0052751C /* LabelExtension.swift */; };
 		EF796610261536CC0052751C /* SpaceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF79660F261536CC0052751C /* SpaceFactory.swift */; };
+		EF79661626153F810052751C /* MaskedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF79661526153F810052751C /* MaskedTextField.swift */; };
+		EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6B5261D773D00E9ECEA /* Button.swift */; };
+		EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6BA261D778400E9ECEA /* ViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +61,15 @@
 		EF18EB0826092B1F00EA1F37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF1D782726152A9D00168CF9 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		EF1D783226152AEF00168CF9 /* InitialViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewControllerTests.swift; sourceTree = "<group>"; };
+		EF2DBAF22619E52F008C2B6E /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		EF7965E226152D800052751C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EF7965F526152FEC0052751C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		EF7966042615336F0052751C /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		EF79660A2615348F0052751C /* LabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtension.swift; sourceTree = "<group>"; };
 		EF79660F261536CC0052751C /* SpaceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceFactory.swift; sourceTree = "<group>"; };
+		EF79661526153F810052751C /* MaskedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskedTextField.swift; sourceTree = "<group>"; };
+		EF92E6B5261D773D00E9ECEA /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		EF92E6BA261D778400E9ECEA /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		F62F2FD548E43B5A7701739C /* Pods-Gas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gas.debug.xcconfig"; path = "Target Support Files/Pods-Gas/Pods-Gas.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +141,7 @@
 		EF18EAE326092B1E00EA1F37 /* Gas */ = {
 			isa = PBXGroup;
 			children = (
+				EF79661426153F720052751C /* UIKit */,
 				EF7965FA261533460052751C /* Core */,
 				EF7965E126152D6D0052751C /* Common */,
 				EF1D782426152A5300168CF9 /* Modules */,
@@ -227,8 +236,19 @@
 			isa = PBXGroup;
 			children = (
 				EF79660A2615348F0052751C /* LabelExtension.swift */,
+				EF2DBAF22619E52F008C2B6E /* StringExtension.swift */,
+				EF92E6BA261D778400E9ECEA /* ViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF79661426153F720052751C /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				EF79661526153F810052751C /* MaskedTextField.swift */,
+				EF92E6B5261D773D00E9ECEA /* Button.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,13 +425,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF79660B2615348F0052751C /* LabelExtension.swift in Sources */,
+				EF79661626153F810052751C /* MaskedTextField.swift in Sources */,
 				EF796610261536CC0052751C /* SpaceFactory.swift in Sources */,
 				EF1D782826152A9D00168CF9 /* InitialViewController.swift in Sources */,
 				EF7965F626152FEC0052751C /* Colors.swift in Sources */,
 				EF7965E326152D800052751C /* Constants.swift in Sources */,
+				EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */,
 				EF7966052615336F0052751C /* LabelFactory.swift in Sources */,
 				EF18EAE526092B1E00EA1F37 /* AppDelegate.swift in Sources */,
 				EF18EAE726092B1E00EA1F37 /* SceneDelegate.swift in Sources */,
+				EF2DBAF32619E52F008C2B6E /* StringExtension.swift in Sources */,
+				EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
