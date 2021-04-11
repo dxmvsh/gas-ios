@@ -13,7 +13,7 @@ class RegistrationCoordinatorTests: XCTestCase {
     var sut: RegistrationCoordinatorManager!
     
     override func setUp() {
-        sut = RegistrationCoordinatorManager(navigationController: UINavigationController())
+        sut = RegistrationCoordinatorManager(navigationController: NavigationControllerMock())
     }
     
     func test_WhenStartCalled_MoveToPersonalAccountCalled() {
