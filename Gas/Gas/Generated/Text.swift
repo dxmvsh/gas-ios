@@ -11,6 +11,10 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name
 internal enum Text {
+  /// Продолжить
+  internal static var `continue`: String {
+      return Text.localized("Localizable", "continue")
+  }
   /// Номер лицевого счета
   internal static var personalAccountNumber: String {
       return Text.localized("Localizable", "personal account number")
