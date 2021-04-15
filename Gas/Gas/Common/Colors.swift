@@ -22,6 +22,7 @@ enum Color {
     static let background: UIColor = #colorLiteral(red: 0.968627451, green: 0.9725490196, blue: 0.9764705882, alpha: 1)
     /// rgba = 223,44,44,1
     static let fail: UIColor = #colorLiteral(red: 0.8745098039, green: 0.1725490196, blue: 0.1725490196, alpha: 1)
+    static let red: UIColor = fail
     /// rgba = 72,192,70,1
     static let success: UIColor = #colorLiteral(red: 0.2823529412, green: 0.7529411765, blue: 0.2745098039, alpha: 1)
 }
