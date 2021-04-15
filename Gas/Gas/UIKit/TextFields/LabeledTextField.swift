@@ -16,8 +16,17 @@ fileprivate enum Constants {
         static let errorPadding: CGFloat = 10.0
         static let rightViewSize: CGFloat = 24.0
         static let leftViewSize: CGFloat = 40.0
-        static let reliablilityButtonSize: CGFloat = 20.0
     }
+}
+
+protocol CommentShowing {
+    func showComment(_ text: String, textColor: UIColor)
+    func hideComment()
+}
+
+protocol ErrorShowing {
+    func showError(_ errorMessage: String)
+    func hideError()
 }
 
 class LabeledTextField: MaskedTextfield {
@@ -65,13 +74,9 @@ class LabeledTextField: MaskedTextfield {
     private var isCommentTextShown: Bool {
         return !(commentMessageLabel.text ?? "").isEmpty
     }
-    private var isReliabilityButtonShown: Bool {
-        let shown = !(reliabilityButton.currentTitle ?? "").isEmpty
-        return shown
-    }
     private var titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = Color.darkGray
+        label.textColor = Color.gray
         label.font = UIFont.systemFont(ofSize: 13.0)
         return label
     }()
@@ -80,7 +85,7 @@ class LabeledTextField: MaskedTextfield {
             if let text = placeholderText {
                 attributedPlaceholder = NSAttributedString(
                     string: text,
-                    attributes: [NSAttributedString.Key.foregroundColor: Color.darkGray]
+                    attributes: [NSAttributedString.Key.foregroundColor: Color.gray]
                 )
             } else {
                 attributedPlaceholder = nil
@@ -106,9 +111,8 @@ class LabeledTextField: MaskedTextfield {
     fileprivate var isPastingAvailable = true
     private var editingActions: [EditingAction]?
     private var borderLayer = CAShapeLayer()
-    weak var buttonActionDelegate: FieldButtonActionDelegate?
     var isEditable: Bool = true
-    override var isErrorShown: Bool {
+    var isErrorShown: Bool {
         return isErrorTextShown
     }
     var isErrorCommentShown: Bool {
@@ -146,11 +150,11 @@ class LabeledTextField: MaskedTextfield {
         placeholderText = title
         attributedPlaceholder = NSAttributedString(
             string: title,
-            attributes: [NSAttributedString.Key.foregroundColor: Color.grayDark])
+            attributes: [NSAttributedString.Key.foregroundColor: Color.darkGray])
         font = UIFont.systemFont(ofSize: 17)
-        tintColor = Color.orangeMain
+        tintColor = Color.gray
         layer.cornerRadius = LayoutGuidance.cornerRadius
-        [titleLabel, errorMessageLabel, commentMessageLabel, reliabilityButton, indicator].forEach {
+        [titleLabel, errorMessageLabel, commentMessageLabel, indicator].forEach {
             addSubview($0)
         }
         resignFirstResponder()
@@ -166,10 +170,9 @@ class LabeledTextField: MaskedTextfield {
         let top = (LayoutGuidance.offsetHalf + titleHeight + Constants.UI.interPadding)
         let bottom = LayoutGuidance.offsetHalf +
             (isErrorTextShown ? errorTextHeight : 0.0) +
-            (isCommentTextShown ? commentTextHeight : 0.0) +
-            (isReliabilityButtonShown ? Constants.UI.reliablilityButtonSize : 0.0)
+            (isCommentTextShown ? commentTextHeight : 0.0)
         return bounds.inset(by: UIEdgeInsets(top: top,
-                                             left: LayoutGuidance.offset + additionalLeftPadding,
+                                             left: additionalLeftPadding,
                                              bottom: bottom,
                                              right: LayoutGuidance.offset + additionalRightPadding))
     }
@@ -178,8 +181,7 @@ class LabeledTextField: MaskedTextfield {
         var y = bounds.height - inputTextHeight
         y = isCommentTextShown ? y - commentTextHeight : y
         y = (isErrorTextShown ? y - errorTextHeight : y) / 2.0
-        y = isReliabilityButtonShown ? y - Constants.UI.reliablilityButtonSize : y
-        return CGRect(x: LayoutGuidance.offset + additionalLeftPadding,
+        return CGRect(x: additionalLeftPadding,
                       y: y,
                       width: bounds.width - LayoutGuidance.offset * 2.0 - additionalRightPadding - additionalLeftPadding,
                       height: inputTextHeight)
@@ -203,9 +205,9 @@ class LabeledTextField: MaskedTextfield {
     
     private func titleLabelRectForBounds(_ bounds: CGRect, editing: Bool) -> CGRect {
         let yPadding = editing ? LayoutGuidance.offsetHalf : Constants.UI.topPadding
-        return CGRect(x: LayoutGuidance.offset + additionalLeftPadding,
+        return CGRect(x: additionalLeftPadding,
                       y: yPadding,
-                      width: bounds.size.width - 2.0 * LayoutGuidance.offset - additionalLeftPadding - additionalRightPadding,
+                      width: bounds.size.width - LayoutGuidance.offsetDouble - additionalLeftPadding - additionalRightPadding,
                       height: titleHeight)
     }
     
@@ -232,20 +234,6 @@ class LabeledTextField: MaskedTextfield {
         return .zero
     }
     
-    internal func reliabilityButtonRectForBounds(_ bounds: CGRect) -> CGRect {
-        if isReliabilityButtonShown {
-            let commentLabelY = LayoutGuidance.offsetHalf + titleHeight + Constants.UI.interPadding + inputTextHeight + Constants.UI.errorPadding + LayoutGuidance.offsetQuarter
-            let additionalY = isErrorTextShown ? errorTextHeight + LayoutGuidance.offsetQuarter : 0
-            let rect = CGRect(
-                x: LayoutGuidance.offsetHalf,
-                y: commentLabelY + additionalY,
-                width: bounds.width,
-                height: Constants.UI.reliablilityButtonSize)
-            return rect
-        }
-        return .zero
-    }
-    
     private func getRectForLeftView(_ bounds: CGRect) -> CGRect {
         let x = LayoutGuidance.offset
         var height = isErrorTextShown ? bounds.height - errorTextHeight : bounds.height
@@ -262,7 +250,6 @@ class LabeledTextField: MaskedTextfield {
         let x = bounds.width - Constants.UI.rightViewSize - LayoutGuidance.offset
         var height = isErrorTextShown ? bounds.height - errorTextHeight : bounds.height
         height = isCommentTextShown ? height - commentTextHeight : height
-        height = isReliabilityButtonShown ? height - Constants.UI.reliablilityButtonSize : height
         let y = (height - Constants.UI.rightViewSize) / 2
         let rightViewBounds = CGRect(x: x,
                                      y: y,
@@ -276,26 +263,21 @@ class LabeledTextField: MaskedTextfield {
         updateTitleVisibility(animated: false)
         errorMessageLabel.frame = errorRectForBounds(bounds)
         commentMessageLabel.frame = commentRectForBounds(bounds)
-        reliabilityButton.frame = reliabilityButtonRectForBounds(bounds)
         indicator.frame = getRectForRightView(bounds)
-        addBorder()
+        addBottomBorder()
     }
     
     private func updateTitleVisibility(animated: Bool = true) {
         let alpha: CGFloat = self.isTitleVisible ? 1.0 : 0.0
-        let textColor: UIColor = self.isFirstResponder ?
-            Color.orangeMain : Color.grayDark
         let frame = self.titleLabelRectForBounds(self.bounds, editing: self.isTitleVisible)
         let errorLabelFrame = self.errorRectForBounds(self.bounds)
         let commentLabelFrame = self.commentRectForBounds(self.bounds)
-        let reliabilityButtonFrame = self.reliabilityButtonRectForBounds(self.bounds)
         let updateBlock = { () -> Void in
             self.titleLabel.alpha = alpha
             self.titleLabel.frame = frame
-            self.titleLabel.textColor = self.isEnabled ? textColor : Color.gray
+            self.titleLabel.textColor = Color.gray
             self.errorMessageLabel.frame = errorLabelFrame
             self.commentMessageLabel.frame = commentLabelFrame
-            self.reliabilityButton.frame = reliabilityButtonFrame
             if !self.isEnabled {
                 self.textColor = Color.gray
             }
@@ -342,50 +324,33 @@ class LabeledTextField: MaskedTextfield {
         if isCommentTextShown {
             height += commentTextHeight + LayoutGuidance.offsetQuarter
         }
-        if isReliabilityButtonShown {
-            height += Constants.UI.rightViewSize + LayoutGuidance.offsetQuarter
-        }
         return CGSize(width: width, height: height)
     }
     
     override func textChanged() {
         hideError()
-        hideReliabilityView()
     }
     
-    func addBorder(bgColor: UIColor = Color.grayInput) {
+    func addBottomBorder() {
         if layer.sublayers?.first(where: { $0.name == "BorderSublayer" }) != nil {
             return
         }
 
         borderLayer.name = "BorderSublayer"
-        let height: CGFloat = LayoutGuidance.offsetHalf + titleHeight +
-            Constants.UI.interPadding + inputTextHeight + Constants.UI.errorPadding
-        let rect = CGRect(
-            x: 1,
-            y: 1,
-            width: bounds.width - 2,
-            height: height - 2
-        )
-        borderLayer.path = UIBezierPath(
-            roundedRect: rect,
-            cornerRadius: LayoutGuidance.cornerRadius
-        ).cgPath
-        borderLayer.fillColor = isEnabled ? bgColor.cgColor : Color.grayInput50Percent.cgColor
-        borderLayer.strokeColor = UIColor.clear.cgColor
-        borderLayer.lineWidth = 1
-        borderLayer.frame = bounds
-        backgroundColor = .clear
+        
+        borderLayer.frame = CGRect(x: 0, y: self.frame.size.height - 1, width: self.frame.size.width - LayoutGuidance.offset, height: 1)
+        borderLayer.backgroundColor = Color.lineGray.cgColor
+        borderStyle = .none
         layer.insertSublayer(borderLayer, at: 0)
     }
     
     private func addErrorBorder() {
-        borderLayer.fillColor = Color.redLight.cgColor
+        borderLayer.fillColor = Color.red.cgColor
         borderLayer.strokeColor = Color.red.cgColor
     }
    
     private func hideErrorBorder() {
-        borderLayer.fillColor = Color.grayInput.cgColor
+        borderLayer.fillColor = Color.lineGray.cgColor
         borderLayer.strokeColor = UIColor.clear.cgColor
     }
     
@@ -403,15 +368,63 @@ class LabeledTextField: MaskedTextfield {
         isUserInteractionEnabled = true
     }
     
-    override func showViewError(_ errorMessage: String) {
+    func showViewError(_ errorMessage: String) {
         showError(errorMessage)
     }
     
-    override func hideViewError() {
+    func hideViewError() {
         hideError()
     }
     
-    @objc private func commentLabelTapped() {
-        buttonActionDelegate?.commentViewPressed()
+}
+
+extension LabeledTextField: ErrorShowing {
+    func showError(_ errorMessage: String) {
+        errorMessageLabel.text = errorMessage
+        errorMessageLabel.frame = errorRectForBounds(bounds)
+        addErrorBorder()
+        invalidateIntrinsicContentSize()
+    }
+    
+    func hideError() {
+        errorMessageLabel.text = nil
+        errorMessageLabel.frame = errorRectForBounds(bounds)
+        hideErrorBorder()
+        invalidateIntrinsicContentSize()
+    }
+}
+
+extension LabeledTextField: CommentShowing {
+    override public func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+        guard let editingActions = editingActions else {
+            return true
+        }
+        for editingAction in editingActions {
+            if action == Selector(editingAction.selectorId) {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func showComment(_ text: String, textColor: UIColor = Color.darkGray) {
+        let attributedString = NSMutableAttributedString(string: text)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 3
+        attributedString.addAttribute(
+            NSAttributedString.Key.paragraphStyle,
+            value: paragraphStyle,
+            range: NSRange(location: 0, length: attributedString.length))
+        commentMessageLabel.attributedText = attributedString
+        commentMessageLabel.frame = commentRectForBounds(bounds)
+        commentMessageLabel.textColor = textColor
+        invalidateIntrinsicContentSize()
+    }
+    
+    func hideComment() {
+        commentMessageLabel.text = nil
+        commentMessageLabel.attributedText = nil
+        commentMessageLabel.frame = commentRectForBounds(bounds)
+        invalidateIntrinsicContentSize()
     }
 }

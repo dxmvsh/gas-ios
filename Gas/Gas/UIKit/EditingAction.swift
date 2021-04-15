@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+enum EditingAction {
+    case copy
+    case paste
+    
+    var selectorId: String {
+        switch self {
+        case .copy:
+            return "copy:"
+        case .paste:
+            return "paste:"
+        }
+    }
+}
