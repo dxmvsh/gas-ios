@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct UserInformationDataModel {
+    var fio: String
+    var accountNumber: String
+    var city: String
+    var address: String
+}
