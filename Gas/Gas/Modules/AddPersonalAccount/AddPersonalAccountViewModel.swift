@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class AddPersonalAccountViewModel: AddPersonalAccountViewOutput {
+    
+    weak var view: AddPersonalAccountViewInput?
+    var output: AddPersonalAccountModuleOutput?
+    
+    func didTapSubmit(accountNumber: String) {
+        output?.didTapSubmit(accountNumber: accountNumber)
+    }
+}

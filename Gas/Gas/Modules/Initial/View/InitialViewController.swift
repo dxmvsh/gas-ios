@@ -80,7 +80,9 @@ class InitialViewController: UIViewController {
     
     @objc
     private func registrationTapped() {
-        print("registrationTapped")
+        guard let navigationController = navigationController else { return }
+        let coordinator = RegistrationCoordinatorManager(navigationController: navigationController)
+        coordinator.start()
     }
     
     @objc
