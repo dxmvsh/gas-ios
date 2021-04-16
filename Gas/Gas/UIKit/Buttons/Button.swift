@@ -19,6 +19,7 @@ class Button: UIButton {
         button.roundCorners(radius: Constants.cornerRadius)
         button.backgroundColor = Color.main
         button.setTitleColor(.white, for: .normal)
+        button.setTitleColor(Color.buttonInactiveTitleColor, for: .disabled)
         return button
     }
     
@@ -28,6 +29,16 @@ class Button: UIButton {
         button.backgroundColor = .none
         button.setTitleColor(Color.darkGray, for: .normal)
         return button
+    }
+    
+    func setDisabled() {
+        isEnabled = false
+        backgroundColor = Color.buttonInactiveBackgroundColor
+    }
+    
+    func setEnabled() {
+        isEnabled = true
+        backgroundColor = Color.main
     }
     
 }
