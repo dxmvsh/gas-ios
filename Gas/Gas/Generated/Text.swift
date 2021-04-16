@@ -39,6 +39,10 @@ internal enum Text {
   internal static var fio: String {
       return Text.localized("Localizable", "fio")
   }
+  /// Получить код
+  internal static var getCode: String {
+      return Text.localized("Localizable", "get code")
+  }
   /// Номер лицевого счета
   internal static var personalAccountNumber: String {
       return Text.localized("Localizable", "personal account number")
