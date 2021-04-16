@@ -22,6 +22,8 @@
 		EF1D782826152A9D00168CF9 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1D782726152A9D00168CF9 /* InitialViewController.swift */; };
 		EF2DBAF32619E52F008C2B6E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2DBAF22619E52F008C2B6E /* StringExtension.swift */; };
 		EF2E936E262906F400C0ADD9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2E936D262906F400C0ADD9 /* BaseViewController.swift */; };
+		EF2E937626290D6000C0ADD9 /* AddPersonalAccountAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2E937526290D6000C0ADD9 /* AddPersonalAccountAssembly.swift */; };
+		EF2E937A26290DA100C0ADD9 /* AddPersonalAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2E937926290DA100C0ADD9 /* AddPersonalAccountViewModel.swift */; };
 		EF7965E326152D800052751C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7965E226152D800052751C /* Constants.swift */; };
 		EF7965F626152FEC0052751C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7965F526152FEC0052751C /* Colors.swift */; };
 		EF7966052615336F0052751C /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7966042615336F0052751C /* LabelFactory.swift */; };
@@ -38,6 +40,7 @@
 		EF92E725261D8FD200E9ECEA /* GasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E721261D8FD200E9ECEA /* GasTests.swift */; };
 		EF92E749261DA3F600E9ECEA /* AddPersonalAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E748261DA3F600E9ECEA /* AddPersonalAccountViewController.swift */; };
 		EF92E75A261DA43E00E9ECEA /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E759261DA43E00E9ECEA /* RegistrationCoordinator.swift */; };
+		EFAB6C54262912FA00250F4B /* CustomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C53262912FA00250F4B /* CustomToolbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,8 @@
 		EF1D782726152A9D00168CF9 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		EF2DBAF22619E52F008C2B6E /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		EF2E936D262906F400C0ADD9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		EF2E937526290D6000C0ADD9 /* AddPersonalAccountAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonalAccountAssembly.swift; sourceTree = "<group>"; };
+		EF2E937926290DA100C0ADD9 /* AddPersonalAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonalAccountViewModel.swift; sourceTree = "<group>"; };
 		EF7965E226152D800052751C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EF7965F526152FEC0052751C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		EF7966042615336F0052751C /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
@@ -89,6 +94,7 @@
 		EF92E722261D8FD200E9ECEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF92E748261DA3F600E9ECEA /* AddPersonalAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonalAccountViewController.swift; sourceTree = "<group>"; };
 		EF92E759261DA43E00E9ECEA /* RegistrationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationCoordinator.swift; sourceTree = "<group>"; };
+		EFAB6C53262912FA00250F4B /* CustomToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbar.swift; sourceTree = "<group>"; };
 		F62F2FD548E43B5A7701739C /* Pods-Gas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gas.debug.xcconfig"; path = "Target Support Files/Pods-Gas/Pods-Gas.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -264,6 +270,7 @@
 				EF09521126233AF300AD02BB /* IndicatorProtocol.swift */,
 				EF09521826233B2C00AD02BB /* EditingAction.swift */,
 				EF07B74E26233F1A007A45CE /* ClearableDelegate.swift */,
+				EFAB6C53262912FA00250F4B /* CustomToolbar.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -342,6 +349,8 @@
 			isa = PBXGroup;
 			children = (
 				EF92E748261DA3F600E9ECEA /* AddPersonalAccountViewController.swift */,
+				EF2E937526290D6000C0ADD9 /* AddPersonalAccountAssembly.swift */,
+				EF2E937926290DA100C0ADD9 /* AddPersonalAccountViewModel.swift */,
 			);
 			path = AddPersonalAccount;
 			sourceTree = "<group>";
@@ -509,12 +518,15 @@
 				EF09521226233AF300AD02BB /* IndicatorProtocol.swift in Sources */,
 				EF7965F626152FEC0052751C /* Colors.swift in Sources */,
 				EF09520A26233A6E00AD02BB /* FontExtension.swift in Sources */,
+				EF2E937626290D6000C0ADD9 /* AddPersonalAccountAssembly.swift in Sources */,
 				EF7965E326152D800052751C /* Constants.swift in Sources */,
 				EF0952062623393300AD02BB /* LabeledTextField.swift in Sources */,
 				EF92E75A261DA43E00E9ECEA /* RegistrationCoordinator.swift in Sources */,
+				EFAB6C54262912FA00250F4B /* CustomToolbar.swift in Sources */,
 				EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */,
 				EF92E6E6261D86BD00E9ECEA /* Assets.swift in Sources */,
 				EF92E749261DA3F600E9ECEA /* AddPersonalAccountViewController.swift in Sources */,
+				EF2E937A26290DA100C0ADD9 /* AddPersonalAccountViewModel.swift in Sources */,
 				EF7966052615336F0052751C /* LabelFactory.swift in Sources */,
 				EF18EAE526092B1E00EA1F37 /* AppDelegate.swift in Sources */,
 				EF2E936E262906F400C0ADD9 /* BaseViewController.swift in Sources */,
