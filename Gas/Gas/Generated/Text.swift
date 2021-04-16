@@ -11,6 +11,18 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name
 internal enum Text {
+  /// Адрес
+  internal static var address: String {
+      return Text.localized("Localizable", "address")
+  }
+  /// Проверьте данные чтобы продолжить
+  internal static var checkDataToContinue: String {
+      return Text.localized("Localizable", "check data to continue")
+  }
+  /// Город
+  internal static var city: String {
+      return Text.localized("Localizable", "city")
+  }
   /// Продолжить
   internal static var `continue`: String {
       return Text.localized("Localizable", "continue")
@@ -18,6 +30,10 @@ internal enum Text {
   /// Готово
   internal static var done: String {
       return Text.localized("Localizable", "done")
+  }
+  /// Ф.И.О
+  internal static var fio: String {
+      return Text.localized("Localizable", "fio")
   }
   /// Номер лицевого счета
   internal static var personalAccountNumber: String {
