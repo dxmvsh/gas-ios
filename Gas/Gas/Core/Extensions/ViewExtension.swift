@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIView {
+extension UIView: CustomToolbarOutput {
     
     func roundCorners(radius: CGFloat) {
         layer.cornerRadius = radius
@@ -28,5 +28,27 @@ extension UIView {
         let backgroundCGColor = backgroundColor?.cgColor
         backgroundColor = nil
         layer.backgroundColor =  backgroundCGColor
+    }
+    
+    func addInputAccessoryForViews(_ views: [UIView]) {
+        for (_, view) in views.enumerated() {
+            let toolbar = CustomToolbar()
+            toolbar.output = self
+            var items = [UIBarButtonItem]()
+            if let toolbarItems = toolbar.items {
+                items.append(contentsOf: toolbarItems)
+            }
+            toolbar.setItems(items, animated: false)
+            if let input = view as? UITextView {
+                input.inputAccessoryView = toolbar
+            }
+            if let input = view as? UITextField {
+                input.inputAccessoryView = toolbar
+            }
+        }
+    }
+    
+    func toolbarDonePressed() {
+        endEditing(true)
     }
 }
