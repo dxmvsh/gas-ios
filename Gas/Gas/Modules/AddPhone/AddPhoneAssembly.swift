@@ -5,4 +5,29 @@
 //  Created by Strong on 4/16/21.
 //
 
-import Foundation
+import UIKit
+
+protocol AddPhoneViewInput: class {
+    
+}
+
+protocol AddPhoneViewOutput {
+    func didTapSubmit(with phoneNumber: String)
+}
+
+protocol AddPhoneModuleOutput {
+    func didFinish(with phoneNumber: String)
+}
+
+class AddPhoneAssembly {
+    
+    func assemble(_ moduleOutput: AddPhoneModuleOutput? = nil) -> UIViewController {
+        let view = AddPhoneViewController()
+        let viewModel = AddPhoneViewModel()
+        viewModel.view = view
+        view.output = viewModel
+        viewModel.output = moduleOutput
+        return view
+    }
+    
+}

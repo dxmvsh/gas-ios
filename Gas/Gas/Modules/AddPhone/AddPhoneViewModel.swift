@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+class AddPhoneViewModel: AddPhoneViewOutput {
+    
+    weak var view: AddPhoneViewInput?
+    var output: AddPhoneModuleOutput?
+    
+    func didTapSubmit(with phoneNumber: String) {
+        output?.didFinish(with: phoneNumber)
+    }
+    
+}

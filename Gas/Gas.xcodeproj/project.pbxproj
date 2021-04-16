@@ -45,6 +45,9 @@
 		EFAB6C5D2629181000250F4B /* UserInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C5C2629181000250F4B /* UserInformationViewModel.swift */; };
 		EFAB6C612629182200250F4B /* UserInformationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C602629182200250F4B /* UserInformationAssembly.swift */; };
 		EFAB6C6A2629191200250F4B /* UserInformationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C692629191200250F4B /* UserInformationDataModel.swift */; };
+		EFAB6C732629371A00250F4B /* AddPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C722629371A00250F4B /* AddPhoneViewController.swift */; };
+		EFAB6C772629372600250F4B /* AddPhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C762629372600250F4B /* AddPhoneViewModel.swift */; };
+		EFAB6C7B2629373400250F4B /* AddPhoneAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C7A2629373400250F4B /* AddPhoneAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,9 @@
 		EFAB6C5C2629181000250F4B /* UserInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationViewModel.swift; sourceTree = "<group>"; };
 		EFAB6C602629182200250F4B /* UserInformationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationAssembly.swift; sourceTree = "<group>"; };
 		EFAB6C692629191200250F4B /* UserInformationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationDataModel.swift; sourceTree = "<group>"; };
+		EFAB6C722629371A00250F4B /* AddPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneViewController.swift; sourceTree = "<group>"; };
+		EFAB6C762629372600250F4B /* AddPhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneViewModel.swift; sourceTree = "<group>"; };
+		EFAB6C7A2629373400250F4B /* AddPhoneAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneAssembly.swift; sourceTree = "<group>"; };
 		F62F2FD548E43B5A7701739C /* Pods-Gas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gas.debug.xcconfig"; path = "Target Support Files/Pods-Gas/Pods-Gas.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,6 +213,7 @@
 		EF1D782426152A5300168CF9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EFAB6C712629370A00250F4B /* AddPhone */,
 				EFAB6C572629174100250F4B /* UserInformation */,
 				EF92E747261DA3F600E9ECEA /* AddPersonalAccount */,
 				EF1D782626152A8B00168CF9 /* Initial */,
@@ -391,6 +398,16 @@
 			path = DataModels;
 			sourceTree = "<group>";
 		};
+		EFAB6C712629370A00250F4B /* AddPhone */ = {
+			isa = PBXGroup;
+			children = (
+				EFAB6C722629371A00250F4B /* AddPhoneViewController.swift */,
+				EFAB6C762629372600250F4B /* AddPhoneViewModel.swift */,
+				EFAB6C7A2629373400250F4B /* AddPhoneAssembly.swift */,
+			);
+			path = AddPhone;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -537,14 +554,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF79660B2615348F0052751C /* LabelExtension.swift in Sources */,
+				EFAB6C772629372600250F4B /* AddPhoneViewModel.swift in Sources */,
 				EF79661626153F810052751C /* MaskedTextField.swift in Sources */,
 				EFAB6C5D2629181000250F4B /* UserInformationViewModel.swift in Sources */,
 				EF796610261536CC0052751C /* SpaceFactory.swift in Sources */,
 				EFAB6C6A2629191200250F4B /* UserInformationDataModel.swift in Sources */,
 				EF1D782826152A9D00168CF9 /* InitialViewController.swift in Sources */,
 				EF09521926233B2C00AD02BB /* EditingAction.swift in Sources */,
+				EFAB6C732629371A00250F4B /* AddPhoneViewController.swift in Sources */,
 				EF92E6E9261D86BD00E9ECEA /* Text.swift in Sources */,
 				EF07B74F26233F1A007A45CE /* ClearableDelegate.swift in Sources */,
+				EFAB6C7B2629373400250F4B /* AddPhoneAssembly.swift in Sources */,
 				EF09521226233AF300AD02BB /* IndicatorProtocol.swift in Sources */,
 				EF7965F626152FEC0052751C /* Colors.swift in Sources */,
 				EF09520A26233A6E00AD02BB /* FontExtension.swift in Sources */,
