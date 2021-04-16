@@ -10,7 +10,7 @@ import UIKit
 protocol RegistrationCoordinator {
     func start()
     func moveToPersonalAccount()
-    func moveToUserData()
+    func moveToUserData(accountNumber: String)
     func moveToAddPhone()
     func moveToPhoneConfirmation()
     func moveToAddEmail()
@@ -38,8 +38,12 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func moveToUserData() {
-        
+    func moveToUserData(accountNumber: String) {
+        let viewController = UserInformationAssembly().assemble { [weak self] input in
+            input.setAccountNumber(accountNumber)
+            return self
+        }
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func moveToAddPhone() {
@@ -76,9 +80,13 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
 }
 
 extension RegistrationCoordinatorManager: AddPersonalAccountModuleOutput {
-    
     func didTapSubmit(accountNumber: String) {
-        moveToUserData()
+        moveToUserData(accountNumber: accountNumber)
     }
-    
+}
+
+extension RegistrationCoordinatorManager: UserInformationModuleOutput {
+    func didTapSubmit(_ userInfo: UserInformationDataModel) {
+        moveToAddPhone()
+    }
 }
