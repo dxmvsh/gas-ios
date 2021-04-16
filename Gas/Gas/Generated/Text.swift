@@ -15,6 +15,10 @@ internal enum Text {
   internal static var `continue`: String {
       return Text.localized("Localizable", "continue")
   }
+  /// Готово
+  internal static var done: String {
+      return Text.localized("Localizable", "done")
+  }
   /// Номер лицевого счета
   internal static var personalAccountNumber: String {
       return Text.localized("Localizable", "personal account number")
