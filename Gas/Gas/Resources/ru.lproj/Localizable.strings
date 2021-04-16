@@ -20,3 +20,8 @@
 "address" = "Адрес";
 "enter phone number to register" = "Введите номер телефона чтобы зарегистрироваться";
 "get code" = "Получить код";
+"enter code" = "Введите код";
+"we send you sms" = "Мы вам отправили SMS с кодом. Введите его.";
+"resend code after %@" = "Отправить повторно через %@";
+"resend again" = "Отправить повторно";
+"invalid code" = "Неверный код";

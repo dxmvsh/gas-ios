@@ -31,6 +31,10 @@ internal enum Text {
   internal static var done: String {
       return Text.localized("Localizable", "done")
   }
+  /// Введите код
+  internal static var enterCode: String {
+      return Text.localized("Localizable", "enter code")
+  }
   /// Введите номер телефона чтобы зарегистрироваться
   internal static var enterPhoneNumberToRegister: String {
       return Text.localized("Localizable", "enter phone number to register")
@@ -42,6 +46,10 @@ internal enum Text {
   /// Получить код
   internal static var getCode: String {
       return Text.localized("Localizable", "get code")
+  }
+  /// Неверный код
+  internal static var invalidCode: String {
+      return Text.localized("Localizable", "invalid code")
   }
   /// Номер лицевого счета
   internal static var personalAccountNumber: String {
@@ -55,6 +63,14 @@ internal enum Text {
   internal static var registration: String {
       return Text.localized("Localizable", "registration")
   }
+  /// Отправить повторно
+  internal static var resendAgain: String {
+      return Text.localized("Localizable", "resend again")
+  }
+  /// Отправить повторно через %@
+  internal static func resendCodeAfter(_ p1: String) -> String {
+    return Text.localized("Localizable", "resend code after %@", p1)
+  }
   /// Войдите или зарегистрируйтесь чтобы продолжить
   internal static var signInOrSignUpToContinue: String {
       return Text.localized("Localizable", "sign in or sign up to continue")
@@ -66,6 +82,10 @@ internal enum Text {
   /// Регистрация пользователя
   internal static var userRegistration: String {
       return Text.localized("Localizable", "user registration")
+  }
+  /// Мы вам отправили SMS с кодом. Введите его.
+  internal static var weSendYouSms: String {
+      return Text.localized("Localizable", "we send you sms")
   }
   /// Добро пожаловать!
   internal static var welcome: String {
