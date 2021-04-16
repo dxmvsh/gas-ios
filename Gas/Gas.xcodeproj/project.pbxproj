@@ -41,6 +41,10 @@
 		EF92E749261DA3F600E9ECEA /* AddPersonalAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E748261DA3F600E9ECEA /* AddPersonalAccountViewController.swift */; };
 		EF92E75A261DA43E00E9ECEA /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E759261DA43E00E9ECEA /* RegistrationCoordinator.swift */; };
 		EFAB6C54262912FA00250F4B /* CustomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C53262912FA00250F4B /* CustomToolbar.swift */; };
+		EFAB6C592629176000250F4B /* UserInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C582629176000250F4B /* UserInformationViewController.swift */; };
+		EFAB6C5D2629181000250F4B /* UserInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C5C2629181000250F4B /* UserInformationViewModel.swift */; };
+		EFAB6C612629182200250F4B /* UserInformationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C602629182200250F4B /* UserInformationAssembly.swift */; };
+		EFAB6C6A2629191200250F4B /* UserInformationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C692629191200250F4B /* UserInformationDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +99,10 @@
 		EF92E748261DA3F600E9ECEA /* AddPersonalAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonalAccountViewController.swift; sourceTree = "<group>"; };
 		EF92E759261DA43E00E9ECEA /* RegistrationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationCoordinator.swift; sourceTree = "<group>"; };
 		EFAB6C53262912FA00250F4B /* CustomToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbar.swift; sourceTree = "<group>"; };
+		EFAB6C582629176000250F4B /* UserInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationViewController.swift; sourceTree = "<group>"; };
+		EFAB6C5C2629181000250F4B /* UserInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationViewModel.swift; sourceTree = "<group>"; };
+		EFAB6C602629182200250F4B /* UserInformationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationAssembly.swift; sourceTree = "<group>"; };
+		EFAB6C692629191200250F4B /* UserInformationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationDataModel.swift; sourceTree = "<group>"; };
 		F62F2FD548E43B5A7701739C /* Pods-Gas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gas.debug.xcconfig"; path = "Target Support Files/Pods-Gas/Pods-Gas.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +207,7 @@
 		EF1D782426152A5300168CF9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EFAB6C572629174100250F4B /* UserInformation */,
 				EF92E747261DA3F600E9ECEA /* AddPersonalAccount */,
 				EF1D782626152A8B00168CF9 /* Initial */,
 			);
@@ -233,6 +242,7 @@
 		EF7965FA261533460052751C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EFAB6C682629190A00250F4B /* DataModels */,
 				EF8947FC2625C64200338039 /* Base */,
 				EF92E758261DA43E00E9ECEA /* Coordinators */,
 				EF7966092615347F0052751C /* Extensions */,
@@ -361,6 +371,24 @@
 				EF92E759261DA43E00E9ECEA /* RegistrationCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		EFAB6C572629174100250F4B /* UserInformation */ = {
+			isa = PBXGroup;
+			children = (
+				EFAB6C582629176000250F4B /* UserInformationViewController.swift */,
+				EFAB6C5C2629181000250F4B /* UserInformationViewModel.swift */,
+				EFAB6C602629182200250F4B /* UserInformationAssembly.swift */,
+			);
+			path = UserInformation;
+			sourceTree = "<group>";
+		};
+		EFAB6C682629190A00250F4B /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				EFAB6C692629191200250F4B /* UserInformationDataModel.swift */,
+			);
+			path = DataModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -510,7 +538,9 @@
 			files = (
 				EF79660B2615348F0052751C /* LabelExtension.swift in Sources */,
 				EF79661626153F810052751C /* MaskedTextField.swift in Sources */,
+				EFAB6C5D2629181000250F4B /* UserInformationViewModel.swift in Sources */,
 				EF796610261536CC0052751C /* SpaceFactory.swift in Sources */,
+				EFAB6C6A2629191200250F4B /* UserInformationDataModel.swift in Sources */,
 				EF1D782826152A9D00168CF9 /* InitialViewController.swift in Sources */,
 				EF09521926233B2C00AD02BB /* EditingAction.swift in Sources */,
 				EF92E6E9261D86BD00E9ECEA /* Text.swift in Sources */,
@@ -524,12 +554,14 @@
 				EF92E75A261DA43E00E9ECEA /* RegistrationCoordinator.swift in Sources */,
 				EFAB6C54262912FA00250F4B /* CustomToolbar.swift in Sources */,
 				EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */,
+				EFAB6C592629176000250F4B /* UserInformationViewController.swift in Sources */,
 				EF92E6E6261D86BD00E9ECEA /* Assets.swift in Sources */,
 				EF92E749261DA3F600E9ECEA /* AddPersonalAccountViewController.swift in Sources */,
 				EF2E937A26290DA100C0ADD9 /* AddPersonalAccountViewModel.swift in Sources */,
 				EF7966052615336F0052751C /* LabelFactory.swift in Sources */,
 				EF18EAE526092B1E00EA1F37 /* AppDelegate.swift in Sources */,
 				EF2E936E262906F400C0ADD9 /* BaseViewController.swift in Sources */,
+				EFAB6C612629182200250F4B /* UserInformationAssembly.swift in Sources */,
 				EF18EAE726092B1E00EA1F37 /* SceneDelegate.swift in Sources */,
 				EF09520E26233AD900AD02BB /* IndicatorExtension.swift in Sources */,
 				EF2DBAF32619E52F008C2B6E /* StringExtension.swift in Sources */,
