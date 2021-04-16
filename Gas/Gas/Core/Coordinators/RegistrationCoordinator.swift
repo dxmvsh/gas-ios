@@ -34,7 +34,7 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
     }
     
     func moveToPersonalAccount() {
-        let viewController = AddPersonalAccountViewController()
+        let viewController = AddPersonalAccountAssembly().assemble(self)
         navigationController.pushViewController(viewController, animated: true)
     }
     
@@ -73,4 +73,12 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
     func moveToResultPage() {
         
     }
+}
+
+extension RegistrationCoordinatorManager: AddPersonalAccountModuleOutput {
+    
+    func didTapSubmit(accountNumber: String) {
+        moveToUserData()
+    }
+    
 }
