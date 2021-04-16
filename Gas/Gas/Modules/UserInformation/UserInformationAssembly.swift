@@ -21,7 +21,7 @@ protocol UserInformationViewInput: class {
 
 protocol UserInformationViewOutput {
     func didLoad()
-    func didTapSubmit(_ userInfo: UserInformationDataModel)
+    func didTapSubmit()
 }
 
 typealias UserInformationConfiguration = (UserInformationModuleInput) -> UserInformationModuleOutput?

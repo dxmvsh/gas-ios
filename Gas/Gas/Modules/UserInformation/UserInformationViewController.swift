@@ -54,6 +54,8 @@ class UserInformationViewController: BaseViewController, UserInformationViewInpu
         addTitleAndSubtitleLabels(title: Text.userRegistration, subtitle: Text.checkDataToContinue)
         setupViews()
         
+        continueButton.addTarget(self, action: #selector(didTapSubmit), for: .touchUpInside)
+        
         output?.didLoad()
     }
     
@@ -85,5 +87,10 @@ class UserInformationViewController: BaseViewController, UserInformationViewInpu
         accountNumberTextField.setText(userInfo.accountNumber)
         cityTextField.setText(userInfo.city)
         addressTextField.setText(userInfo.address)
+    }
+    
+    @objc
+    private func didTapSubmit() {
+        output?.didTapSubmit()
     }
 }

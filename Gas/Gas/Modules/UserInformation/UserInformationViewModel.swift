@@ -13,15 +13,15 @@ class UserInformationViewModel: UserInformationViewOutput, UserInformationModule
     
     weak var view: UserInformationViewInput?
     var output: UserInformationModuleOutput?
-    
+    private var userInfo = UserInformationDataModel(fio: "Алмас Рахимов",
+                                                    accountNumber: "10050030",
+                                                    city: "Кокшетау",
+                                                    address: "Kurmangazy 43/65")
     func didLoad() {
-        view?.display(UserInformationDataModel(fio: "Алмас Рахимов",
-                                               accountNumber: "10050030",
-                                               city: "Кокшетау",
-                                               address: "Kurmangazy 43/65"))
+        view?.display(userInfo)
     }
     
-    func didTapSubmit(_ userInfo: UserInformationDataModel) {
+    func didTapSubmit() {
         output?.didTapSubmit(userInfo)
     }
     
