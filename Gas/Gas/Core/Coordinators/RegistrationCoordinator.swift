@@ -12,7 +12,7 @@ protocol RegistrationCoordinator {
     func moveToPersonalAccount()
     func moveToUserData(accountNumber: String)
     func moveToAddPhone()
-    func moveToPhoneConfirmation()
+    func moveToPhoneConfirmation(phoneNumber: String)
     func moveToAddEmail()
     func moveToEmailConfirmation()
     func moveToOfferInfo()
@@ -47,10 +47,11 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
     }
     
     func moveToAddPhone() {
-        
+        let viewController = AddPhoneAssembly().assemble(self)
+        navigationController.pushViewController(viewController, animated: true)
     }
     
-    func moveToPhoneConfirmation() {
+    func moveToPhoneConfirmation(phoneNumber: String) {
         
     }
     
@@ -88,5 +89,11 @@ extension RegistrationCoordinatorManager: AddPersonalAccountModuleOutput {
 extension RegistrationCoordinatorManager: UserInformationModuleOutput {
     func didTapSubmit(_ userInfo: UserInformationDataModel) {
         moveToAddPhone()
+    }
+}
+
+extension RegistrationCoordinatorManager: AddPhoneModuleOutput {
+    func didFinish(with phoneNumber: String) {
+        moveToPhoneConfirmation(phoneNumber: phoneNumber)
     }
 }
