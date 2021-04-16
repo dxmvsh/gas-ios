@@ -31,6 +31,10 @@ internal enum Text {
   internal static var done: String {
       return Text.localized("Localizable", "done")
   }
+  /// Введите номер телефона чтобы зарегистрироваться
+  internal static var enterPhoneNumberToRegister: String {
+      return Text.localized("Localizable", "enter phone number to register")
+  }
   /// Ф.И.О
   internal static var fio: String {
       return Text.localized("Localizable", "fio")
