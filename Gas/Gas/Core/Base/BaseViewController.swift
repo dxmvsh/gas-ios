@@ -15,6 +15,11 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var contactButtonTapHandler: (() -> Void)? = nil
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = Color.background
+    }
+    
     func setupDefaultNavigationBarStyle() {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
