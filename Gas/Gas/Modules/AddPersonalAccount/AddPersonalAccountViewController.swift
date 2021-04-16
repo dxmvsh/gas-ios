@@ -10,13 +10,6 @@ import SnapKit
 
 class AddPersonalAccountViewController: BaseViewController, AddPersonalAccountViewInput {
     
-    private let titleLabel = LabelFactory.buildTitleLabel()
-                                         .with(text: Text.welcome)
-    
-    private let subtitleLabel = LabelFactory.buildSubtitleLabel()
-                                            .with(text: Text.pleaseEnterFieldCorrectly)
-                                            .with(numberOfLines: 0)
-    
     private let accountNumberTextField = LabeledTextField(title: Text.personalAccountNumber,
                                              prefix: "",
                                              suffix: "",
@@ -35,6 +28,7 @@ class AddPersonalAccountViewController: BaseViewController, AddPersonalAccountVi
         setupDefaultNavigationBarStyle()
         setupBackButton()
         setupContactSupportButton()
+        addTitleAndSubtitleLabels(title: Text.welcome, subtitle: Text.pleaseEnterFieldCorrectly)
         setupViews()
         
         accountNumberTextField.maskedDelegate = self
@@ -46,24 +40,12 @@ class AddPersonalAccountViewController: BaseViewController, AddPersonalAccountVi
     }
     
     private func setupViews() {
-        [titleLabel, subtitleLabel, accountNumberTextField, continueButton].forEach {
+        [accountNumberTextField, continueButton].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
         
-        [titleLabel, subtitleLabel].forEach {
-            $0.textAlignment = .center
-        }
-        
         NSLayoutConstraint.activate([
-            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LayoutGuidance.offset),
-            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: LayoutGuidance.offsetDouble),
-            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -LayoutGuidance.offset),
-            
-            subtitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LayoutGuidance.offset),
-            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: LayoutGuidance.offset),
-            subtitleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -LayoutGuidance.offset),
-            
             accountNumberTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LayoutGuidance.offsetAndHalf),
             accountNumberTextField.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: LayoutGuidance.offsetDouble),
             accountNumberTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -LayoutGuidance.offsetAndHalf),

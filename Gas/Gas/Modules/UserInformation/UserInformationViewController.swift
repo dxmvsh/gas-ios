@@ -9,17 +9,6 @@ import UIKit
 
 class UserInformationViewController: BaseViewController, UserInformationViewInput {
     
-    private let titleLabel = LabelFactory.buildTitleLabel()
-                                         .with(text: Text.userRegistration)
-                                         .with(alignment: .center)
-                                         .with(numberOfLines: 0)
-    
-    private let subtitleLabel = LabelFactory.buildSubtitleLabel()
-                                            .with(text: Text.checkDataToContinue)
-                                            .with(numberOfLines: 0)
-                                            .with(alignment: .center)
-    private let continueButton = Button.makePrimary(title: Text.continue)
-    
     private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -52,6 +41,8 @@ class UserInformationViewController: BaseViewController, UserInformationViewInpu
         return textField
     }()
     
+    private let continueButton = Button.makePrimary(title: Text.continue)
+    
     var output: UserInformationViewOutput?
     
     override func viewDidLoad() {
@@ -60,14 +51,14 @@ class UserInformationViewController: BaseViewController, UserInformationViewInpu
         setupDefaultNavigationBarStyle()
         setupBackButton()
         setupContactSupportButton()
-        
+        addTitleAndSubtitleLabels(title: Text.userRegistration, subtitle: Text.checkDataToContinue)
         setupViews()
         
         output?.didLoad()
     }
     
     private func setupViews() {
-        [titleLabel, subtitleLabel, stackView, continueButton].forEach {
+        [stackView, continueButton].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
@@ -78,14 +69,6 @@ class UserInformationViewController: BaseViewController, UserInformationViewInpu
         }
         
         NSLayoutConstraint.activate([
-            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LayoutGuidance.offsetHalf),
-            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: LayoutGuidance.offsetDouble),
-            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -LayoutGuidance.offsetHalf),
-            
-            subtitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LayoutGuidance.offsetHalf),
-            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: LayoutGuidance.offset),
-            subtitleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -LayoutGuidance.offsetHalf),
-            
             stackView.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: LayoutGuidance.offset),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LayoutGuidance.offset),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -LayoutGuidance.offset),
