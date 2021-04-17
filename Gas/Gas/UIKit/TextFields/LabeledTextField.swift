@@ -152,7 +152,6 @@ class LabeledTextField: MaskedTextfield {
             attributes: [NSAttributedString.Key.foregroundColor: Color.darkGray])
         font = UIFont.systemFont(ofSize: 17)
         tintColor = Color.gray
-        layer.cornerRadius = LayoutGuidance.cornerRadius
         [titleLabel, errorMessageLabel, commentMessageLabel, indicator].forEach {
             addSubview($0)
         }
@@ -167,9 +166,8 @@ class LabeledTextField: MaskedTextfield {
     
     open func getRectForText(_ bounds: CGRect) -> CGRect {
         let top = (LayoutGuidance.offsetHalf + titleHeight + Constants.UI.interPadding)
-        let bottom = LayoutGuidance.offsetHalf +
-            (isErrorTextShown ? errorTextHeight : 0.0) +
-            (isCommentTextShown ? commentTextHeight : 0.0)
+        let bottom = (isErrorTextShown ? errorTextHeight : 0.0) +
+                    (isCommentTextShown ? commentTextHeight : 0.0)
         return bounds.inset(by: UIEdgeInsets(top: top,
                                              left: additionalLeftPadding,
                                              bottom: bottom,
@@ -314,7 +312,7 @@ class LabeledTextField: MaskedTextfield {
     
     override var intrinsicContentSize: CGSize {
         let width = super.intrinsicContentSize.width
-        var height: CGFloat = LayoutGuidance.offsetHalf + titleHeight +
+        var height: CGFloat = titleHeight +
             Constants.UI.interPadding + inputTextHeight + Constants.UI.errorPadding
         if isErrorTextShown {
             height += errorTextHeight + LayoutGuidance.offsetQuarter

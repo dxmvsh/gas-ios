@@ -396,8 +396,8 @@ class MaskedTextfield: UITextField {
 
         borderLayer.name = "BorderSublayer"
         
-        borderLayer.frame = CGRect(x: 0, y: self.frame.size.height - 1, width: self.frame.size.width - LayoutGuidance.offset, height: 1)
-        borderLayer.backgroundColor = Color.lineGray.cgColor
+        borderLayer.frame = CGRect(x: 0, y: self.frame.size.height + LayoutGuidance.offsetHalf, width: self.frame.size.width - LayoutGuidance.offset, height: 1)
+        borderLayer.backgroundColor = Color.lineGray2.cgColor
         borderStyle = .none
         layer.insertSublayer(borderLayer, at: 0)
     }
