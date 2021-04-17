@@ -53,6 +53,9 @@
 		EFAB6C8C262AF8B100250F4B /* SmsCodeDigitLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C8B262AF8B100250F4B /* SmsCodeDigitLabel.swift */; };
 		EFAB6C90262AFCD400250F4B /* SmsVerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C8F262AFCD400250F4B /* SmsVerificationViewModel.swift */; };
 		EFAB6C94262AFCF100250F4B /* SmsVerificationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C93262AFCF100250F4B /* SmsVerificationAssembly.swift */; };
+		EFAB6C99262B1B0A00250F4B /* AddEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C98262B1B0A00250F4B /* AddEmailViewController.swift */; };
+		EFAB6C9F262B1C5400250F4B /* AddEmailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C9E262B1C5400250F4B /* AddEmailAssembly.swift */; };
+		EFAB6CA3262B1C8500250F4B /* AddEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6CA2262B1C8500250F4B /* AddEmailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +122,9 @@
 		EFAB6C8B262AF8B100250F4B /* SmsCodeDigitLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsCodeDigitLabel.swift; sourceTree = "<group>"; };
 		EFAB6C8F262AFCD400250F4B /* SmsVerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsVerificationViewModel.swift; sourceTree = "<group>"; };
 		EFAB6C93262AFCF100250F4B /* SmsVerificationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsVerificationAssembly.swift; sourceTree = "<group>"; };
+		EFAB6C98262B1B0A00250F4B /* AddEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmailViewController.swift; sourceTree = "<group>"; };
+		EFAB6C9E262B1C5400250F4B /* AddEmailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmailAssembly.swift; sourceTree = "<group>"; };
+		EFAB6CA2262B1C8500250F4B /* AddEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmailViewModel.swift; sourceTree = "<group>"; };
 		F62F2FD548E43B5A7701739C /* Pods-Gas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gas.debug.xcconfig"; path = "Target Support Files/Pods-Gas/Pods-Gas.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,6 +230,7 @@
 		EF1D782426152A5300168CF9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EFAB6C97262B1AF800250F4B /* AddEmail */,
 				EFAB6C7F2629923B00250F4B /* SmsVerification */,
 				EFAB6C712629370A00250F4B /* AddPhone */,
 				EFAB6C572629174100250F4B /* UserInformation */,
@@ -439,6 +446,16 @@
 			path = Labels;
 			sourceTree = "<group>";
 		};
+		EFAB6C97262B1AF800250F4B /* AddEmail */ = {
+			isa = PBXGroup;
+			children = (
+				EFAB6C98262B1B0A00250F4B /* AddEmailViewController.swift */,
+				EFAB6C9E262B1C5400250F4B /* AddEmailAssembly.swift */,
+				EFAB6CA2262B1C8500250F4B /* AddEmailViewModel.swift */,
+			);
+			path = AddEmail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -594,6 +611,7 @@
 				EF09521926233B2C00AD02BB /* EditingAction.swift in Sources */,
 				EFAB6C732629371A00250F4B /* AddPhoneViewController.swift in Sources */,
 				EF92E6E9261D86BD00E9ECEA /* Text.swift in Sources */,
+				EFAB6CA3262B1C8500250F4B /* AddEmailViewModel.swift in Sources */,
 				EF07B74F26233F1A007A45CE /* ClearableDelegate.swift in Sources */,
 				EFAB6C7B2629373400250F4B /* AddPhoneAssembly.swift in Sources */,
 				EF09521226233AF300AD02BB /* IndicatorProtocol.swift in Sources */,
@@ -610,6 +628,7 @@
 				EFAB6C592629176000250F4B /* UserInformationViewController.swift in Sources */,
 				EF92E6E6261D86BD00E9ECEA /* Assets.swift in Sources */,
 				EF92E749261DA3F600E9ECEA /* AddPersonalAccountViewController.swift in Sources */,
+				EFAB6C9F262B1C5400250F4B /* AddEmailAssembly.swift in Sources */,
 				EFAB6C94262AFCF100250F4B /* SmsVerificationAssembly.swift in Sources */,
 				EFAB6C87262AD3BF00250F4B /* SmsCodeTextField.swift in Sources */,
 				EF2E937A26290DA100C0ADD9 /* AddPersonalAccountViewModel.swift in Sources */,
@@ -622,6 +641,7 @@
 				EF09520E26233AD900AD02BB /* IndicatorExtension.swift in Sources */,
 				EF2DBAF32619E52F008C2B6E /* StringExtension.swift in Sources */,
 				EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */,
+				EFAB6C99262B1B0A00250F4B /* AddEmailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
