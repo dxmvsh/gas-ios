@@ -25,7 +25,7 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Color.background
+        view.backgroundColor = .white
     }
     
     func setupDefaultNavigationBarStyle() {

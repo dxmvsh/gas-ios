@@ -52,7 +52,8 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
     }
     
     func moveToPhoneConfirmation(phoneNumber: String) {
-        
+        let viewController = SmsVerificationAssembly().assemble(self)
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func moveToAddEmail() {
@@ -95,5 +96,15 @@ extension RegistrationCoordinatorManager: UserInformationModuleOutput {
 extension RegistrationCoordinatorManager: AddPhoneModuleOutput {
     func didFinish(with phoneNumber: String) {
         moveToPhoneConfirmation(phoneNumber: phoneNumber)
+    }
+}
+
+extension RegistrationCoordinatorManager: SmsVerificationModuleOutput {
+    func didSucceed() {
+        moveToAddEmail()
+    }
+    
+    func didFail() {
+        
     }
 }
