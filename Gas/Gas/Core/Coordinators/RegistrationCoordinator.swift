@@ -14,7 +14,7 @@ protocol RegistrationCoordinator {
     func moveToAddPhone()
     func moveToPhoneConfirmation(phoneNumber: String)
     func moveToAddEmail()
-    func moveToEmailConfirmation()
+    func moveToEmailConfirmation(email: String)
     func moveToOfferInfo()
     func moveToSetPassword()
     func moveToSetPasscode()
@@ -57,10 +57,11 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
     }
     
     func moveToAddEmail() {
-        
+        let viewController = AddEmailAssembly().assemble(self)
+        navigationController.pushViewController(viewController, animated: true)
     }
     
-    func moveToEmailConfirmation() {
+    func moveToEmailConfirmation(email: String) {
         
     }
     
@@ -106,5 +107,11 @@ extension RegistrationCoordinatorManager: SmsVerificationModuleOutput {
     
     func didFail() {
         
+    }
+}
+
+extension RegistrationCoordinatorManager: AddEmailModuleOutput {
+    func didAdd(email: String) {
+        moveToEmailConfirmation(email: email)
     }
 }
