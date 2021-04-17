@@ -48,6 +48,11 @@
 		EFAB6C732629371A00250F4B /* AddPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C722629371A00250F4B /* AddPhoneViewController.swift */; };
 		EFAB6C772629372600250F4B /* AddPhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C762629372600250F4B /* AddPhoneViewModel.swift */; };
 		EFAB6C7B2629373400250F4B /* AddPhoneAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C7A2629373400250F4B /* AddPhoneAssembly.swift */; };
+		EFAB6C812629924D00250F4B /* SmsVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C802629924D00250F4B /* SmsVerificationViewController.swift */; };
+		EFAB6C87262AD3BF00250F4B /* SmsCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C86262AD3BF00250F4B /* SmsCodeTextField.swift */; };
+		EFAB6C8C262AF8B100250F4B /* SmsCodeDigitLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C8B262AF8B100250F4B /* SmsCodeDigitLabel.swift */; };
+		EFAB6C90262AFCD400250F4B /* SmsVerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C8F262AFCD400250F4B /* SmsVerificationViewModel.swift */; };
+		EFAB6C94262AFCF100250F4B /* SmsVerificationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C93262AFCF100250F4B /* SmsVerificationAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +114,11 @@
 		EFAB6C722629371A00250F4B /* AddPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneViewController.swift; sourceTree = "<group>"; };
 		EFAB6C762629372600250F4B /* AddPhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneViewModel.swift; sourceTree = "<group>"; };
 		EFAB6C7A2629373400250F4B /* AddPhoneAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneAssembly.swift; sourceTree = "<group>"; };
+		EFAB6C802629924D00250F4B /* SmsVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsVerificationViewController.swift; sourceTree = "<group>"; };
+		EFAB6C86262AD3BF00250F4B /* SmsCodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsCodeTextField.swift; sourceTree = "<group>"; };
+		EFAB6C8B262AF8B100250F4B /* SmsCodeDigitLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsCodeDigitLabel.swift; sourceTree = "<group>"; };
+		EFAB6C8F262AFCD400250F4B /* SmsVerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsVerificationViewModel.swift; sourceTree = "<group>"; };
+		EFAB6C93262AFCF100250F4B /* SmsVerificationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsVerificationAssembly.swift; sourceTree = "<group>"; };
 		F62F2FD548E43B5A7701739C /* Pods-Gas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gas.debug.xcconfig"; path = "Target Support Files/Pods-Gas/Pods-Gas.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +179,7 @@
 			children = (
 				EF79661526153F810052751C /* MaskedTextField.swift */,
 				EF0952052623393300AD02BB /* LabeledTextField.swift */,
+				EFAB6C86262AD3BF00250F4B /* SmsCodeTextField.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -213,6 +224,7 @@
 		EF1D782426152A5300168CF9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EFAB6C7F2629923B00250F4B /* SmsVerification */,
 				EFAB6C712629370A00250F4B /* AddPhone */,
 				EFAB6C572629174100250F4B /* UserInformation */,
 				EF92E747261DA3F600E9ECEA /* AddPersonalAccount */,
@@ -282,6 +294,7 @@
 		EF79661426153F720052751C /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				EFAB6C8A262AF8A200250F4B /* Labels */,
 				EF8948032625C6D500338039 /* Buttons */,
 				EF09521526233AFA00AD02BB /* TextFields */,
 				EF09521126233AF300AD02BB /* IndicatorProtocol.swift */,
@@ -406,6 +419,24 @@
 				EFAB6C7A2629373400250F4B /* AddPhoneAssembly.swift */,
 			);
 			path = AddPhone;
+			sourceTree = "<group>";
+		};
+		EFAB6C7F2629923B00250F4B /* SmsVerification */ = {
+			isa = PBXGroup;
+			children = (
+				EFAB6C802629924D00250F4B /* SmsVerificationViewController.swift */,
+				EFAB6C8F262AFCD400250F4B /* SmsVerificationViewModel.swift */,
+				EFAB6C93262AFCF100250F4B /* SmsVerificationAssembly.swift */,
+			);
+			path = SmsVerification;
+			sourceTree = "<group>";
+		};
+		EFAB6C8A262AF8A200250F4B /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				EFAB6C8B262AF8B100250F4B /* SmsCodeDigitLabel.swift */,
+			);
+			path = Labels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -566,9 +597,11 @@
 				EF07B74F26233F1A007A45CE /* ClearableDelegate.swift in Sources */,
 				EFAB6C7B2629373400250F4B /* AddPhoneAssembly.swift in Sources */,
 				EF09521226233AF300AD02BB /* IndicatorProtocol.swift in Sources */,
+				EFAB6C812629924D00250F4B /* SmsVerificationViewController.swift in Sources */,
 				EF7965F626152FEC0052751C /* Colors.swift in Sources */,
 				EF09520A26233A6E00AD02BB /* FontExtension.swift in Sources */,
 				EF2E937626290D6000C0ADD9 /* AddPersonalAccountAssembly.swift in Sources */,
+				EFAB6C8C262AF8B100250F4B /* SmsCodeDigitLabel.swift in Sources */,
 				EF7965E326152D800052751C /* Constants.swift in Sources */,
 				EF0952062623393300AD02BB /* LabeledTextField.swift in Sources */,
 				EF92E75A261DA43E00E9ECEA /* RegistrationCoordinator.swift in Sources */,
@@ -577,7 +610,10 @@
 				EFAB6C592629176000250F4B /* UserInformationViewController.swift in Sources */,
 				EF92E6E6261D86BD00E9ECEA /* Assets.swift in Sources */,
 				EF92E749261DA3F600E9ECEA /* AddPersonalAccountViewController.swift in Sources */,
+				EFAB6C94262AFCF100250F4B /* SmsVerificationAssembly.swift in Sources */,
+				EFAB6C87262AD3BF00250F4B /* SmsCodeTextField.swift in Sources */,
 				EF2E937A26290DA100C0ADD9 /* AddPersonalAccountViewModel.swift in Sources */,
+				EFAB6C90262AFCD400250F4B /* SmsVerificationViewModel.swift in Sources */,
 				EF7966052615336F0052751C /* LabelFactory.swift in Sources */,
 				EF18EAE526092B1E00EA1F37 /* AppDelegate.swift in Sources */,
 				EF2E936E262906F400C0ADD9 /* BaseViewController.swift in Sources */,
