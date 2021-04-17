@@ -31,6 +31,10 @@ internal enum Text {
   internal static var done: String {
       return Text.localized("Localizable", "done")
   }
+  /// Эл.почта
+  internal static var email: String {
+      return Text.localized("Localizable", "email")
+  }
   /// Введите код
   internal static var enterCode: String {
       return Text.localized("Localizable", "enter code")
@@ -54,6 +58,10 @@ internal enum Text {
   /// Номер лицевого счета
   internal static var personalAccountNumber: String {
       return Text.localized("Localizable", "personal account number")
+  }
+  /// Пожалуйста, введите электронную почту
+  internal static var pleaseEnterEmail: String {
+      return Text.localized("Localizable", "please enter email")
   }
   /// Пожалуйста, заполните поле верно
   internal static var pleaseEnterFieldCorrectly: String {
