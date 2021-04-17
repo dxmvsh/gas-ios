@@ -13,7 +13,7 @@ class UserInformationViewController: BaseViewController, UserInformationViewInpu
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.alignment = .fill
-        stackView.spacing = LayoutGuidance.offsetQuarter
+        stackView.spacing = LayoutGuidance.offset
         return stackView
     }()
     

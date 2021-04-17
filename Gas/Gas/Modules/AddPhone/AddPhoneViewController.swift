@@ -38,7 +38,7 @@ class AddPhoneViewController: BaseViewController, AddPhoneViewInput {
         view.addInputAccessoryForViews([phoneNumberTextField])
         
         NSLayoutConstraint.activate([
-            phoneNumberTextField.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: LayoutGuidance.offset),
+            phoneNumberTextField.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: LayoutGuidance.offsetDouble),
             phoneNumberTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LayoutGuidance.offsetDouble),
             phoneNumberTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -LayoutGuidance.offsetDouble),
             
