@@ -30,4 +30,6 @@ enum Color {
     static let buttonInactiveTitleColor: UIColor = #colorLiteral(red: 0.8156862745, green: 0.8156862745, blue: 0.8156862745, alpha: 1)
     /// rgba(247, 247, 247, 1);
     static let buttonInactiveBackgroundColor: UIColor = #colorLiteral(red: 0.968627451, green: 0.968627451, blue: 0.968627451, alpha: 1)
+    /// rgba(212, 212, 212, 1);
+    static let lineGray2 = #colorLiteral(red: 0.831372549, green: 0.831372549, blue: 0.831372549, alpha: 1)
 }
