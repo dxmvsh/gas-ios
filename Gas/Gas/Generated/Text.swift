@@ -35,6 +35,14 @@ internal enum Text {
   internal static var email: String {
       return Text.localized("Localizable", "email")
   }
+  /// Подтверждение почты
+  internal static var emailVerification: String {
+      return Text.localized("Localizable", "email verification")
+  }
+  /// Введите 4-значный код подтверждения, который мы выслали на ваш email адрес %@
+  internal static func enter4DigitCodeSentTo(_ p1: String) -> String {
+    return Text.localized("Localizable", "enter 4 digit code sent to %@", p1)
+  }
   /// Введите код
   internal static var enterCode: String {
       return Text.localized("Localizable", "enter code")
