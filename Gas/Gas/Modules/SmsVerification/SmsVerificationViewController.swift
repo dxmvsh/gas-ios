@@ -25,6 +25,7 @@ class SmsVerificationViewController: BaseViewController, SmsVerificationViewInpu
         
         setupViews()
         
+        output?.didLoad()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,6 +56,11 @@ class SmsVerificationViewController: BaseViewController, SmsVerificationViewInpu
     
     func setErrorStyle(message: String) {
         smsCodeTextField.showError(message: message)
+    }
+    
+    func setTitleAndSubtitleTexts(title: String, subtitle: String) {
+        titleLabel.text = title
+        subtitleLabel.text = subtitle
     }
     
 }
