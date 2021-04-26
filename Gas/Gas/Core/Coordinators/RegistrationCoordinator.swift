@@ -30,7 +30,7 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
     }
     
     func start() {
-        moveToPersonalAccount()
+        moveToSetPassword()
     }
     
     func moveToPersonalAccount() {
@@ -75,7 +75,8 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
     }
     
     func moveToSetPassword() {
-        
+        let viewController = PasswordAssembly().assemble(self)
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func moveToSetPasscode() {
@@ -129,4 +130,16 @@ extension RegistrationCoordinatorManager: EmailVerificationModuleOutput {
     func didFailEmailVerification() {
         
     }
+}
+
+extension RegistrationCoordinatorManager: PasswordModuleOutput {
+    
+    func didSucceedPasswordSet() {
+        moveToSetPasscode()
+    }
+    
+    func didFailPasswordSet() {
+        
+    }
+    
 }
