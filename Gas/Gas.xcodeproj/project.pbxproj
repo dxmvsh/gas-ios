@@ -436,11 +436,9 @@
 		EF9D0BC02636988E006E5472 /* Password */ = {
 			isa = PBXGroup;
 			children = (
-				EF9D0BC1263698FB006E5472 /* PasswordAssembly.swift */,
-				EF9D0BC526369932006E5472 /* PasswordViewController.swift */,
-				EF9D0BC926369BA6006E5472 /* PasswordRulesView.swift */,
-				EF9D0BCD2636AC25006E5472 /* PasswordRuleViewAdapter.swift */,
-				EF9D0BD12636BA55006E5472 /* PasswordViewModel.swift */,
+				EF9D0BDF2636D651006E5472 /* ViewModel */,
+				EF9D0BDD2636D633006E5472 /* View */,
+				EF9D0BDC2636D629006E5472 /* Assembly */,
 			);
 			path = Password;
 			sourceTree = "<group>";
@@ -451,6 +449,48 @@
 				EF9D0BD62636BD95006E5472 /* PasswordCheckerService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		EF9D0BDC2636D629006E5472 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				EF9D0BC1263698FB006E5472 /* PasswordAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		EF9D0BDD2636D633006E5472 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF9D0BC526369932006E5472 /* PasswordViewController.swift */,
+				EF9D0BDE2636D63E006E5472 /* Additional */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF9D0BDE2636D63E006E5472 /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				EF9D0BE02636D662006E5472 /* Adapter */,
+				EF9D0BC926369BA6006E5472 /* PasswordRulesView.swift */,
+			);
+			path = Additional;
+			sourceTree = "<group>";
+		};
+		EF9D0BDF2636D651006E5472 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF9D0BD12636BA55006E5472 /* PasswordViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF9D0BE02636D662006E5472 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				EF9D0BCD2636AC25006E5472 /* PasswordRuleViewAdapter.swift */,
+			);
+			path = Adapter;
 			sourceTree = "<group>";
 		};
 		EFAB6C572629174100250F4B /* UserInformation */ = {

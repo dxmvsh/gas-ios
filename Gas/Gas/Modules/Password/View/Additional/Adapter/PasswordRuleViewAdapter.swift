@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct PasswordRuleViewAdapter {
+    var title: String
+    var regex: String
+}
