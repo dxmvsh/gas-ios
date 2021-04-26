@@ -14,7 +14,7 @@ fileprivate enum Constants {
         static let interPadding: CGFloat = 4.0
         static let titleFadeInDuration: TimeInterval = 0.3
         static let errorPadding: CGFloat = 10.0
-        static let rightViewSize: CGFloat = 24.0
+        static let rightViewSize: CGFloat = 16.0
         static let leftViewSize: CGFloat = 40.0
     }
 }
@@ -247,7 +247,7 @@ class LabeledTextField: MaskedTextfield {
         let x = bounds.width - Constants.UI.rightViewSize - LayoutGuidance.offset
         var height = isErrorTextShown ? bounds.height - errorTextHeight : bounds.height
         height = isCommentTextShown ? height - commentTextHeight : height
-        let y = (height - Constants.UI.rightViewSize) / 2
+        let y = (height - Constants.UI.rightViewSize) / 2 + 8
         let rightViewBounds = CGRect(x: x,
                                      y: y,
                                      width: Constants.UI.rightViewSize,
@@ -271,7 +271,6 @@ class LabeledTextField: MaskedTextfield {
         let updateBlock = { () -> Void in
             self.titleLabel.alpha = alpha
             self.titleLabel.frame = frame
-            self.titleLabel.textColor = Color.gray
             self.errorMessageLabel.frame = errorLabelFrame
             self.commentMessageLabel.frame = commentLabelFrame
             if !self.isEnabled {
@@ -330,11 +329,13 @@ class LabeledTextField: MaskedTextfield {
     private func addErrorBorder() {
         borderLayer.fillColor = Color.red.cgColor
         borderLayer.strokeColor = Color.red.cgColor
+        borderLayer.backgroundColor = Color.red.cgColor
     }
    
     private func hideErrorBorder() {
-        borderLayer.fillColor = Color.lineGray.cgColor
+        borderLayer.fillColor = Color.lineGray2.cgColor
         borderLayer.strokeColor = UIColor.clear.cgColor
+        borderLayer.backgroundColor = Color.lineGray2.cgColor
     }
     
     func startLoading() {
@@ -366,6 +367,8 @@ extension LabeledTextField: ErrorShowing {
         errorMessageLabel.text = errorMessage
         errorMessageLabel.frame = errorRectForBounds(bounds)
         addErrorBorder()
+        titleLabel.textColor = Color.red
+        textColor = Color.red
         invalidateIntrinsicContentSize()
     }
     
@@ -373,6 +376,8 @@ extension LabeledTextField: ErrorShowing {
         errorMessageLabel.text = nil
         errorMessageLabel.frame = errorRectForBounds(bounds)
         hideErrorBorder()
+        titleLabel.textColor = Color.gray
+        textColor = .black
         invalidateIntrinsicContentSize()
     }
 }

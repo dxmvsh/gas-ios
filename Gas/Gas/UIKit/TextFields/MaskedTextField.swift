@@ -45,7 +45,7 @@ class MaskedTextfield: UITextField {
     private let upperCaseLetterReplacementChar: String = "A"
     private let digitsReplacementChar: String = "#"
     private var allReplacements: [String] = []
-    var borderLayer = CAShapeLayer()
+    var borderLayer = CAShapeLayer() 
     /**
      Var that holds the format pattern that you wish to apply
      to some text
@@ -308,8 +308,7 @@ class MaskedTextfield: UITextField {
     private func setAttributedText() {
         let prefixString = realString.count == 0 ? prefix : realString
         let attributedRealString = NSAttributedString(string: prefixString,
-                                                      attributes: [NSAttributedString.Key.kern: -0.41,
-                                                                   NSAttributedString.Key.foregroundColor: UIColor.black])
+                                                      attributes: [NSAttributedString.Key.kern: -0.41])
         let attributedResultString = NSMutableAttributedString(attributedString: attributedRealString)
         if fillerPlaceholder.count - prefixString.count >= 0 {
             var placeholderString = String(fillerPlaceholder.suffix(fillerPlaceholder.count - prefixString.count))
