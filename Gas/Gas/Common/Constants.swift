@@ -28,6 +28,7 @@ enum FontSize {
 
 enum ViewSize {
     static let buttonHeight: CGFloat = 52
+    static let smallIcon: CGFloat = 16
 }
 
 enum RegexConstants {
@@ -44,6 +45,10 @@ enum RegexConstants {
     static let allowedSymbolsForForeignNameRegex = "[a-zA-Z0-9 ,.()+:?'-/]"
     static let allowedSymbolsForLatinRegex = "[A-Za-z ]"
     static let nonCyrillicSymbolsSubstringsRegex = #"(([a-zA-Z]{1}[a-zA-Z0-9\/\-?:().,\'+\ ]+)|([a-zA-Z]{1}))+"#
+    static let atLeast8Chars = "(?=.{8,}).*$"
+    static let containsUppercaseLetter = "[A-Z]"
+    static let containsLowercaseLetter = "[a-z]"
+    static let containsPasswordParticularCharacter = "[.!@#$%^&*]"
 }
 
 enum DeviceConstants {
