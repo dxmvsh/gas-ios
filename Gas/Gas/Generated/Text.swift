@@ -23,9 +23,21 @@ internal enum Text {
   internal static var city: String {
       return Text.localized("Localizable", "city")
   }
+  /// Подтвердите пароль
+  internal static var confirmPassword: String {
+      return Text.localized("Localizable", "confirm password")
+  }
   /// Продолжить
   internal static var `continue`: String {
       return Text.localized("Localizable", "continue")
+  }
+  /// Придумайте пароль
+  internal static var createPassword: String {
+      return Text.localized("Localizable", "create password")
+  }
+  /// Придумайте пароль для входа в приложение
+  internal static var createPasswordForLogin: String {
+      return Text.localized("Localizable", "create password for login")
   }
   /// Готово
   internal static var done: String {

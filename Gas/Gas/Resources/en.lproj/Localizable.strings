@@ -32,3 +32,6 @@
 "i agree with" = "Я согласен с";
 "with offer conditions" = "Условиями оферты";
 "public offer" = "Публичная оферта";
+"create password" = "Придумайте пароль";
+"confirm password" = "Подтвердите пароль";
+"create password for login" = "Придумайте пароль для входа в приложение";
