@@ -12,6 +12,7 @@ enum LayoutGuidance {
     static let offsetHalf: CGFloat = 8
     static let offsetDouble: CGFloat = 32
     static let offsetQuarter: CGFloat = 4
+    static let offsetThreeQuarter: CGFloat = 12
     static let offsetAndHalf: CGFloat = 20
     static let cornerRadius: CGFloat = 12
 }
@@ -43,4 +44,19 @@ enum RegexConstants {
     static let allowedSymbolsForForeignNameRegex = "[a-zA-Z0-9 ,.()+:?'-/]"
     static let allowedSymbolsForLatinRegex = "[A-Za-z ]"
     static let nonCyrillicSymbolsSubstringsRegex = #"(([a-zA-Z]{1}[a-zA-Z0-9\/\-?:().,\'+\ ]+)|([a-zA-Z]{1}))+"#
+}
+
+enum DeviceConstants {
+    static let screenHeight: CGFloat = UIScreen.main.bounds.size.height
+    static let screenWidth: CGFloat = UIScreen.main.bounds.size.width
+    static let screenHeightHalf: CGFloat = DeviceConstants.screenHeight / 2.0
+    static var bottomNotch: CGFloat {
+        if #available(iOS 11.0, *) {
+            return UIApplication.shared.delegate?.window??.safeAreaInsets.bottom ?? 0.0
+        }
+        return 0.0
+    }
+    static var isIPhoneSE: Bool {
+        return UIScreen.main.nativeBounds.height == 1136
+    }
 }
