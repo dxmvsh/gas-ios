@@ -35,3 +35,8 @@
 "create password" = "Придумайте пароль";
 "confirm password" = "Подтвердите пароль";
 "create password for login" = "Придумайте пароль для входа в приложение";
+"at least 8 chars" = "Не менее 8 символов";
+"at least 1 uppercase letter" = "Минимум одну заглавную букву";
+"at least 1 lowercase letter" = "Минимум одну прописную букву";
+"at least 1 digit" = "Минимум одну цифру";
+"at least one of next chars" = "Одну из следующих знаков: .!@#$%^&*";

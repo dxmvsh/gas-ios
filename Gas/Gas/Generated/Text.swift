@@ -15,6 +15,26 @@ internal enum Text {
   internal static var address: String {
       return Text.localized("Localizable", "address")
   }
+  /// Минимум одну цифру
+  internal static var atLeast1Digit: String {
+      return Text.localized("Localizable", "at least 1 digit")
+  }
+  /// Минимум одну прописную букву
+  internal static var atLeast1LowercaseLetter: String {
+      return Text.localized("Localizable", "at least 1 lowercase letter")
+  }
+  /// Минимум одну заглавную букву
+  internal static var atLeast1UppercaseLetter: String {
+      return Text.localized("Localizable", "at least 1 uppercase letter")
+  }
+  /// Не менее 8 символов
+  internal static var atLeast8Chars: String {
+      return Text.localized("Localizable", "at least 8 chars")
+  }
+  /// Одну из следующих знаков: .!@#$%^&*
+  internal static var atLeastOneOfNextChars: String {
+      return Text.localized("Localizable", "at least one of next chars")
+  }
   /// Проверьте данные чтобы продолжить
   internal static var checkDataToContinue: String {
       return Text.localized("Localizable", "check data to continue")
