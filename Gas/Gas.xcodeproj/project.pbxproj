@@ -40,6 +40,9 @@
 		EF92E725261D8FD200E9ECEA /* GasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E721261D8FD200E9ECEA /* GasTests.swift */; };
 		EF92E749261DA3F600E9ECEA /* AddPersonalAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E748261DA3F600E9ECEA /* AddPersonalAccountViewController.swift */; };
 		EF92E75A261DA43E00E9ECEA /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E759261DA43E00E9ECEA /* RegistrationCoordinator.swift */; };
+		EF9D0BB526367C8E006E5472 /* OfferInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BB426367C8E006E5472 /* OfferInformationViewController.swift */; };
+		EF9D0BB926367D1E006E5472 /* CheckBoxTitledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BB826367D1E006E5472 /* CheckBoxTitledView.swift */; };
+		EF9D0BBD26368274006E5472 /* OfferConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BBC26368274006E5472 /* OfferConfirmationView.swift */; };
 		EFAB6C54262912FA00250F4B /* CustomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C53262912FA00250F4B /* CustomToolbar.swift */; };
 		EFAB6C592629176000250F4B /* UserInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C582629176000250F4B /* UserInformationViewController.swift */; };
 		EFAB6C5D2629181000250F4B /* UserInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C5C2629181000250F4B /* UserInformationViewModel.swift */; };
@@ -110,6 +113,9 @@
 		EF92E722261D8FD200E9ECEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF92E748261DA3F600E9ECEA /* AddPersonalAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonalAccountViewController.swift; sourceTree = "<group>"; };
 		EF92E759261DA43E00E9ECEA /* RegistrationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationCoordinator.swift; sourceTree = "<group>"; };
+		EF9D0BB426367C8E006E5472 /* OfferInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferInformationViewController.swift; sourceTree = "<group>"; };
+		EF9D0BB826367D1E006E5472 /* CheckBoxTitledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxTitledView.swift; sourceTree = "<group>"; };
+		EF9D0BBC26368274006E5472 /* OfferConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferConfirmationView.swift; sourceTree = "<group>"; };
 		EFAB6C53262912FA00250F4B /* CustomToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbar.swift; sourceTree = "<group>"; };
 		EFAB6C582629176000250F4B /* UserInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationViewController.swift; sourceTree = "<group>"; };
 		EFAB6C5C2629181000250F4B /* UserInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationViewModel.swift; sourceTree = "<group>"; };
@@ -232,6 +238,7 @@
 		EF1D782426152A5300168CF9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EF9D0BB326367C79006E5472 /* OfferInformation */,
 				EFAB6C97262B1AF800250F4B /* AddEmail */,
 				EFAB6C7F2629923B00250F4B /* SmsVerification */,
 				EFAB6C712629370A00250F4B /* AddPhone */,
@@ -310,6 +317,7 @@
 				EF09521826233B2C00AD02BB /* EditingAction.swift */,
 				EF07B74E26233F1A007A45CE /* ClearableDelegate.swift */,
 				EFAB6C53262912FA00250F4B /* CustomToolbar.swift */,
+				EF9D0BB826367D1E006E5472 /* CheckBoxTitledView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -400,6 +408,15 @@
 				EF92E759261DA43E00E9ECEA /* RegistrationCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		EF9D0BB326367C79006E5472 /* OfferInformation */ = {
+			isa = PBXGroup;
+			children = (
+				EF9D0BB426367C8E006E5472 /* OfferInformationViewController.swift */,
+				EF9D0BBC26368274006E5472 /* OfferConfirmationView.swift */,
+			);
+			path = OfferInformation;
 			sourceTree = "<group>";
 		};
 		EFAB6C572629174100250F4B /* UserInformation */ = {
@@ -623,6 +640,7 @@
 				EF09520A26233A6E00AD02BB /* FontExtension.swift in Sources */,
 				EF2E937626290D6000C0ADD9 /* AddPersonalAccountAssembly.swift in Sources */,
 				EFAB6C8C262AF8B100250F4B /* SmsCodeDigitLabel.swift in Sources */,
+				EF9D0BB926367D1E006E5472 /* CheckBoxTitledView.swift in Sources */,
 				EF7965E326152D800052751C /* Constants.swift in Sources */,
 				EF0952062623393300AD02BB /* LabeledTextField.swift in Sources */,
 				EF92E75A261DA43E00E9ECEA /* RegistrationCoordinator.swift in Sources */,
@@ -636,6 +654,8 @@
 				EFAB6C94262AFCF100250F4B /* SmsVerificationAssembly.swift in Sources */,
 				EFAB6C87262AD3BF00250F4B /* SmsCodeTextField.swift in Sources */,
 				EF2E937A26290DA100C0ADD9 /* AddPersonalAccountViewModel.swift in Sources */,
+				EF9D0BB526367C8E006E5472 /* OfferInformationViewController.swift in Sources */,
+				EF9D0BBD26368274006E5472 /* OfferConfirmationView.swift in Sources */,
 				EFAB6C90262AFCD400250F4B /* SmsVerificationViewModel.swift in Sources */,
 				EF7966052615336F0052751C /* LabelFactory.swift in Sources */,
 				EF18EAE526092B1E00EA1F37 /* AppDelegate.swift in Sources */,
