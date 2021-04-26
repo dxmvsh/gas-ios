@@ -67,7 +67,11 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
     }
     
     func moveToOfferInfo() {
-        
+        let viewController = OfferInformationViewController()
+        viewController.completion = {
+            self.moveToSetPassword()
+        }
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func moveToSetPassword() {
