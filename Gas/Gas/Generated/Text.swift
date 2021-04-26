@@ -59,6 +59,10 @@ internal enum Text {
   internal static var getCode: String {
       return Text.localized("Localizable", "get code")
   }
+  /// Я согласен с
+  internal static var iAgreeWith: String {
+      return Text.localized("Localizable", "i agree with")
+  }
   /// Неверный код
   internal static var invalidCode: String {
       return Text.localized("Localizable", "invalid code")
@@ -74,6 +78,10 @@ internal enum Text {
   /// Пожалуйста, заполните поле верно
   internal static var pleaseEnterFieldCorrectly: String {
       return Text.localized("Localizable", "please enter field correctly")
+  }
+  /// Публичная оферта
+  internal static var publicOffer: String {
+      return Text.localized("Localizable", "public offer")
   }
   /// Регистрация
   internal static var registration: String {
@@ -106,6 +114,10 @@ internal enum Text {
   /// Добро пожаловать!
   internal static var welcome: String {
       return Text.localized("Localizable", "welcome")
+  }
+  /// Условиями оферты
+  internal static var withOfferConditions: String {
+      return Text.localized("Localizable", "with offer conditions")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

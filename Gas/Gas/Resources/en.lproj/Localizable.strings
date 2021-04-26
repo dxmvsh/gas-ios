@@ -29,3 +29,6 @@
 "please enter email" = "Пожалуйста, введите электронную почту";
 "email verification" = "Подтверждение почты";
 "enter 4 digit code sent to %@" = "Введите 4-значный код подтверждения, который мы выслали на ваш email адрес %@";
+"i agree with" = "Я согласен с";
+"with offer conditions" = "Условиями оферты";
+"public offer" = "Публичная оферта";
