@@ -41,6 +41,7 @@ class BiometryViewController: BaseViewController {
         setupBackButton()
         
         setupViews()
+        addHandlers()
     }
     
     private func setupViews() {
@@ -71,6 +72,21 @@ class BiometryViewController: BaseViewController {
             secondaryButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -LayoutGuidance.offset),
             secondaryButton.heightAnchor.constraint(equalToConstant: ViewSize.buttonHeight),
         ])
+    }
+    
+    private func addHandlers() {
+        primaryButton.addTarget(self, action: #selector(primaryButtonTapped), for: .touchUpInside)
+        secondaryButton.addTarget(self, action: #selector(secondaryButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc
+    private func primaryButtonTapped() {
+        
+    }
+    
+    @objc
+    private func secondaryButtonTapped() {
+        
     }
     
 }
