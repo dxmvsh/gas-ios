@@ -27,6 +27,7 @@
 		EF4428C2263AD40800ADD537 /* BiometryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4428C1263AD40800ADD537 /* BiometryAssembly.swift */; };
 		EF4428C6263AD43000ADD537 /* BiometryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4428C5263AD43000ADD537 /* BiometryViewController.swift */; };
 		EF4428CA263AD45900ADD537 /* BiometryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4428C9263AD45900ADD537 /* BiometryViewModel.swift */; };
+		EF4428CF263ADFF000ADD537 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4428CE263ADFF000ADD537 /* ResultViewController.swift */; };
 		EF77B8A5263802FE00B34B3E /* PasscodeStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77B8A4263802FE00B34B3E /* PasscodeStatusView.swift */; };
 		EF7965E326152D800052751C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7965E226152D800052751C /* Constants.swift */; };
 		EF7965F626152FEC0052751C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7965F526152FEC0052751C /* Colors.swift */; };
@@ -113,6 +114,7 @@
 		EF4428C1263AD40800ADD537 /* BiometryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometryAssembly.swift; sourceTree = "<group>"; };
 		EF4428C5263AD43000ADD537 /* BiometryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometryViewController.swift; sourceTree = "<group>"; };
 		EF4428C9263AD45900ADD537 /* BiometryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometryViewModel.swift; sourceTree = "<group>"; };
+		EF4428CE263ADFF000ADD537 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		EF77B8A4263802FE00B34B3E /* PasscodeStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeStatusView.swift; sourceTree = "<group>"; };
 		EF7965E226152D800052751C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EF7965F526152FEC0052751C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 		EF1D782426152A5300168CF9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EF4428CD263ADFDC00ADD537 /* ResultPage */,
 				EF4428BD263AD3D900ADD537 /* Biometry */,
 				EF9D0BE12636D6D6006E5472 /* Passcode */,
 				EF9D0BC02636988E006E5472 /* Password */,
@@ -332,6 +335,14 @@
 				EF4428C9263AD45900ADD537 /* BiometryViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF4428CD263ADFDC00ADD537 /* ResultPage */ = {
+			isa = PBXGroup;
+			children = (
+				EF4428CE263ADFF000ADD537 /* ResultViewController.swift */,
+			);
+			path = ResultPage;
 			sourceTree = "<group>";
 		};
 		EF77B8A3263802EE00B34B3E /* Status */ = {
@@ -880,6 +891,7 @@
 				EF09520E26233AD900AD02BB /* IndicatorExtension.swift in Sources */,
 				EF2DBAF32619E52F008C2B6E /* StringExtension.swift in Sources */,
 				EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */,
+				EF4428CF263ADFF000ADD537 /* ResultViewController.swift in Sources */,
 				EF9D0BEB2636D710006E5472 /* PasscodeViewModel.swift in Sources */,
 				EFAB6C99262B1B0A00250F4B /* AddEmailViewController.swift in Sources */,
 			);
