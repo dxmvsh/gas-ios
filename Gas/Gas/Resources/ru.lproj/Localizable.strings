@@ -43,3 +43,7 @@
 "pin code" = "Пин-код";
 "set pin code for fast access" = "Установите пин-код для быстрого доступа к приложению";
 "enter pin code for access" = "Введите пин-код для доступа к приложению";
+"set sign in by faceid" = "Установить вход по Face ID?";
+"sign in by faceid is secure" = "Вход по Face ID предоставит более защищенный доступ к приложению";
+"set up" = "Установить";
+"skip" = "Пропустить";

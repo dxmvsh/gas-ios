@@ -139,6 +139,18 @@ internal enum Text {
   internal static var setPinCodeForFastAccess: String {
       return Text.localized("Localizable", "set pin code for fast access")
   }
+  /// Установить вход по Face ID?
+  internal static var setSignInByFaceid: String {
+      return Text.localized("Localizable", "set sign in by faceid")
+  }
+  /// Установить
+  internal static var setUp: String {
+      return Text.localized("Localizable", "set up")
+  }
+  /// Вход по Face ID предоставит более защищенный доступ к приложению
+  internal static var signInByFaceidIsSecure: String {
+      return Text.localized("Localizable", "sign in by faceid is secure")
+  }
   /// Войдите или зарегистрируйтесь чтобы продолжить
   internal static var signInOrSignUpToContinue: String {
       return Text.localized("Localizable", "sign in or sign up to continue")
@@ -146,6 +158,10 @@ internal enum Text {
   /// Войти в приложение
   internal static var signInToApp: String {
       return Text.localized("Localizable", "sign in to app")
+  }
+  /// Пропустить
+  internal static var skip: String {
+      return Text.localized("Localizable", "skip")
   }
   /// Регистрация пользователя
   internal static var userRegistration: String {
