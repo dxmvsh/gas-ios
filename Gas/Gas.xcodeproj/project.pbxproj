@@ -24,6 +24,7 @@
 		EF2E936E262906F400C0ADD9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2E936D262906F400C0ADD9 /* BaseViewController.swift */; };
 		EF2E937626290D6000C0ADD9 /* AddPersonalAccountAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2E937526290D6000C0ADD9 /* AddPersonalAccountAssembly.swift */; };
 		EF2E937A26290DA100C0ADD9 /* AddPersonalAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2E937926290DA100C0ADD9 /* AddPersonalAccountViewModel.swift */; };
+		EF77B8A5263802FE00B34B3E /* PasscodeStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77B8A4263802FE00B34B3E /* PasscodeStatusView.swift */; };
 		EF7965E326152D800052751C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7965E226152D800052751C /* Constants.swift */; };
 		EF7965F626152FEC0052751C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7965F526152FEC0052751C /* Colors.swift */; };
 		EF7966052615336F0052751C /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7966042615336F0052751C /* LabelFactory.swift */; };
@@ -49,6 +50,12 @@
 		EF9D0BCE2636AC25006E5472 /* PasswordRuleViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BCD2636AC25006E5472 /* PasswordRuleViewAdapter.swift */; };
 		EF9D0BD22636BA55006E5472 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BD12636BA55006E5472 /* PasswordViewModel.swift */; };
 		EF9D0BD72636BD95006E5472 /* PasswordCheckerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BD62636BD95006E5472 /* PasswordCheckerService.swift */; };
+		EF9D0BE42636D6E8006E5472 /* PasscodeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BE32636D6E8006E5472 /* PasscodeAssembly.swift */; };
+		EF9D0BEB2636D710006E5472 /* PasscodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BEA2636D710006E5472 /* PasscodeViewModel.swift */; };
+		EF9D0BF12636D71D006E5472 /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BF02636D71D006E5472 /* PasscodeViewController.swift */; };
+		EF9D0BF82636D838006E5472 /* PasscodeKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BF72636D838006E5472 /* PasscodeKeyboardView.swift */; };
+		EF9D0BFE2636D8E5006E5472 /* PasscodeKeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BFD2636D8E5006E5472 /* PasscodeKeyboardButton.swift */; };
+		EF9D0C042636E155006E5472 /* PasscodeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0C032636E155006E5472 /* PasscodeInputView.swift */; };
 		EFAB6C54262912FA00250F4B /* CustomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C53262912FA00250F4B /* CustomToolbar.swift */; };
 		EFAB6C592629176000250F4B /* UserInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C582629176000250F4B /* UserInformationViewController.swift */; };
 		EFAB6C5D2629181000250F4B /* UserInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB6C5C2629181000250F4B /* UserInformationViewModel.swift */; };
@@ -100,6 +107,7 @@
 		EF2E936D262906F400C0ADD9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		EF2E937526290D6000C0ADD9 /* AddPersonalAccountAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonalAccountAssembly.swift; sourceTree = "<group>"; };
 		EF2E937926290DA100C0ADD9 /* AddPersonalAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonalAccountViewModel.swift; sourceTree = "<group>"; };
+		EF77B8A4263802FE00B34B3E /* PasscodeStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeStatusView.swift; sourceTree = "<group>"; };
 		EF7965E226152D800052751C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EF7965F526152FEC0052751C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		EF7966042615336F0052751C /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
@@ -128,6 +136,12 @@
 		EF9D0BCD2636AC25006E5472 /* PasswordRuleViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRuleViewAdapter.swift; sourceTree = "<group>"; };
 		EF9D0BD12636BA55006E5472 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 		EF9D0BD62636BD95006E5472 /* PasswordCheckerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCheckerService.swift; sourceTree = "<group>"; };
+		EF9D0BE32636D6E8006E5472 /* PasscodeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeAssembly.swift; sourceTree = "<group>"; };
+		EF9D0BEA2636D710006E5472 /* PasscodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewModel.swift; sourceTree = "<group>"; };
+		EF9D0BF02636D71D006E5472 /* PasscodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
+		EF9D0BF72636D838006E5472 /* PasscodeKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeKeyboardView.swift; sourceTree = "<group>"; };
+		EF9D0BFD2636D8E5006E5472 /* PasscodeKeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeKeyboardButton.swift; sourceTree = "<group>"; };
+		EF9D0C032636E155006E5472 /* PasscodeInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeInputView.swift; sourceTree = "<group>"; };
 		EFAB6C53262912FA00250F4B /* CustomToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbar.swift; sourceTree = "<group>"; };
 		EFAB6C582629176000250F4B /* UserInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationViewController.swift; sourceTree = "<group>"; };
 		EFAB6C5C2629181000250F4B /* UserInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationViewModel.swift; sourceTree = "<group>"; };
@@ -250,6 +264,7 @@
 		EF1D782426152A5300168CF9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EF9D0BE12636D6D6006E5472 /* Passcode */,
 				EF9D0BC02636988E006E5472 /* Password */,
 				EF9D0BB326367C79006E5472 /* OfferInformation */,
 				EFAB6C97262B1AF800250F4B /* AddEmail */,
@@ -276,6 +291,14 @@
 				EF1D782726152A9D00168CF9 /* InitialViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EF77B8A3263802EE00B34B3E /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				EF77B8A4263802FE00B34B3E /* PasscodeStatusView.swift */,
+			);
+			path = Status;
 			sourceTree = "<group>";
 		};
 		EF7965E126152D6D0052751C /* Common */ = {
@@ -493,6 +516,68 @@
 			path = Adapter;
 			sourceTree = "<group>";
 		};
+		EF9D0BE12636D6D6006E5472 /* Passcode */ = {
+			isa = PBXGroup;
+			children = (
+				EF9D0BE22636D6DC006E5472 /* Assembly */,
+				EF9D0BE92636D702006E5472 /* View */,
+				EF9D0BF42636D7B8006E5472 /* ViewModel */,
+			);
+			path = Passcode;
+			sourceTree = "<group>";
+		};
+		EF9D0BE22636D6DC006E5472 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				EF9D0BE32636D6E8006E5472 /* PasscodeAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		EF9D0BE92636D702006E5472 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF9D0BF62636D826006E5472 /* Additional */,
+				EF9D0BF02636D71D006E5472 /* PasscodeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF9D0BF42636D7B8006E5472 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF9D0BEA2636D710006E5472 /* PasscodeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF9D0BF62636D826006E5472 /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				EF77B8A3263802EE00B34B3E /* Status */,
+				EF9D0C022636DF50006E5472 /* Input */,
+				EF9D0C012636DF3C006E5472 /* Keyboard */,
+			);
+			path = Additional;
+			sourceTree = "<group>";
+		};
+		EF9D0C012636DF3C006E5472 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EF9D0BF72636D838006E5472 /* PasscodeKeyboardView.swift */,
+				EF9D0BFD2636D8E5006E5472 /* PasscodeKeyboardButton.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		EF9D0C022636DF50006E5472 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				EF9D0C032636E155006E5472 /* PasscodeInputView.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
 		EFAB6C572629174100250F4B /* UserInformation */ = {
 			isa = PBXGroup;
 			children = (
@@ -701,14 +786,17 @@
 				EFAB6C5D2629181000250F4B /* UserInformationViewModel.swift in Sources */,
 				EF796610261536CC0052751C /* SpaceFactory.swift in Sources */,
 				EFAB6C6A2629191200250F4B /* UserInformationDataModel.swift in Sources */,
+				EF9D0BFE2636D8E5006E5472 /* PasscodeKeyboardButton.swift in Sources */,
 				EF1D782826152A9D00168CF9 /* InitialViewController.swift in Sources */,
 				EF9D0BCE2636AC25006E5472 /* PasswordRuleViewAdapter.swift in Sources */,
+				EF9D0BF82636D838006E5472 /* PasscodeKeyboardView.swift in Sources */,
 				EF09521926233B2C00AD02BB /* EditingAction.swift in Sources */,
 				EFAB6C732629371A00250F4B /* AddPhoneViewController.swift in Sources */,
 				EF92E6E9261D86BD00E9ECEA /* Text.swift in Sources */,
 				EFAB6CA3262B1C8500250F4B /* AddEmailViewModel.swift in Sources */,
 				EF07B74F26233F1A007A45CE /* ClearableDelegate.swift in Sources */,
 				EFAB6C7B2629373400250F4B /* AddPhoneAssembly.swift in Sources */,
+				EF77B8A5263802FE00B34B3E /* PasscodeStatusView.swift in Sources */,
 				EF09521226233AF300AD02BB /* IndicatorProtocol.swift in Sources */,
 				EFAB6C812629924D00250F4B /* SmsVerificationViewController.swift in Sources */,
 				EF7965F626152FEC0052751C /* Colors.swift in Sources */,
@@ -718,6 +806,7 @@
 				EF9D0BB926367D1E006E5472 /* CheckBoxTitledView.swift in Sources */,
 				EF9D0BC626369932006E5472 /* PasswordViewController.swift in Sources */,
 				EF7965E326152D800052751C /* Constants.swift in Sources */,
+				EF9D0BE42636D6E8006E5472 /* PasscodeAssembly.swift in Sources */,
 				EF0952062623393300AD02BB /* LabeledTextField.swift in Sources */,
 				EF92E75A261DA43E00E9ECEA /* RegistrationCoordinator.swift in Sources */,
 				EFAB6C54262912FA00250F4B /* CustomToolbar.swift in Sources */,
@@ -726,6 +815,7 @@
 				EF9D0BCA26369BA6006E5472 /* PasswordRulesView.swift in Sources */,
 				EF9D0BD22636BA55006E5472 /* PasswordViewModel.swift in Sources */,
 				EF92E6E6261D86BD00E9ECEA /* Assets.swift in Sources */,
+				EF9D0C042636E155006E5472 /* PasscodeInputView.swift in Sources */,
 				EF92E749261DA3F600E9ECEA /* AddPersonalAccountViewController.swift in Sources */,
 				EFAB6C9F262B1C5400250F4B /* AddEmailAssembly.swift in Sources */,
 				EFAB6CA7262B1F9B00250F4B /* EmailVerificationViewModel.swift in Sources */,
@@ -734,6 +824,7 @@
 				EF2E937A26290DA100C0ADD9 /* AddPersonalAccountViewModel.swift in Sources */,
 				EF9D0BB526367C8E006E5472 /* OfferInformationViewController.swift in Sources */,
 				EF9D0BC2263698FB006E5472 /* PasswordAssembly.swift in Sources */,
+				EF9D0BF12636D71D006E5472 /* PasscodeViewController.swift in Sources */,
 				EF9D0BBD26368274006E5472 /* OfferConfirmationView.swift in Sources */,
 				EFAB6C90262AFCD400250F4B /* SmsVerificationViewModel.swift in Sources */,
 				EF7966052615336F0052751C /* LabelFactory.swift in Sources */,
@@ -745,6 +836,7 @@
 				EF09520E26233AD900AD02BB /* IndicatorExtension.swift in Sources */,
 				EF2DBAF32619E52F008C2B6E /* StringExtension.swift in Sources */,
 				EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */,
+				EF9D0BEB2636D710006E5472 /* PasscodeViewModel.swift in Sources */,
 				EFAB6C99262B1B0A00250F4B /* AddEmailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
