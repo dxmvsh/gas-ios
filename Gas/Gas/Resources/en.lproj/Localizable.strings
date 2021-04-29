@@ -40,3 +40,6 @@
 "at least 1 lowercase letter" = "Минимум одну прописную букву";
 "at least 1 digit" = "Минимум одну цифру";
 "at least one of next chars" = "Одну из следующих знаков: .!@#$%^&*";
+"pin code" = "Пин-код";
+"set pin code for fast access" = "Установите пин-код для быстрого доступа к приложению";
+"enter pin code for access" = "Введите пин-код для доступа к приложению";

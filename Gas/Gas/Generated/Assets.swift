@@ -26,6 +26,8 @@ internal enum Asset {
   internal static let checkboxSelected = ImageAsset(name: "checkbox_selected")
   internal static let nbBackIcon = ImageAsset(name: "nb_back_icon")
   internal static let nbSupportIcon = ImageAsset(name: "nb_support_icon")
+  internal static let backspace = ImageAsset(name: "backspace")
+  internal static let biometry = ImageAsset(name: "biometry")
   internal static let iconEyeClosed = ImageAsset(name: "icon_eye_closed")
   internal static let iconEyeOpen = ImageAsset(name: "icon_eye_open")
   internal static let infoIcon = ImageAsset(name: "info_icon")

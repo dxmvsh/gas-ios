@@ -83,6 +83,10 @@ internal enum Text {
   internal static var enterPhoneNumberToRegister: String {
       return Text.localized("Localizable", "enter phone number to register")
   }
+  /// Введите пин-код для доступа к приложению
+  internal static var enterPinCodeForAccess: String {
+      return Text.localized("Localizable", "enter pin code for access")
+  }
   /// Ф.И.О
   internal static var fio: String {
       return Text.localized("Localizable", "fio")
@@ -102,6 +106,10 @@ internal enum Text {
   /// Номер лицевого счета
   internal static var personalAccountNumber: String {
       return Text.localized("Localizable", "personal account number")
+  }
+  /// Пин-код
+  internal static var pinCode: String {
+      return Text.localized("Localizable", "pin code")
   }
   /// Пожалуйста, введите электронную почту
   internal static var pleaseEnterEmail: String {
@@ -126,6 +134,10 @@ internal enum Text {
   /// Отправить повторно через %@
   internal static func resendCodeAfter(_ p1: String) -> String {
     return Text.localized("Localizable", "resend code after %@", p1)
+  }
+  /// Установите пин-код для быстрого доступа к приложению
+  internal static var setPinCodeForFastAccess: String {
+      return Text.localized("Localizable", "set pin code for fast access")
   }
   /// Войдите или зарегистрируйтесь чтобы продолжить
   internal static var signInOrSignUpToContinue: String {
