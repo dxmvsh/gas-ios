@@ -18,6 +18,7 @@ protocol RegistrationCoordinator {
     func moveToOfferInfo()
     func moveToSetPassword()
     func moveToSetPasscode()
+    func moveToSetBiometry()
     func moveToResultPage()
 }
 
@@ -30,7 +31,7 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
     }
     
     func start() {
-        moveToSetPassword()
+        moveToPersonalAccount()
     }
     
     func moveToPersonalAccount() {
@@ -80,11 +81,16 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
     }
     
     func moveToSetPasscode() {
+        let viewController = PasscodeAssembly().assemble(self)
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func moveToSetBiometry() {
         
     }
     
     func moveToResultPage() {
-        
+        navigationController.popToRootViewController(animated: true)
     }
 }
 
@@ -139,6 +145,18 @@ extension RegistrationCoordinatorManager: PasswordModuleOutput {
     }
     
     func didFailPasswordSet() {
+        
+    }
+    
+}
+
+extension RegistrationCoordinatorManager: PasscodeModuleOutput {
+    
+    func didSucceedPasscodeModule() {
+        moveToSetBiometry()
+    }
+    
+    func didFailPasscodeModule() {
         
     }
     
