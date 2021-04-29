@@ -11,6 +11,7 @@ enum PasscodeKeyboardButtonType {
     case custom(text: String)
     case empty
     case delete
+    case biometry
 }
 
 class PasscodeKeyboardButton: UIButton {
@@ -22,6 +23,8 @@ class PasscodeKeyboardButton: UIButton {
             switch type {
             case .custom(let text):
                 return !text.isEmpty
+            case .empty:
+                return false
             default:
                 return true
             }
@@ -46,10 +49,14 @@ class PasscodeKeyboardButton: UIButton {
             setTitle(text, for: .normal)
         case .delete:
             setImage(Asset.backspace.image, for: .normal)
+        case .biometry:
+            setImage(Asset.biometry.image, for: .normal)
         case .empty:
             setTitle(nil, for: .normal)
         }
-        titleLabel?.font = UIFont.systemFont(ofSize: 32)
+        titleLabel?.font = UIFont.systemFont(ofSize: 32, weight: .light)
+        setTitleColor(Color.darkGray, for: .normal)
+        addTarget(self, action: #selector(didTap), for: .touchUpInside)
     }
     
     @objc

@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+class PasscodeViewModel: PasscodeViewOutput {
+    
+    weak var view: PasscodeViewInput?
+    var output: PasscodeModuleOutput?
+    
+}
