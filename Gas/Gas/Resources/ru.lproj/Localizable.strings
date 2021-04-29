@@ -47,3 +47,8 @@
 "sign in by faceid is secure" = "Вход по Face ID предоставит более защищенный доступ к приложению";
 "set up" = "Установить";
 "skip" = "Пропустить";
+"congrats" = "Поздравляем!";
+"you registered successfully" = "Вы успешно зарегистрировались.";
+"error" = "Ошибка";
+"error happened while registering" = "Произошла ошибка при регистрации.";
+"try again" = "Попробуйте еще раз.";

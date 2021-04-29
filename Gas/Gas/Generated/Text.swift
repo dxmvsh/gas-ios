@@ -47,6 +47,10 @@ internal enum Text {
   internal static var confirmPassword: String {
       return Text.localized("Localizable", "confirm password")
   }
+  /// Поздравляем!
+  internal static var congrats: String {
+      return Text.localized("Localizable", "congrats")
+  }
   /// Продолжить
   internal static var `continue`: String {
       return Text.localized("Localizable", "continue")
@@ -86,6 +90,14 @@ internal enum Text {
   /// Введите пин-код для доступа к приложению
   internal static var enterPinCodeForAccess: String {
       return Text.localized("Localizable", "enter pin code for access")
+  }
+  /// Ошибка
+  internal static var error: String {
+      return Text.localized("Localizable", "error")
+  }
+  /// Произошла ошибка при регистрации.
+  internal static var errorHappenedWhileRegistering: String {
+      return Text.localized("Localizable", "error happened while registering")
   }
   /// Ф.И.О
   internal static var fio: String {
@@ -163,6 +175,10 @@ internal enum Text {
   internal static var skip: String {
       return Text.localized("Localizable", "skip")
   }
+  /// Попробуйте еще раз.
+  internal static var tryAgain: String {
+      return Text.localized("Localizable", "try again")
+  }
   /// Регистрация пользователя
   internal static var userRegistration: String {
       return Text.localized("Localizable", "user registration")
@@ -178,6 +194,10 @@ internal enum Text {
   /// Условиями оферты
   internal static var withOfferConditions: String {
       return Text.localized("Localizable", "with offer conditions")
+  }
+  /// Вы успешно зарегистрировались.
+  internal static var youRegisteredSuccessfully: String {
+      return Text.localized("Localizable", "you registered successfully")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

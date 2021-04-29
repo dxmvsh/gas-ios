@@ -31,7 +31,7 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
     }
     
     func start() {
-        moveToPersonalAccount()
+        moveToResultPage()
     }
     
     func moveToPersonalAccount() {
@@ -91,7 +91,9 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
     }
     
     func moveToResultPage() {
-        navigationController.popToRootViewController(animated: true)
+        let viewController = ResultViewController()
+        viewController.setSuccessState()
+        navigationController.pushViewController(viewController, animated: true)
     }
 }
 
