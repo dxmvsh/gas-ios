@@ -7,6 +7,16 @@
 
 import Foundation
 
-class BiometryViewModel {
+class BiometryViewModel: BiometryViewOutput {
+    
+    var output: BiometryModuleOutput?
+    
+    func didTapPrimaryButton() {
+        output?.didSucceedBiometry()
+    }
+    
+    func didTapSecondaryButton() {
+        output?.didFailBiometry()
+    }
     
 }

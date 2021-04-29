@@ -13,6 +13,8 @@ fileprivate enum Constants {
 
 class BiometryViewController: BaseViewController {
     
+    var output: BiometryViewOutput?
+    
     private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical

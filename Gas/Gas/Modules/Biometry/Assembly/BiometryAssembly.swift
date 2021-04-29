@@ -7,10 +7,25 @@
 
 import UIKit
 
+protocol BiometryViewOutput {
+    func didTapPrimaryButton()
+    func didTapSecondaryButton()
+}
+
+protocol BiometryModuleOutput {
+    func didSucceedBiometry()
+    func didFailBiometry()
+}
+
 class BiometryAssembly {
     
-    func assemble() -> UIViewController {
+    func assemble(_ moduleOutput: BiometryModuleOutput? = nil) -> UIViewController {
         let view = BiometryViewController()
+        let viewModel = BiometryViewModel()
+        
+        view.output = viewModel
+        viewModel.output = moduleOutput
+        
         return view
     }
     
