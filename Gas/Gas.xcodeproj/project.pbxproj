@@ -24,6 +24,9 @@
 		EF2E936E262906F400C0ADD9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2E936D262906F400C0ADD9 /* BaseViewController.swift */; };
 		EF2E937626290D6000C0ADD9 /* AddPersonalAccountAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2E937526290D6000C0ADD9 /* AddPersonalAccountAssembly.swift */; };
 		EF2E937A26290DA100C0ADD9 /* AddPersonalAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2E937926290DA100C0ADD9 /* AddPersonalAccountViewModel.swift */; };
+		EF4428C2263AD40800ADD537 /* BiometryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4428C1263AD40800ADD537 /* BiometryAssembly.swift */; };
+		EF4428C6263AD43000ADD537 /* BiometryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4428C5263AD43000ADD537 /* BiometryViewController.swift */; };
+		EF4428CA263AD45900ADD537 /* BiometryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4428C9263AD45900ADD537 /* BiometryViewModel.swift */; };
 		EF77B8A5263802FE00B34B3E /* PasscodeStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77B8A4263802FE00B34B3E /* PasscodeStatusView.swift */; };
 		EF7965E326152D800052751C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7965E226152D800052751C /* Constants.swift */; };
 		EF7965F626152FEC0052751C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7965F526152FEC0052751C /* Colors.swift */; };
@@ -107,6 +110,9 @@
 		EF2E936D262906F400C0ADD9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		EF2E937526290D6000C0ADD9 /* AddPersonalAccountAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonalAccountAssembly.swift; sourceTree = "<group>"; };
 		EF2E937926290DA100C0ADD9 /* AddPersonalAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonalAccountViewModel.swift; sourceTree = "<group>"; };
+		EF4428C1263AD40800ADD537 /* BiometryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometryAssembly.swift; sourceTree = "<group>"; };
+		EF4428C5263AD43000ADD537 /* BiometryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometryViewController.swift; sourceTree = "<group>"; };
+		EF4428C9263AD45900ADD537 /* BiometryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometryViewModel.swift; sourceTree = "<group>"; };
 		EF77B8A4263802FE00B34B3E /* PasscodeStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeStatusView.swift; sourceTree = "<group>"; };
 		EF7965E226152D800052751C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EF7965F526152FEC0052751C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -264,6 +270,7 @@
 		EF1D782426152A5300168CF9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EF4428BD263AD3D900ADD537 /* Biometry */,
 				EF9D0BE12636D6D6006E5472 /* Passcode */,
 				EF9D0BC02636988E006E5472 /* Password */,
 				EF9D0BB326367C79006E5472 /* OfferInformation */,
@@ -291,6 +298,40 @@
 				EF1D782726152A9D00168CF9 /* InitialViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EF4428BD263AD3D900ADD537 /* Biometry */ = {
+			isa = PBXGroup;
+			children = (
+				EF4428BE263AD3E000ADD537 /* Assembly */,
+				EF4428BF263AD3F200ADD537 /* View */,
+				EF4428C0263AD3F500ADD537 /* ViewModel */,
+			);
+			path = Biometry;
+			sourceTree = "<group>";
+		};
+		EF4428BE263AD3E000ADD537 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				EF4428C1263AD40800ADD537 /* BiometryAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		EF4428BF263AD3F200ADD537 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF4428C5263AD43000ADD537 /* BiometryViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF4428C0263AD3F500ADD537 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF4428C9263AD45900ADD537 /* BiometryViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EF77B8A3263802EE00B34B3E /* Status */ = {
@@ -801,10 +842,12 @@
 				EFAB6C812629924D00250F4B /* SmsVerificationViewController.swift in Sources */,
 				EF7965F626152FEC0052751C /* Colors.swift in Sources */,
 				EF09520A26233A6E00AD02BB /* FontExtension.swift in Sources */,
+				EF4428C6263AD43000ADD537 /* BiometryViewController.swift in Sources */,
 				EF2E937626290D6000C0ADD9 /* AddPersonalAccountAssembly.swift in Sources */,
 				EFAB6C8C262AF8B100250F4B /* SmsCodeDigitLabel.swift in Sources */,
 				EF9D0BB926367D1E006E5472 /* CheckBoxTitledView.swift in Sources */,
 				EF9D0BC626369932006E5472 /* PasswordViewController.swift in Sources */,
+				EF4428C2263AD40800ADD537 /* BiometryAssembly.swift in Sources */,
 				EF7965E326152D800052751C /* Constants.swift in Sources */,
 				EF9D0BE42636D6E8006E5472 /* PasscodeAssembly.swift in Sources */,
 				EF0952062623393300AD02BB /* LabeledTextField.swift in Sources */,
@@ -812,6 +855,7 @@
 				EFAB6C54262912FA00250F4B /* CustomToolbar.swift in Sources */,
 				EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */,
 				EFAB6C592629176000250F4B /* UserInformationViewController.swift in Sources */,
+				EF4428CA263AD45900ADD537 /* BiometryViewModel.swift in Sources */,
 				EF9D0BCA26369BA6006E5472 /* PasswordRulesView.swift in Sources */,
 				EF9D0BD22636BA55006E5472 /* PasswordViewModel.swift in Sources */,
 				EF92E6E6261D86BD00E9ECEA /* Assets.swift in Sources */,
