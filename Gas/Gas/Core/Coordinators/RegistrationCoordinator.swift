@@ -86,7 +86,8 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
     }
     
     func moveToSetBiometry() {
-        
+        let viewController = BiometryAssembly().assemble(self)
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func moveToResultPage() {
@@ -160,4 +161,14 @@ extension RegistrationCoordinatorManager: PasscodeModuleOutput {
         
     }
     
+}
+
+extension RegistrationCoordinatorManager: BiometryModuleOutput {
+    func didSucceedBiometry() {
+        moveToResultPage()
+    }
+    
+    func didFailBiometry() {
+        moveToResultPage()
+    }
 }
