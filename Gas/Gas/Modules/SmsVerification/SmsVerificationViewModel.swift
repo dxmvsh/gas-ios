@@ -12,12 +12,26 @@ class SmsVerificationViewModel: SmsVerificationViewOutput {
     weak var view: SmsVerificationViewInput?
     var output: SmsVerificationModuleOutput?
     
+    private let dataProvider: AuthorizationService
+    
+    init(dataProvider: AuthorizationService) {
+        self.dataProvider = dataProvider
+    }
+    
     func didLoad() { }
     
     func didEnterCode(_ code: String) {
-        view?.setErrorStyle(message: "You failed")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.output?.didSucceed()
+        dataProvider.verify(code: code) { [weak self] result in
+            switch result {
+            case .success(let message):
+                if message.message == .success {
+                    self?.output?.didSucceed()
+                } else {
+                    self?.view?.setErrorStyle(message: Text.invalidCode)
+                }
+            case .failure(let error):
+                self?.output?.didFail()
+            }
         }
     }
 }

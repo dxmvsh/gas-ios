@@ -31,7 +31,8 @@ class SmsVerificationAssembly {
     
     func assemblePhone(_ moduleOutput: SmsVerificationModuleOutput? = nil) -> UIViewController {
         let view = SmsVerificationViewController()
-        let viewModel = SmsVerificationViewModel()
+        let dataProvider = AuthorizationService()
+        let viewModel = SmsVerificationViewModel(dataProvider: dataProvider)
         
         view.output = viewModel
         viewModel.view = view

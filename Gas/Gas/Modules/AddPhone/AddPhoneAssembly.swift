@@ -23,7 +23,8 @@ class AddPhoneAssembly {
     
     func assemble(_ moduleOutput: AddPhoneModuleOutput? = nil) -> UIViewController {
         let view = AddPhoneViewController()
-        let viewModel = AddPhoneViewModel()
+        let dataProvider = AuthorizationService()
+        let viewModel = AddPhoneViewModel(dataProvider: dataProvider)
         viewModel.view = view
         view.output = viewModel
         viewModel.output = moduleOutput
