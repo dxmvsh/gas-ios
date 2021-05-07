@@ -57,7 +57,6 @@ class NetworkDataProvider<Target: TargetType> {
     private var dataProvider: MoyaProvider<Target>
     
     // MARK: - Initializers
-    
     public init(
         networkReachibilityChecker: NetworkReachabilityManager = NetworkReachabilityManager()!,
         endpointClosure: @escaping MoyaProvider<Target>.EndpointClosure = MoyaProvider<Target>.defaultEndpointMapping,
@@ -65,7 +64,9 @@ class NetworkDataProvider<Target: TargetType> {
         stubClosure: @escaping MoyaProvider<Target>.StubClosure = MoyaProvider<Target>.neverStub,
         callbackQueue: DispatchQueue? = nil,
         session: Session = Session(configuration: URLSessionConfiguration.default),
-        plugins: [PluginType] = [],
+        plugins: [PluginType] = [NetworkLoggerPlugin(configuration: NetworkLoggerPlugin.Configuration(formatter: NetworkLoggerPlugin.Configuration.Formatter(),
+                                                                                                      output: NetworkLoggerPlugin.Configuration.defaultOutput(target:items:),
+                                                                                                      logOptions: NetworkLoggerPlugin.Configuration.LogOptions.verbose))],
         trackInflights: Bool = false
     ) {
         self.networkReachibilityChecker = networkReachibilityChecker
