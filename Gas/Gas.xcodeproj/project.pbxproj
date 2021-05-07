@@ -44,7 +44,6 @@
 		EF7B09D626456A3200307772 /* AuthTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09D526456A3200307772 /* AuthTarget.swift */; };
 		EF7B09DC26456B9600307772 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09DB26456B9600307772 /* AuthorizationService.swift */; };
 		EF7B09E026456EEE00307772 /* JSONCodingKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09DF26456EEE00307772 /* JSONCodingKeys.swift */; };
-		EF7B09E42645739200307772 /* PhoneAuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09E32645739200307772 /* PhoneAuthToken.swift */; };
 		EF7B09E82645747200307772 /* QueryEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09E72645747200307772 /* QueryEncoding.swift */; };
 		EF7B09EC2645792A00307772 /* MessageStatusDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09EB2645792A00307772 /* MessageStatusDataModel.swift */; };
 		EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6B5261D773D00E9ECEA /* Button.swift */; };
@@ -143,7 +142,6 @@
 		EF7B09D526456A3200307772 /* AuthTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTarget.swift; sourceTree = "<group>"; };
 		EF7B09DB26456B9600307772 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		EF7B09DF26456EEE00307772 /* JSONCodingKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCodingKeys.swift; sourceTree = "<group>"; };
-		EF7B09E32645739200307772 /* PhoneAuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthToken.swift; sourceTree = "<group>"; };
 		EF7B09E72645747200307772 /* QueryEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryEncoding.swift; sourceTree = "<group>"; };
 		EF7B09EB2645792A00307772 /* MessageStatusDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStatusDataModel.swift; sourceTree = "<group>"; };
 		EF92E6B5261D773D00E9ECEA /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
@@ -702,7 +700,6 @@
 			isa = PBXGroup;
 			children = (
 				EFAB6C692629191200250F4B /* UserInformationDataModel.swift */,
-				EF7B09E32645739200307772 /* PhoneAuthToken.swift */,
 				EF7B09EB2645792A00307772 /* MessageStatusDataModel.swift */,
 			);
 			path = DataModels;
@@ -904,7 +901,6 @@
 				EF1D782826152A9D00168CF9 /* InitialViewController.swift in Sources */,
 				EF9D0BCE2636AC25006E5472 /* PasswordRuleViewAdapter.swift in Sources */,
 				EF9D0BF82636D838006E5472 /* PasscodeKeyboardView.swift in Sources */,
-				EF7B09E42645739200307772 /* PhoneAuthToken.swift in Sources */,
 				EF09521926233B2C00AD02BB /* EditingAction.swift in Sources */,
 				EFAB6C732629371A00250F4B /* AddPhoneViewController.swift in Sources */,
 				EF92E6E9261D86BD00E9ECEA /* Text.swift in Sources */,

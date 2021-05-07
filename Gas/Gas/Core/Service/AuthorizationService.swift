@@ -11,7 +11,7 @@ typealias ResponseCompletion<T> = (Result<T, GeneralError>) -> Void
 
 protocol AuthorizationServiceProtocol {
     func getUserInformation(accountNumber: String, completion: @escaping ResponseCompletion<UserInformationDataModel>)
-    func sendOTP(phoneToken: PhoneAuthTokenSend, completion: @escaping ResponseCompletion<MessageStatusDataModel>)
+    func sendOTP(phoneNumber: String, completion: @escaping ResponseCompletion<MessageStatusDataModel>)
     func verify(code: String, completion: @escaping ResponseCompletion<MessageStatusDataModel>)
 }
 
@@ -38,8 +38,8 @@ class AuthorizationService: AuthorizationServiceProtocol {
         }
     }
     
-    func sendOTP(phoneToken: PhoneAuthTokenSend, completion: @escaping ResponseCompletion<MessageStatusDataModel>) {
-        dataProvider.request(.smsInit(phoneToken: phoneToken)) { result in
+    func sendOTP(phoneNumber: String, completion: @escaping ResponseCompletion<MessageStatusDataModel>) {
+        dataProvider.request(.smsInit(phoneNumber: phoneNumber)) { result in
             switch result {
             case .success(let response):
                 guard let model = try? JSONDecoder().decode(MessageStatusDataModel.self, from: response.data) else {

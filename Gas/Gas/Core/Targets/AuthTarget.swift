@@ -10,7 +10,7 @@ import Moya
 enum AuthTarget: TargetType {
     
     case accountNumber(number: String)
-    case smsInit(phoneToken: PhoneAuthTokenSend)
+    case smsInit(phoneNumber: String)
     case verify(code: String)
     
     var baseURL: URL {
@@ -45,8 +45,8 @@ enum AuthTarget: TargetType {
         switch self {
         case .accountNumber:
             return .requestPlain
-        case .smsInit(let phoneToken):
-            return .requestParameters(parameters: ["mobile_phone": phoneToken.mobile_phone], encoding: JSONEncoding.default)
+        case .smsInit(let phoneNumber):
+            return .requestParameters(parameters: ["mobile_phone": phoneNumber], encoding: JSONEncoding.default)
         case .verify(let code):
             return .requestParameters(parameters: ["otp_code": code], encoding: JSONEncoding.default)
         }

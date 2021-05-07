@@ -18,7 +18,7 @@ class AddPhoneViewModel: AddPhoneViewOutput {
     }
     
     func didTapSubmit(with phoneNumber: String) {
-        dataProvider.sendOTP(phoneToken: PhoneAuthTokenSend(mobile_phone: "+\(phoneNumber)")) { [weak self] result in
+        dataProvider.sendOTP(phoneNumber: "+\(phoneNumber)") { [weak self] result in
             switch result {
             case .success(let message):
                 if message.message == .success {
