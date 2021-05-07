@@ -13,6 +13,12 @@ class EmailVerificationViewModel: SmsVerificationViewOutput {
     var output: EmailVerificationModuleOutput?
     var email: String? = nil
     
+    private let dataProvider: AuthorizationService
+    
+    init(dataProvider: AuthorizationService) {
+        self.dataProvider = dataProvider
+    }
+    
     func didLoad() {
         if let email = email {
             view?.setTitleAndSubtitleTexts(title: Text.emailVerification,
@@ -25,9 +31,17 @@ class EmailVerificationViewModel: SmsVerificationViewOutput {
     }
     
     func didEnterCode(_ code: String) {
-        view?.setErrorStyle(message: "You failed")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.output?.didSucceedEmailVerification()
+        dataProvider.verify(code: code) { [weak self] result in
+            switch result {
+            case .success(let message):
+                if message.message == .success {
+                    self?.output?.didSucceedEmailVerification()
+                } else {
+                    self?.view?.setErrorStyle(message: Text.invalidCode)
+                }
+            case .failure(let error):
+                self?.output?.didFailEmailVerification()
+            }
         }
     }
 }

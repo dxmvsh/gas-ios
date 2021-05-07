@@ -12,6 +12,7 @@ enum AuthTarget: TargetType {
     case accountNumber(number: String)
     case smsInit(phoneNumber: String)
     case verify(code: String)
+    case emailInit(email: String)
     
     var baseURL: URL {
         return URL(string: "http://130.61.58.200/api/")!
@@ -25,6 +26,8 @@ enum AuthTarget: TargetType {
             return "auth/otp/send/"
         case .verify:
             return "auth/otp/verify/"
+        case .emailInit:
+            return "auth/otp/email/"
         }
     }
     
@@ -35,6 +38,8 @@ enum AuthTarget: TargetType {
         case .smsInit:
             return .post
         case .verify:
+            return .post
+        case .emailInit:
             return .post
         }
     }
@@ -47,6 +52,8 @@ enum AuthTarget: TargetType {
             return .requestPlain
         case .smsInit(let phoneNumber):
             return .requestParameters(parameters: ["mobile_phone": phoneNumber], encoding: JSONEncoding.default)
+        case .emailInit(let email):
+            return .requestParameters(parameters: ["email": email], encoding: JSONEncoding.default)
         case .verify(let code):
             return .requestParameters(parameters: ["otp_code": code], encoding: JSONEncoding.default)
         }

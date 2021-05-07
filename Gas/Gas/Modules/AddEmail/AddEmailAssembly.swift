@@ -23,7 +23,8 @@ class AddEmailAssembly {
     
     func assemble(_ moduleOutput: AddEmailModuleOutput? = nil) -> UIViewController {
         let view = AddEmailViewController()
-        let viewModel = AddEmailViewModel()
+        let dataProvider = AuthorizationService()
+        let viewModel = AddEmailViewModel(dataProvider: dataProvider)
         viewModel.view = view
         view.output = viewModel
         viewModel.output = moduleOutput

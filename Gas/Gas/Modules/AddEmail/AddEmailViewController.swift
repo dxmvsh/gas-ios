@@ -53,7 +53,7 @@ class AddEmailViewController: BaseViewController, AddEmailViewInput {
     
     @objc
     private func didTapContinue() {
-        output?.didTapSubmit(with: emailTextField.publicRealString.onlyDigits)
+        output?.didTapSubmit(with: emailTextField.publicRealString)
     }
     
 }

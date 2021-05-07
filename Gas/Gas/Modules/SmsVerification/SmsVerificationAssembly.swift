@@ -43,7 +43,8 @@ class SmsVerificationAssembly {
     
     func assembleEmail(_ moduleOutput: EmailVerificationModuleOutput? = nil, email: String) -> UIViewController {
         let view = SmsVerificationViewController()
-        let viewModel = EmailVerificationViewModel()
+        let dataProvider = AuthorizationService()
+        let viewModel = EmailVerificationViewModel(dataProvider: dataProvider)
         
         view.output = viewModel
         viewModel.view = view

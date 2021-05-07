@@ -12,6 +12,7 @@ typealias ResponseCompletion<T> = (Result<T, GeneralError>) -> Void
 protocol AuthorizationServiceProtocol {
     func getUserInformation(accountNumber: String, completion: @escaping ResponseCompletion<UserInformationDataModel>)
     func sendOTP(phoneNumber: String, completion: @escaping ResponseCompletion<MessageStatusDataModel>)
+    func sendEmailOTP(email: String, completion: @escaping ResponseCompletion<MessageStatusDataModel>)
     func verify(code: String, completion: @escaping ResponseCompletion<MessageStatusDataModel>)
 }
 
@@ -40,6 +41,21 @@ class AuthorizationService: AuthorizationServiceProtocol {
     
     func sendOTP(phoneNumber: String, completion: @escaping ResponseCompletion<MessageStatusDataModel>) {
         dataProvider.request(.smsInit(phoneNumber: phoneNumber)) { result in
+            switch result {
+            case .success(let response):
+                guard let model = try? JSONDecoder().decode(MessageStatusDataModel.self, from: response.data) else {
+                    completion(.failure(.custom("JSON parsing error")))
+                    return
+                }
+                completion(.success(model))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func sendEmailOTP(email: String, completion: @escaping ResponseCompletion<MessageStatusDataModel>) {
+        dataProvider.request(.emailInit(email: email)) { result in
             switch result {
             case .success(let response):
                 guard let model = try? JSONDecoder().decode(MessageStatusDataModel.self, from: response.data) else {
