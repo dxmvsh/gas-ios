@@ -35,6 +35,15 @@
 		EF79660B2615348F0052751C /* LabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF79660A2615348F0052751C /* LabelExtension.swift */; };
 		EF796610261536CC0052751C /* SpaceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF79660F261536CC0052751C /* SpaceFactory.swift */; };
 		EF79661626153F810052751C /* MaskedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF79661526153F810052751C /* MaskedTextField.swift */; };
+		EF7B09AA2645664400307772 /* NetworkDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09A92645664400307772 /* NetworkDataProvider.swift */; };
+		EF7B09B4264566CB00307772 /* Moya+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09B3264566CB00307772 /* Moya+Alamofire.swift */; };
+		EF7B09C52645684000307772 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09C42645684000307772 /* ApiError.swift */; };
+		EF7B09C92645685F00307772 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09C82645685F00307772 /* Converter.swift */; };
+		EF7B09CD2645690400307772 /* CodableContainersExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09CC2645690400307772 /* CodableContainersExtension.swift */; };
+		EF7B09D12645694700307772 /* NetworkReachabilityChecking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09D02645694700307772 /* NetworkReachabilityChecking.swift */; };
+		EF7B09D626456A3200307772 /* AuthTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09D526456A3200307772 /* AuthTarget.swift */; };
+		EF7B09DC26456B9600307772 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09DB26456B9600307772 /* AuthorizationService.swift */; };
+		EF7B09E026456EEE00307772 /* JSONCodingKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09DF26456EEE00307772 /* JSONCodingKeys.swift */; };
 		EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6B5261D773D00E9ECEA /* Button.swift */; };
 		EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6BA261D778400E9ECEA /* ViewExtension.swift */; };
 		EF92E6DA261D858C00E9ECEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF92E6DC261D858C00E9ECEA /* Localizable.strings */; };
@@ -122,6 +131,15 @@
 		EF79660A2615348F0052751C /* LabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtension.swift; sourceTree = "<group>"; };
 		EF79660F261536CC0052751C /* SpaceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceFactory.swift; sourceTree = "<group>"; };
 		EF79661526153F810052751C /* MaskedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskedTextField.swift; sourceTree = "<group>"; };
+		EF7B09A92645664400307772 /* NetworkDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataProvider.swift; sourceTree = "<group>"; };
+		EF7B09B3264566CB00307772 /* Moya+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+Alamofire.swift"; sourceTree = "<group>"; };
+		EF7B09C42645684000307772 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		EF7B09C82645685F00307772 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		EF7B09CC2645690400307772 /* CodableContainersExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableContainersExtension.swift; sourceTree = "<group>"; };
+		EF7B09D02645694700307772 /* NetworkReachabilityChecking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityChecking.swift; sourceTree = "<group>"; };
+		EF7B09D526456A3200307772 /* AuthTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTarget.swift; sourceTree = "<group>"; };
+		EF7B09DB26456B9600307772 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
+		EF7B09DF26456EEE00307772 /* JSONCodingKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCodingKeys.swift; sourceTree = "<group>"; };
 		EF92E6B5261D773D00E9ECEA /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		EF92E6BA261D778400E9ECEA /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		EF92E6D0261D852400E9ECEA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -365,6 +383,9 @@
 		EF7965FA261533460052751C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EF7B09DA26456B8B00307772 /* Service */,
+				EF7B09D426456A2700307772 /* Targets */,
+				EF7B09A82645663500307772 /* DataProvider */,
 				EF9D0BD52636BD7C006E5472 /* Services */,
 				EFAB6C682629190A00250F4B /* DataModels */,
 				EF8947FC2625C64200338039 /* Base */,
@@ -409,6 +430,36 @@
 				EF9D0BB826367D1E006E5472 /* CheckBoxTitledView.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		EF7B09A82645663500307772 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B09A92645664400307772 /* NetworkDataProvider.swift */,
+				EF7B09B3264566CB00307772 /* Moya+Alamofire.swift */,
+				EF7B09C42645684000307772 /* ApiError.swift */,
+				EF7B09C82645685F00307772 /* Converter.swift */,
+				EF7B09CC2645690400307772 /* CodableContainersExtension.swift */,
+				EF7B09D02645694700307772 /* NetworkReachabilityChecking.swift */,
+				EF7B09DF26456EEE00307772 /* JSONCodingKeys.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		EF7B09D426456A2700307772 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B09D526456A3200307772 /* AuthTarget.swift */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		EF7B09DA26456B8B00307772 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B09DB26456B9600307772 /* AuthorizationService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		EF8947FC2625C64200338039 /* Base */ = {
@@ -832,6 +883,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7B09B4264566CB00307772 /* Moya+Alamofire.swift in Sources */,
+				EF7B09DC26456B9600307772 /* AuthorizationService.swift in Sources */,
 				EF79660B2615348F0052751C /* LabelExtension.swift in Sources */,
 				EFAB6C772629372600250F4B /* AddPhoneViewModel.swift in Sources */,
 				EF79661626153F810052751C /* MaskedTextField.swift in Sources */,
@@ -852,11 +905,13 @@
 				EF09521226233AF300AD02BB /* IndicatorProtocol.swift in Sources */,
 				EFAB6C812629924D00250F4B /* SmsVerificationViewController.swift in Sources */,
 				EF7965F626152FEC0052751C /* Colors.swift in Sources */,
+				EF7B09D12645694700307772 /* NetworkReachabilityChecking.swift in Sources */,
 				EF09520A26233A6E00AD02BB /* FontExtension.swift in Sources */,
 				EF4428C6263AD43000ADD537 /* BiometryViewController.swift in Sources */,
 				EF2E937626290D6000C0ADD9 /* AddPersonalAccountAssembly.swift in Sources */,
 				EFAB6C8C262AF8B100250F4B /* SmsCodeDigitLabel.swift in Sources */,
 				EF9D0BB926367D1E006E5472 /* CheckBoxTitledView.swift in Sources */,
+				EF7B09D626456A3200307772 /* AuthTarget.swift in Sources */,
 				EF9D0BC626369932006E5472 /* PasswordViewController.swift in Sources */,
 				EF4428C2263AD40800ADD537 /* BiometryAssembly.swift in Sources */,
 				EF7965E326152D800052751C /* Constants.swift in Sources */,
@@ -865,6 +920,7 @@
 				EF92E75A261DA43E00E9ECEA /* RegistrationCoordinator.swift in Sources */,
 				EFAB6C54262912FA00250F4B /* CustomToolbar.swift in Sources */,
 				EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */,
+				EF7B09C92645685F00307772 /* Converter.swift in Sources */,
 				EFAB6C592629176000250F4B /* UserInformationViewController.swift in Sources */,
 				EF4428CA263AD45900ADD537 /* BiometryViewModel.swift in Sources */,
 				EF9D0BCA26369BA6006E5472 /* PasswordRulesView.swift in Sources */,
@@ -873,11 +929,13 @@
 				EF9D0C042636E155006E5472 /* PasscodeInputView.swift in Sources */,
 				EF92E749261DA3F600E9ECEA /* AddPersonalAccountViewController.swift in Sources */,
 				EFAB6C9F262B1C5400250F4B /* AddEmailAssembly.swift in Sources */,
+				EF7B09E026456EEE00307772 /* JSONCodingKeys.swift in Sources */,
 				EFAB6CA7262B1F9B00250F4B /* EmailVerificationViewModel.swift in Sources */,
 				EFAB6C94262AFCF100250F4B /* SmsVerificationAssembly.swift in Sources */,
 				EFAB6C87262AD3BF00250F4B /* SmsCodeTextField.swift in Sources */,
 				EF2E937A26290DA100C0ADD9 /* AddPersonalAccountViewModel.swift in Sources */,
 				EF9D0BB526367C8E006E5472 /* OfferInformationViewController.swift in Sources */,
+				EF7B09CD2645690400307772 /* CodableContainersExtension.swift in Sources */,
 				EF9D0BC2263698FB006E5472 /* PasswordAssembly.swift in Sources */,
 				EF9D0BF12636D71D006E5472 /* PasscodeViewController.swift in Sources */,
 				EF9D0BBD26368274006E5472 /* OfferConfirmationView.swift in Sources */,
@@ -893,6 +951,8 @@
 				EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */,
 				EF4428CF263ADFF000ADD537 /* ResultViewController.swift in Sources */,
 				EF9D0BEB2636D710006E5472 /* PasscodeViewModel.swift in Sources */,
+				EF7B09AA2645664400307772 /* NetworkDataProvider.swift in Sources */,
+				EF7B09C52645684000307772 /* ApiError.swift in Sources */,
 				EFAB6C99262B1B0A00250F4B /* AddEmailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

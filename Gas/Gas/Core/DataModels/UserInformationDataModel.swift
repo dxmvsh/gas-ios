@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct UserInformationDataModel {
-    var fio: String
-    var accountNumber: String
+struct UserInformationDataModel: Codable {
+    var full_name: String
+    var number: String
     var city: String
     var address: String
 }
