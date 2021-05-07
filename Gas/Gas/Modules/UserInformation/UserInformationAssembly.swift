@@ -30,7 +30,8 @@ class UserInformationAssembly {
     
     func assemble(_ configuration: UserInformationConfiguration? = nil) -> UIViewController {
         let view = UserInformationViewController()
-        let viewModel = UserInformationViewModel()
+        let dataProvider = AuthorizationService(dataProvider: NetworkDataProvider<AuthTarget>())
+        let viewModel = UserInformationViewModel(dataProvider: dataProvider)
         viewModel.view = view
         view.output = viewModel
         viewModel.output = configuration?(viewModel)

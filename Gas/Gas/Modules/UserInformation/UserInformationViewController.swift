@@ -83,8 +83,8 @@ class UserInformationViewController: BaseViewController, UserInformationViewInpu
     }
     
     func display(_ userInfo: UserInformationDataModel) {
-        fullnameTextField.setText(userInfo.fio)
-        accountNumberTextField.setText(userInfo.accountNumber)
+        fullnameTextField.setText(userInfo.full_name)
+        accountNumberTextField.setText(userInfo.number)
         cityTextField.setText(userInfo.city)
         addressTextField.setText(userInfo.address)
     }
