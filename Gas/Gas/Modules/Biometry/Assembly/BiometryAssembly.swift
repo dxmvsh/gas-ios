@@ -21,7 +21,7 @@ class BiometryAssembly {
     
     func assemble(_ moduleOutput: BiometryModuleOutput? = nil) -> UIViewController {
         let view = BiometryViewController()
-        let viewModel = BiometryViewModel()
+        let viewModel = BiometryViewModel(secureAuth: SecureAuthentication(dataProvider: AuthorizationService()))
         
         view.output = viewModel
         viewModel.output = moduleOutput

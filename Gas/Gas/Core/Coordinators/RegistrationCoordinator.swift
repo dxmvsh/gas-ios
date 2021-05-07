@@ -28,9 +28,11 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
     var phoneNumber: String?
     var email: String?
     var accountNumber: String?
-    
-    init(navigationController: UINavigationController) {
+    private let secureAuth: SecureAuthenticationProtocol
+    init(navigationController: UINavigationController,
+         secureAuth: SecureAuthenticationProtocol) {
         self.navigationController = navigationController
+        self.secureAuth = secureAuth
     }
     
     func start() {
@@ -169,7 +171,11 @@ extension RegistrationCoordinatorManager: PasswordModuleOutput {
 extension RegistrationCoordinatorManager: PasscodeModuleOutput {
     
     func didSucceedPasscodeModule() {
-        moveToSetBiometry()
+        if secureAuth.canSetBiometry {
+            moveToSetBiometry()
+        } else {
+            moveToResultPage()
+        }
     }
     
     func didFailPasscodeModule() {

@@ -8,11 +8,11 @@
 import UIKit
 
 protocol PasscodeViewOutput {
-    
+    func didEnterPasscode(_ code: String)
 }
 
 protocol PasscodeViewInput: class {
-    
+    func showError()
 }
 
 protocol PasscodeModuleOutput {
@@ -26,7 +26,7 @@ class PasscodeAssembly {
     
     func assemble(_ moduleOutput: PasscodeModuleOutput) -> UIViewController {
         let view = PasscodeViewController(mode: .set)
-        let viewModel = PasscodeViewModel()
+        let viewModel = PasscodeViewModel(mode: .set, secureAuth: SecureAuthentication(dataProvider: AuthorizationService()))
         
         view.output = viewModel
         viewModel.view = view

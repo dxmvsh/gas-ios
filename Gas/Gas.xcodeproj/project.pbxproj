@@ -48,6 +48,7 @@
 		EF7B09EC2645792A00307772 /* MessageStatusDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09EB2645792A00307772 /* MessageStatusDataModel.swift */; };
 		EF7B09F22645886400307772 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09F12645886400307772 /* UserDataModel.swift */; };
 		EF7B09F6264588E800307772 /* EncodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09F5264588E800307772 /* EncodableExtension.swift */; };
+		EF7B09FA2645A32000307772 /* SecureAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09F92645A32000307772 /* SecureAuth.swift */; };
 		EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6B5261D773D00E9ECEA /* Button.swift */; };
 		EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6BA261D778400E9ECEA /* ViewExtension.swift */; };
 		EF92E6DA261D858C00E9ECEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF92E6DC261D858C00E9ECEA /* Localizable.strings */; };
@@ -148,6 +149,7 @@
 		EF7B09EB2645792A00307772 /* MessageStatusDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStatusDataModel.swift; sourceTree = "<group>"; };
 		EF7B09F12645886400307772 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		EF7B09F5264588E800307772 /* EncodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtension.swift; sourceTree = "<group>"; };
+		EF7B09F92645A32000307772 /* SecureAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAuth.swift; sourceTree = "<group>"; };
 		EF92E6B5261D773D00E9ECEA /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		EF92E6BA261D778400E9ECEA /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		EF92E6D0261D852400E9ECEA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -391,7 +393,7 @@
 		EF7965FA261533460052751C /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				EF7B09DA26456B8B00307772 /* Service */,
+				EF7B09DA26456B8B00307772 /* NetworkServices */,
 				EF7B09D426456A2700307772 /* Targets */,
 				EF7B09A82645663500307772 /* DataProvider */,
 				EF9D0BD52636BD7C006E5472 /* Services */,
@@ -464,12 +466,12 @@
 			path = Targets;
 			sourceTree = "<group>";
 		};
-		EF7B09DA26456B8B00307772 /* Service */ = {
+		EF7B09DA26456B8B00307772 /* NetworkServices */ = {
 			isa = PBXGroup;
 			children = (
 				EF7B09DB26456B9600307772 /* AuthorizationService.swift */,
 			);
-			path = Service;
+			path = NetworkServices;
 			sourceTree = "<group>";
 		};
 		EF8947FC2625C64200338039 /* Base */ = {
@@ -583,6 +585,7 @@
 			isa = PBXGroup;
 			children = (
 				EF9D0BD62636BD95006E5472 /* PasswordCheckerService.swift */,
+				EF7B09F92645A32000307772 /* SecureAuth.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -935,6 +938,7 @@
 				EFAB6C54262912FA00250F4B /* CustomToolbar.swift in Sources */,
 				EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */,
 				EF7B09C92645685F00307772 /* Converter.swift in Sources */,
+				EF7B09FA2645A32000307772 /* SecureAuth.swift in Sources */,
 				EFAB6C592629176000250F4B /* UserInformationViewController.swift in Sources */,
 				EF4428CA263AD45900ADD537 /* BiometryViewModel.swift in Sources */,
 				EF9D0BCA26369BA6006E5472 /* PasswordRulesView.swift in Sources */,

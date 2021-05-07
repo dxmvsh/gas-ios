@@ -78,6 +78,8 @@ class PasscodeStatusView: UIView {
     
     func setDefaultState() {
         secondaryInputView.isHidden = true
+        primaryInputView.showDefaultState()
+        secondaryInputView.showDefaultState()
     }
     
     func showSecondaryInputView() {

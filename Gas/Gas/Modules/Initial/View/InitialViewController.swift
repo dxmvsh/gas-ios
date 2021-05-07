@@ -81,7 +81,7 @@ class InitialViewController: UIViewController {
     @objc
     private func registrationTapped() {
         guard let navigationController = navigationController else { return }
-        let coordinator = RegistrationCoordinatorManager(navigationController: navigationController)
+        let coordinator = RegistrationCoordinatorManager(navigationController: navigationController, secureAuth: SecureAuthentication(dataProvider: AuthorizationService()))
         coordinator.start()
     }
     

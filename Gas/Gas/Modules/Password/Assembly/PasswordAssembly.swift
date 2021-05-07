@@ -38,7 +38,9 @@ class PasswordAssembly {
     func assemble(_ configuration: PasswordModuleConfiguration? = nil) -> UIViewController {
         let view = PasswordViewController()
         let passwordCheckerService = PasswordChecker()
-        let viewModel = PasswordViewModel(passwordChecker: passwordCheckerService, dataProvider: AuthorizationService())
+        let viewModel = PasswordViewModel(passwordChecker: passwordCheckerService,
+                                          dataProvider: AuthorizationService(),
+                                          secureAuthService: SecureAuthentication(dataProvider: AuthorizationService()))
         
         view.output = viewModel
         viewModel.view = view

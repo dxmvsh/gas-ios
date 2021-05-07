@@ -39,7 +39,6 @@ class PasscodeViewController: BaseViewController, PasscodeViewInput {
     }()
     
     var output: PasscodeViewOutput?
-    var route: (() -> Void)?
     
     init(mode: PasscodeMode) {
         self.mode = mode
@@ -104,11 +103,12 @@ class PasscodeViewController: BaseViewController, PasscodeViewInput {
             }
         }
         
-        statusView.completionHandler = { [weak self] in
-            self?.statusView.showFailure(completionHandler: { [weak self] in
-                self?.routeNext()
-            })
-        }
+//        statusView.completionHandler = { [weak self] in
+//            self?.statusView.showFailure(completionHandler: { [weak self] in
+//                guard let passcode = self?.enteredPasscode else { return }
+//                self?.output?.didEnterPasscode(passcode)
+//            })
+//        }
     }
     
     private func didChangePasscode() {
@@ -132,14 +132,15 @@ class PasscodeViewController: BaseViewController, PasscodeViewInput {
                 statusView.set(highlighted: false, at: index)
             }
         }
-        if enteredPasscode.count > count {
-            statusView.showFailure(completionHandler: { [weak self] in
-                self?.routeNext()
-            })
+        if enteredPasscode.count >= count {
+            output?.didEnterPasscode(enteredPasscode)
         }
     }
     
-    private func routeNext() {
-        route?()
+    func showError() {
+        statusView.showFailure { [weak self] in
+            self?.statusView.setDefaultState()
+        }
     }
+    
 }

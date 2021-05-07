@@ -10,9 +10,14 @@ import Foundation
 class BiometryViewModel: BiometryViewOutput {
     
     var output: BiometryModuleOutput?
+    private let secureAuth: SecureAuthenticationProtocol
+    
+    init(secureAuth: SecureAuthenticationProtocol) {
+        self.secureAuth = secureAuth
+    }
     
     func didTapPrimaryButton() {
-        output?.didSucceedBiometry()
+        secureAuth.setBiometry()
     }
     
     func didTapSecondaryButton() {

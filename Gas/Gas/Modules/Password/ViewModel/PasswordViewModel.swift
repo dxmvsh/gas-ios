@@ -32,11 +32,14 @@ class PasswordViewModel: PasswordViewOutput, PasswordModuleInput {
     private var userDataModel: UserDataModel?
     
     private let dataProvider: AuthorizationServiceProtocol
+    private let secureAuthService: SecureAuthenticationProtocol
     
     init(passwordChecker: PasswordCheckerService,
-         dataProvider: AuthorizationService) {
+         dataProvider: AuthorizationService,
+         secureAuthService: SecureAuthenticationProtocol) {
         self.passwordChecker = passwordChecker
         self.dataProvider = dataProvider
+        self.secureAuthService = secureAuthService
         passwordChecker.setRegexRules(rules.compactMap{ $0.regex })
     }
     
@@ -70,13 +73,12 @@ class PasswordViewModel: PasswordViewOutput, PasswordModuleInput {
             dataProvider.register(user: userDataModel) { [weak self] result in
                 switch result {
                 case .success(let message):
-                    if message.message == .success {
-                        self?.output?.didSucceedPasswordSet()
-                    } else {
-                        self?.output?.didFailPasswordSet()
-                    }
+                    self?.secureAuthService.setPassword(userDataModel.password)
+                    self?.secureAuthService.setEmail(userDataModel.email)
+                    self?.output?.didSucceedPasswordSet()
                 case .failure(let error):
                     print("error: \(error)")
+                    self?.output?.didFailPasswordSet()
                 }
             }
         }
