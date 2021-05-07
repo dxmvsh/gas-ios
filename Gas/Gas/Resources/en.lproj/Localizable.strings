@@ -1,0 +1,54 @@
+/* 
+  Localizable.strings
+  Gas
+
+  Created by Strong on 4/7/21.
+  
+*/
+"welcome" = "Добро пожаловать!";
+"sign in or sign up to continue" = "Войдите или зарегистрируйтесь чтобы продолжить";
+"registration" = "Регистрация";
+"sign in to app" = "Войти в приложение";
+"please enter field correctly" = "Пожалуйста, заполните поле верно";
+"personal account number" = "Номер лицевого счета";
+"user registration" = "Регистрация пользователя";
+"continue" = "Продолжить";
+"done" = "Готово";
+"check data to continue" = "Проверьте данные чтобы продолжить";
+"fio" = "Ф.И.О";
+"city" = "Город";
+"address" = "Адрес";
+"enter phone number to register" = "Введите номер телефона чтобы зарегистрироваться";
+"get code" = "Получить код";
+"enter code" = "Введите код";
+"we send you sms" = "Мы вам отправили SMS с кодом. Введите его.";
+"resend code after %@" = "Отправить повторно через %@";
+"resend again" = "Отправить повторно";
+"invalid code" = "Неверный код";
+"email" = "Эл.почта";
+"please enter email" = "Пожалуйста, введите электронную почту";
+"email verification" = "Подтверждение почты";
+"enter 4 digit code sent to %@" = "Введите 4-значный код подтверждения, который мы выслали на ваш email адрес %@";
+"i agree with" = "Я согласен с";
+"with offer conditions" = "Условиями оферты";
+"public offer" = "Публичная оферта";
+"create password" = "Придумайте пароль";
+"confirm password" = "Подтвердите пароль";
+"create password for login" = "Придумайте пароль для входа в приложение";
+"at least 8 chars" = "Не менее 8 символов";
+"at least 1 uppercase letter" = "Минимум одну заглавную букву";
+"at least 1 lowercase letter" = "Минимум одну прописную букву";
+"at least 1 digit" = "Минимум одну цифру";
+"at least one of next chars" = "Одну из следующих знаков: .!@#$%^&*";
+"pin code" = "Пин-код";
+"set pin code for fast access" = "Установите пин-код для быстрого доступа к приложению";
+"enter pin code for access" = "Введите пин-код для доступа к приложению";
+"set sign in by faceid" = "Установить вход по Face ID?";
+"sign in by faceid is secure" = "Вход по Face ID предоставит более защищенный доступ к приложению";
+"set up" = "Установить";
+"skip" = "Пропустить";
+"congrats" = "Поздравляем!";
+"you registered successfully" = "Вы успешно зарегистрировались.";
+"error" = "Ошибка";
+"error happened while registering" = "Произошла ошибка при регистрации.";
+"try again" = "Попробуйте еще раз.";
