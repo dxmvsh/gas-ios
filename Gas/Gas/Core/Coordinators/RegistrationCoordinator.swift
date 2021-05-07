@@ -25,6 +25,9 @@ protocol RegistrationCoordinator {
 class RegistrationCoordinatorManager: RegistrationCoordinator {
     
     let navigationController: UINavigationController
+    var phoneNumber: String?
+    var email: String?
+    var accountNumber: String?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -53,7 +56,7 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
     }
     
     func moveToPhoneConfirmation(phoneNumber: String) {
-        let viewController = SmsVerificationAssembly().assemblePhone(self)
+        let viewController = SmsVerificationAssembly().assemblePhone(self, phoneNumber: phoneNumber)
         navigationController.pushViewController(viewController, animated: true)
     }
     
@@ -76,7 +79,14 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
     }
     
     func moveToSetPassword() {
-        let viewController = PasswordAssembly().assemble(self)
+        let viewController = PasswordAssembly().assemble { [weak self] input -> PasswordModuleOutput? in
+            if let phoneNumber = self?.phoneNumber,
+               let email = self?.email,
+               let accountNumber = self?.accountNumber {
+                input.configure(userDataModel: UserDataModel(mobile_phone: "+\(phoneNumber)", email: email, account_number: accountNumber, password: ""))
+            }
+            return self
+        }
         navigationController.pushViewController(viewController, animated: true)
     }
     
@@ -104,7 +114,8 @@ extension RegistrationCoordinatorManager: AddPersonalAccountModuleOutput {
 }
 
 extension RegistrationCoordinatorManager: UserInformationModuleOutput {
-    func didTapSubmit(_ userInfo: UserInformationDataModel) {
+    func didTapContinue(accountNumber: String) {
+        self.accountNumber = accountNumber
         moveToAddPhone()
     }
 }
@@ -116,7 +127,8 @@ extension RegistrationCoordinatorManager: AddPhoneModuleOutput {
 }
 
 extension RegistrationCoordinatorManager: SmsVerificationModuleOutput {
-    func didSucceed() {
+    func didSucceed(phoneNumber: String) {
+        self.phoneNumber = phoneNumber
         moveToAddEmail()
     }
     
@@ -132,7 +144,8 @@ extension RegistrationCoordinatorManager: AddEmailModuleOutput {
 }
 
 extension RegistrationCoordinatorManager: EmailVerificationModuleOutput {
-    func didSucceedEmailVerification() {
+    func didSucceedEmailVerification(email: String) {
+        self.email = email
         moveToOfferInfo()
     }
     

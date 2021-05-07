@@ -18,7 +18,6 @@ class UserInformationViewModel: UserInformationViewOutput, UserInformationModule
                                                     number: "10050030",
                                                     city: "Кокшетау",
                                                     address: "Kurmangazy 43/65")
-    
     init(dataProvider: AuthorizationService) {
         self.dataProvider = dataProvider
     }
@@ -36,7 +35,8 @@ class UserInformationViewModel: UserInformationViewOutput, UserInformationModule
     }
     
     func didTapSubmit() {
-        output?.didTapSubmit(userInfo)
+        guard let accountNumber = accountNumber else { return }
+        output?.didTapContinue(accountNumber: accountNumber)
     }
     
     func setAccountNumber(_ accountNumber: String) {

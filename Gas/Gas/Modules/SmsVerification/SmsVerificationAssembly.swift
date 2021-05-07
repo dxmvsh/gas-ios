@@ -18,23 +18,24 @@ protocol SmsVerificationViewOutput {
 }
 
 protocol SmsVerificationModuleOutput {
-    func didSucceed()
+    func didSucceed(phoneNumber: String)
     func didFail()
 }
 
 protocol EmailVerificationModuleOutput {
-    func didSucceedEmailVerification()
+    func didSucceedEmailVerification(email: String)
     func didFailEmailVerification()
 }
 
 class SmsVerificationAssembly {
     
-    func assemblePhone(_ moduleOutput: SmsVerificationModuleOutput? = nil) -> UIViewController {
+    func assemblePhone(_ moduleOutput: SmsVerificationModuleOutput? = nil, phoneNumber: String) -> UIViewController {
         let view = SmsVerificationViewController()
         let dataProvider = AuthorizationService()
         let viewModel = SmsVerificationViewModel(dataProvider: dataProvider)
         
         view.output = viewModel
+        viewModel.phoneNumber = phoneNumber
         viewModel.view = view
         viewModel.output = moduleOutput
         

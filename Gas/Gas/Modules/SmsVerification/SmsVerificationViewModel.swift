@@ -11,6 +11,7 @@ class SmsVerificationViewModel: SmsVerificationViewOutput {
     
     weak var view: SmsVerificationViewInput?
     var output: SmsVerificationModuleOutput?
+    var phoneNumber: String?
     
     private let dataProvider: AuthorizationService
     
@@ -24,8 +25,8 @@ class SmsVerificationViewModel: SmsVerificationViewOutput {
         dataProvider.verify(code: code) { [weak self] result in
             switch result {
             case .success(let message):
-                if message.message == .success {
-                    self?.output?.didSucceed()
+                if message.message == .success, let phoneNumber = self?.phoneNumber {
+                    self?.output?.didSucceed(phoneNumber: phoneNumber)
                 } else {
                     self?.view?.setErrorStyle(message: Text.invalidCode)
                 }

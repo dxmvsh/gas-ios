@@ -34,8 +34,8 @@ class EmailVerificationViewModel: SmsVerificationViewOutput {
         dataProvider.verify(code: code) { [weak self] result in
             switch result {
             case .success(let message):
-                if message.message == .success {
-                    self?.output?.didSucceedEmailVerification()
+                if message.message == .success, let email = self?.email {
+                    self?.output?.didSucceedEmailVerification(email: email)
                 } else {
                     self?.view?.setErrorStyle(message: Text.invalidCode)
                 }

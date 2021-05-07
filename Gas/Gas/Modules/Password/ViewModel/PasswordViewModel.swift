@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PasswordViewModel: PasswordViewOutput {
+class PasswordViewModel: PasswordViewOutput, PasswordModuleInput {
     
     weak var view: PasswordViewInput?
     var output: PasswordModuleOutput?
@@ -29,8 +29,14 @@ class PasswordViewModel: PasswordViewOutput {
     private var password: String = ""
     private var confirmPassword: String = ""
     
-    init(passwordChecker: PasswordCheckerService) {
+    private var userDataModel: UserDataModel?
+    
+    private let dataProvider: AuthorizationServiceProtocol
+    
+    init(passwordChecker: PasswordCheckerService,
+         dataProvider: AuthorizationService) {
         self.passwordChecker = passwordChecker
+        self.dataProvider = dataProvider
         passwordChecker.setRegexRules(rules.compactMap{ $0.regex })
     }
     
@@ -54,14 +60,34 @@ class PasswordViewModel: PasswordViewOutput {
     }
     
     func didTapContinue() {
-        view?.showConfirmPasswordError("Пароли не совпадают")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-            
+        if password != confirmPassword {
+            view?.showConfirmPasswordError("Пароли не совпадают")
+            return
+        }
+        
+        if var userDataModel = userDataModel {
+            userDataModel.password = password
+            dataProvider.register(user: userDataModel) { [weak self] result in
+                switch result {
+                case .success(let message):
+                    if message.message == .success {
+                        self?.output?.didSucceedPasswordSet()
+                    } else {
+                        self?.output?.didFailPasswordSet()
+                    }
+                case .failure(let error):
+                    print("error: \(error)")
+                }
+            }
         }
     }
     
     private func updateButtonAvailability() {
         view?.setButton(active: arePasswordsValid)
+    }
+    
+    func configure(userDataModel: UserDataModel) {
+        self.userDataModel = userDataModel
     }
 }
 

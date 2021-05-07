@@ -12,7 +12,7 @@ protocol UserInformationModuleInput: class {
 }
 
 protocol UserInformationModuleOutput {
-    func didTapSubmit(_ userInfo: UserInformationDataModel)
+    func didTapContinue(accountNumber: String)
 }
 
 protocol UserInformationViewInput: class {

@@ -46,6 +46,8 @@
 		EF7B09E026456EEE00307772 /* JSONCodingKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09DF26456EEE00307772 /* JSONCodingKeys.swift */; };
 		EF7B09E82645747200307772 /* QueryEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09E72645747200307772 /* QueryEncoding.swift */; };
 		EF7B09EC2645792A00307772 /* MessageStatusDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09EB2645792A00307772 /* MessageStatusDataModel.swift */; };
+		EF7B09F22645886400307772 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09F12645886400307772 /* UserDataModel.swift */; };
+		EF7B09F6264588E800307772 /* EncodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09F5264588E800307772 /* EncodableExtension.swift */; };
 		EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6B5261D773D00E9ECEA /* Button.swift */; };
 		EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6BA261D778400E9ECEA /* ViewExtension.swift */; };
 		EF92E6DA261D858C00E9ECEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF92E6DC261D858C00E9ECEA /* Localizable.strings */; };
@@ -144,6 +146,8 @@
 		EF7B09DF26456EEE00307772 /* JSONCodingKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCodingKeys.swift; sourceTree = "<group>"; };
 		EF7B09E72645747200307772 /* QueryEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryEncoding.swift; sourceTree = "<group>"; };
 		EF7B09EB2645792A00307772 /* MessageStatusDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStatusDataModel.swift; sourceTree = "<group>"; };
+		EF7B09F12645886400307772 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
+		EF7B09F5264588E800307772 /* EncodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtension.swift; sourceTree = "<group>"; };
 		EF92E6B5261D773D00E9ECEA /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		EF92E6BA261D778400E9ECEA /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		EF92E6D0261D852400E9ECEA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -417,6 +421,7 @@
 				EF92E6BA261D778400E9ECEA /* ViewExtension.swift */,
 				EF09520926233A6E00AD02BB /* FontExtension.swift */,
 				EF09520D26233AD900AD02BB /* IndicatorExtension.swift */,
+				EF7B09F5264588E800307772 /* EncodableExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -701,6 +706,7 @@
 			children = (
 				EFAB6C692629191200250F4B /* UserInformationDataModel.swift */,
 				EF7B09EB2645792A00307772 /* MessageStatusDataModel.swift */,
+				EF7B09F12645886400307772 /* UserDataModel.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -907,6 +913,7 @@
 				EFAB6CA3262B1C8500250F4B /* AddEmailViewModel.swift in Sources */,
 				EF07B74F26233F1A007A45CE /* ClearableDelegate.swift in Sources */,
 				EFAB6C7B2629373400250F4B /* AddPhoneAssembly.swift in Sources */,
+				EF7B09F22645886400307772 /* UserDataModel.swift in Sources */,
 				EF77B8A5263802FE00B34B3E /* PasscodeStatusView.swift in Sources */,
 				EF09521226233AF300AD02BB /* IndicatorProtocol.swift in Sources */,
 				EFAB6C812629924D00250F4B /* SmsVerificationViewController.swift in Sources */,
@@ -946,6 +953,7 @@
 				EF7B09CD2645690400307772 /* CodableContainersExtension.swift in Sources */,
 				EF9D0BC2263698FB006E5472 /* PasswordAssembly.swift in Sources */,
 				EF9D0BF12636D71D006E5472 /* PasscodeViewController.swift in Sources */,
+				EF7B09F6264588E800307772 /* EncodableExtension.swift in Sources */,
 				EF9D0BBD26368274006E5472 /* OfferConfirmationView.swift in Sources */,
 				EFAB6C90262AFCD400250F4B /* SmsVerificationViewModel.swift in Sources */,
 				EF7966052615336F0052751C /* LabelFactory.swift in Sources */,
