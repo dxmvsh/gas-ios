@@ -49,6 +49,11 @@
 		EF7B09F22645886400307772 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09F12645886400307772 /* UserDataModel.swift */; };
 		EF7B09F6264588E800307772 /* EncodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09F5264588E800307772 /* EncodableExtension.swift */; };
 		EF7B09FA2645A32000307772 /* SecureAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B09F92645A32000307772 /* SecureAuth.swift */; };
+		EF7B0A0E2645BB3F00307772 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A0D2645BB3F00307772 /* LoginViewController.swift */; };
+		EF7B0A1426483F7B00307772 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A1326483F7B00307772 /* LoginViewModel.swift */; };
+		EF7B0A1826483F8D00307772 /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A1726483F8D00307772 /* LoginAssembly.swift */; };
+		EF7B0A1E2649410200307772 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A1D2649410200307772 /* SignInCoordinator.swift */; };
+		EF7B0A22264949DC00307772 /* LoginTokenDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A21264949DC00307772 /* LoginTokenDataModel.swift */; };
 		EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6B5261D773D00E9ECEA /* Button.swift */; };
 		EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6BA261D778400E9ECEA /* ViewExtension.swift */; };
 		EF92E6DA261D858C00E9ECEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF92E6DC261D858C00E9ECEA /* Localizable.strings */; };
@@ -150,6 +155,11 @@
 		EF7B09F12645886400307772 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		EF7B09F5264588E800307772 /* EncodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtension.swift; sourceTree = "<group>"; };
 		EF7B09F92645A32000307772 /* SecureAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAuth.swift; sourceTree = "<group>"; };
+		EF7B0A0D2645BB3F00307772 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EF7B0A1326483F7B00307772 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		EF7B0A1726483F8D00307772 /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
+		EF7B0A1D2649410200307772 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
+		EF7B0A21264949DC00307772 /* LoginTokenDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTokenDataModel.swift; sourceTree = "<group>"; };
 		EF92E6B5261D773D00E9ECEA /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		EF92E6BA261D778400E9ECEA /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		EF92E6D0261D852400E9ECEA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -300,6 +310,7 @@
 		EF1D782426152A5300168CF9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EF7B0A0C2645BB2E00307772 /* Login */,
 				EF4428CD263ADFDC00ADD537 /* ResultPage */,
 				EF4428BD263AD3D900ADD537 /* Biometry */,
 				EF9D0BE12636D6D6006E5472 /* Passcode */,
@@ -474,6 +485,16 @@
 			path = NetworkServices;
 			sourceTree = "<group>";
 		};
+		EF7B0A0C2645BB2E00307772 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0A1726483F8D00307772 /* LoginAssembly.swift */,
+				EF7B0A0D2645BB3F00307772 /* LoginViewController.swift */,
+				EF7B0A1326483F7B00307772 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		EF8947FC2625C64200338039 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -558,6 +579,7 @@
 			isa = PBXGroup;
 			children = (
 				EF92E759261DA43E00E9ECEA /* RegistrationCoordinator.swift */,
+				EF7B0A1D2649410200307772 /* SignInCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -710,6 +732,7 @@
 				EFAB6C692629191200250F4B /* UserInformationDataModel.swift */,
 				EF7B09EB2645792A00307772 /* MessageStatusDataModel.swift */,
 				EF7B09F12645886400307772 /* UserDataModel.swift */,
+				EF7B0A21264949DC00307772 /* LoginTokenDataModel.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -906,11 +929,13 @@
 				EFAB6C5D2629181000250F4B /* UserInformationViewModel.swift in Sources */,
 				EF796610261536CC0052751C /* SpaceFactory.swift in Sources */,
 				EFAB6C6A2629191200250F4B /* UserInformationDataModel.swift in Sources */,
+				EF7B0A1426483F7B00307772 /* LoginViewModel.swift in Sources */,
 				EF9D0BFE2636D8E5006E5472 /* PasscodeKeyboardButton.swift in Sources */,
 				EF1D782826152A9D00168CF9 /* InitialViewController.swift in Sources */,
 				EF9D0BCE2636AC25006E5472 /* PasswordRuleViewAdapter.swift in Sources */,
 				EF9D0BF82636D838006E5472 /* PasscodeKeyboardView.swift in Sources */,
 				EF09521926233B2C00AD02BB /* EditingAction.swift in Sources */,
+				EF7B0A1E2649410200307772 /* SignInCoordinator.swift in Sources */,
 				EFAB6C732629371A00250F4B /* AddPhoneViewController.swift in Sources */,
 				EF92E6E9261D86BD00E9ECEA /* Text.swift in Sources */,
 				EFAB6CA3262B1C8500250F4B /* AddEmailViewModel.swift in Sources */,
@@ -919,6 +944,7 @@
 				EF7B09F22645886400307772 /* UserDataModel.swift in Sources */,
 				EF77B8A5263802FE00B34B3E /* PasscodeStatusView.swift in Sources */,
 				EF09521226233AF300AD02BB /* IndicatorProtocol.swift in Sources */,
+				EF7B0A0E2645BB3F00307772 /* LoginViewController.swift in Sources */,
 				EFAB6C812629924D00250F4B /* SmsVerificationViewController.swift in Sources */,
 				EF7965F626152FEC0052751C /* Colors.swift in Sources */,
 				EF7B09D12645694700307772 /* NetworkReachabilityChecking.swift in Sources */,
@@ -944,6 +970,7 @@
 				EF9D0BCA26369BA6006E5472 /* PasswordRulesView.swift in Sources */,
 				EF9D0BD22636BA55006E5472 /* PasswordViewModel.swift in Sources */,
 				EF92E6E6261D86BD00E9ECEA /* Assets.swift in Sources */,
+				EF7B0A22264949DC00307772 /* LoginTokenDataModel.swift in Sources */,
 				EF9D0C042636E155006E5472 /* PasscodeInputView.swift in Sources */,
 				EF92E749261DA3F600E9ECEA /* AddPersonalAccountViewController.swift in Sources */,
 				EFAB6C9F262B1C5400250F4B /* AddEmailAssembly.swift in Sources */,
@@ -953,6 +980,7 @@
 				EFAB6C94262AFCF100250F4B /* SmsVerificationAssembly.swift in Sources */,
 				EFAB6C87262AD3BF00250F4B /* SmsCodeTextField.swift in Sources */,
 				EF2E937A26290DA100C0ADD9 /* AddPersonalAccountViewModel.swift in Sources */,
+				EF7B0A1826483F8D00307772 /* LoginAssembly.swift in Sources */,
 				EF9D0BB526367C8E006E5472 /* OfferInformationViewController.swift in Sources */,
 				EF7B09CD2645690400307772 /* CodableContainersExtension.swift in Sources */,
 				EF9D0BC2263698FB006E5472 /* PasswordAssembly.swift in Sources */,
