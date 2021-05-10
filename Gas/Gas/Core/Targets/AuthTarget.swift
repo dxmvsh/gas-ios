@@ -18,7 +18,7 @@ enum AuthTarget: TargetType {
     case resetPassword(data: AccessRecoveryDataModel)
     
     var baseURL: URL {
-        return URL(string: "http://130.61.58.200/api/")!
+        return URL(string: AppConfigs.baseUrl)!
     }
     
     var path: String {

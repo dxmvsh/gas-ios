@@ -74,6 +74,10 @@
 		EF7B0AB8264997E800307772 /* UserTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AB7264997E800307772 /* UserTarget.swift */; };
 		EF7B0ABC2649A29E00307772 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF7B0ABB2649A29E00307772 /* Configuration.plist */; };
 		EF7B0AC12649A4A200307772 /* AppConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AC02649A4A200307772 /* AppConfigs.swift */; };
+		EF7B0AC52649A5A000307772 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AC42649A5A000307772 /* UserService.swift */; };
+		EF7B0AC92649AC9E00307772 /* AuthTokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AC82649AC9E00307772 /* AuthTokenStorage.swift */; };
+		EF7B0ACD2649B46D00307772 /* AnalyticsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0ACC2649B46D00307772 /* AnalyticsDataModel.swift */; };
+		EF7B0AD12649B55800307772 /* AnalyticsViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AD02649B55700307772 /* AnalyticsViewAdapter.swift */; };
 		EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6B5261D773D00E9ECEA /* Button.swift */; };
 		EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6BA261D778400E9ECEA /* ViewExtension.swift */; };
 		EF92E6DA261D858C00E9ECEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF92E6DC261D858C00E9ECEA /* Localizable.strings */; };
@@ -200,6 +204,10 @@
 		EF7B0AB7264997E800307772 /* UserTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTarget.swift; sourceTree = "<group>"; };
 		EF7B0ABB2649A29E00307772 /* Configuration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 		EF7B0AC02649A4A200307772 /* AppConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfigs.swift; sourceTree = "<group>"; };
+		EF7B0AC42649A5A000307772 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		EF7B0AC82649AC9E00307772 /* AuthTokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenStorage.swift; sourceTree = "<group>"; };
+		EF7B0ACC2649B46D00307772 /* AnalyticsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDataModel.swift; sourceTree = "<group>"; };
+		EF7B0AD02649B55700307772 /* AnalyticsViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewAdapter.swift; sourceTree = "<group>"; };
 		EF92E6B5261D773D00E9ECEA /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		EF92E6BA261D778400E9ECEA /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		EF92E6D0261D852400E9ECEA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -528,6 +536,7 @@
 			isa = PBXGroup;
 			children = (
 				EF7B09DB26456B9600307772 /* AuthorizationService.swift */,
+				EF7B0AC42649A5A000307772 /* UserService.swift */,
 			);
 			path = NetworkServices;
 			sourceTree = "<group>";
@@ -690,6 +699,7 @@
 			children = (
 				EF7B0AA9264981A400307772 /* Additional */,
 				EF7B0AA3264980F300307772 /* AnalyticsViewController.swift */,
+				EF7B0AD02649B55700307772 /* AnalyticsViewAdapter.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -835,6 +845,7 @@
 			children = (
 				EF9D0BD62636BD95006E5472 /* PasswordCheckerService.swift */,
 				EF7B09F92645A32000307772 /* SecureAuth.swift */,
+				EF7B0AC82649AC9E00307772 /* AuthTokenStorage.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -961,6 +972,7 @@
 				EF7B09F12645886400307772 /* UserDataModel.swift */,
 				EF7B0A21264949DC00307772 /* LoginTokenDataModel.swift */,
 				EF7B0A302649584400307772 /* AccessRecoveryDataModel.swift */,
+				EF7B0ACC2649B46D00307772 /* AnalyticsDataModel.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -1211,6 +1223,7 @@
 				EF9D0BD22636BA55006E5472 /* PasswordViewModel.swift in Sources */,
 				EF92E6E6261D86BD00E9ECEA /* Assets.swift in Sources */,
 				EF7B0A22264949DC00307772 /* LoginTokenDataModel.swift in Sources */,
+				EF7B0AC92649AC9E00307772 /* AuthTokenStorage.swift in Sources */,
 				EF9D0C042636E155006E5472 /* PasscodeInputView.swift in Sources */,
 				EF92E749261DA3F600E9ECEA /* AddPersonalAccountViewController.swift in Sources */,
 				EFAB6C9F262B1C5400250F4B /* AddEmailAssembly.swift in Sources */,
@@ -1244,11 +1257,14 @@
 				EF2DBAF32619E52F008C2B6E /* StringExtension.swift in Sources */,
 				EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */,
 				EF4428CF263ADFF000ADD537 /* ResultViewController.swift in Sources */,
+				EF7B0ACD2649B46D00307772 /* AnalyticsDataModel.swift in Sources */,
 				EF7B0AB8264997E800307772 /* UserTarget.swift in Sources */,
+				EF7B0AD12649B55800307772 /* AnalyticsViewAdapter.swift in Sources */,
 				EF9D0BEB2636D710006E5472 /* PasscodeViewModel.swift in Sources */,
 				EF7B09AA2645664400307772 /* NetworkDataProvider.swift in Sources */,
 				EF7B09C52645684000307772 /* ApiError.swift in Sources */,
 				EFAB6C99262B1B0A00250F4B /* AddEmailViewController.swift in Sources */,
+				EF7B0AC52649A5A000307772 /* UserService.swift in Sources */,
 				EF7B0AA4264980F300307772 /* AnalyticsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

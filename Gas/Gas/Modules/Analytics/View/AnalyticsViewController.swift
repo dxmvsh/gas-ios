@@ -15,11 +15,11 @@ class AnalyticsViewController: BaseViewController, AnalyticsViewInput {
     
     var output: AnalyticsViewOutput?
     
-    var objects: [(String, String)] = [
-        ("Средний расход", "70 м3"),
-        ("Средний расход", "70 м3"),
-        ("Средний расход", "70 м3"),
-    ]
+    var objects: [(String, String)] = [] {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
     private let textLabel = UILabel().with(font: .systemFont(ofSize: 18, weight: .semibold)).with(textColor: Color.darkGray).with(text: "Показания и расходы")
     
@@ -52,6 +52,7 @@ class AnalyticsViewController: BaseViewController, AnalyticsViewInput {
         super.viewDidLoad()
         
         setupViews()
+        output?.didLoad()
     }
     
     private func setupViews() {
@@ -77,6 +78,10 @@ class AnalyticsViewController: BaseViewController, AnalyticsViewInput {
             pageControl.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             pageControl.heightAnchor.constraint(equalToConstant: 20)
         ])
+    }
+    
+    func display(adapter: AnalyticsViewAdapter) {
+        objects.append(("Средний расход", "\(adapter.median) \(UnitVolume.cubicMeters.symbol)"))
     }
     
 }

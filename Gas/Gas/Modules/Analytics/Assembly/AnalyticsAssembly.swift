@@ -8,11 +8,11 @@
 import UIKit
 
 protocol AnalyticsViewInput: class {
-    
+    func display(adapter: AnalyticsViewAdapter)
 }
 
 protocol AnalyticsViewOutput {
-    
+    func didLoad()
 }
 
 protocol AnalyticsModuleOutput {
@@ -23,7 +23,7 @@ class AnalyticsAssembly {
     
     func assemble(_ output: AnalyticsModuleOutput? = nil) -> UIViewController {
         let view = AnalyticsViewController()
-        let viewModel = AnalyticsViewModel()
+        let viewModel = AnalyticsViewModel(dataProvider: UserService())
         
         viewModel.view = view
         view.output = viewModel
