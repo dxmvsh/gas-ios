@@ -78,6 +78,7 @@
 		EF7B0AC92649AC9E00307772 /* AuthTokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AC82649AC9E00307772 /* AuthTokenStorage.swift */; };
 		EF7B0ACD2649B46D00307772 /* AnalyticsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0ACC2649B46D00307772 /* AnalyticsDataModel.swift */; };
 		EF7B0AD12649B55800307772 /* AnalyticsViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AD02649B55700307772 /* AnalyticsViewAdapter.swift */; };
+		EF7B0AD52649B79000307772 /* AccountInformationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AD42649B79000307772 /* AccountInformationDataModel.swift */; };
 		EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6B5261D773D00E9ECEA /* Button.swift */; };
 		EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6BA261D778400E9ECEA /* ViewExtension.swift */; };
 		EF92E6DA261D858C00E9ECEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF92E6DC261D858C00E9ECEA /* Localizable.strings */; };
@@ -208,6 +209,7 @@
 		EF7B0AC82649AC9E00307772 /* AuthTokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenStorage.swift; sourceTree = "<group>"; };
 		EF7B0ACC2649B46D00307772 /* AnalyticsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDataModel.swift; sourceTree = "<group>"; };
 		EF7B0AD02649B55700307772 /* AnalyticsViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewAdapter.swift; sourceTree = "<group>"; };
+		EF7B0AD42649B79000307772 /* AccountInformationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInformationDataModel.swift; sourceTree = "<group>"; };
 		EF92E6B5261D773D00E9ECEA /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		EF92E6BA261D778400E9ECEA /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		EF92E6D0261D852400E9ECEA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -973,6 +975,7 @@
 				EF7B0A21264949DC00307772 /* LoginTokenDataModel.swift */,
 				EF7B0A302649584400307772 /* AccessRecoveryDataModel.swift */,
 				EF7B0ACC2649B46D00307772 /* AnalyticsDataModel.swift */,
+				EF7B0AD42649B79000307772 /* AccountInformationDataModel.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -1226,6 +1229,7 @@
 				EF7B0AC92649AC9E00307772 /* AuthTokenStorage.swift in Sources */,
 				EF9D0C042636E155006E5472 /* PasscodeInputView.swift in Sources */,
 				EF92E749261DA3F600E9ECEA /* AddPersonalAccountViewController.swift in Sources */,
+				EF7B0AD52649B79000307772 /* AccountInformationDataModel.swift in Sources */,
 				EFAB6C9F262B1C5400250F4B /* AddEmailAssembly.swift in Sources */,
 				EF7B0A522649657300307772 /* ProfileAssembly.swift in Sources */,
 				EF7B09E026456EEE00307772 /* JSONCodingKeys.swift in Sources */,
