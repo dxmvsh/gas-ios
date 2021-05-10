@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum PasswordMode {
+    case set
+    case recover
+}
+
 class PasswordViewModel: PasswordViewOutput, PasswordModuleInput {
     
     weak var view: PasswordViewInput?
@@ -30,13 +35,17 @@ class PasswordViewModel: PasswordViewOutput, PasswordModuleInput {
     private var confirmPassword: String = ""
     
     private var userDataModel: UserDataModel?
+    private var accessRecoveryDataModel: AccessRecoveryDataModel?
     
+    private let mode: PasswordMode
     private let dataProvider: AuthorizationServiceProtocol
     private let secureAuthService: SecureAuthenticationProtocol
     
-    init(passwordChecker: PasswordCheckerService,
+    init(mode: PasswordMode,
+         passwordChecker: PasswordCheckerService,
          dataProvider: AuthorizationService,
          secureAuthService: SecureAuthenticationProtocol) {
+        self.mode = mode
         self.passwordChecker = passwordChecker
         self.dataProvider = dataProvider
         self.secureAuthService = secureAuthService
@@ -67,21 +76,47 @@ class PasswordViewModel: PasswordViewOutput, PasswordModuleInput {
             view?.showConfirmPasswordError("Пароли не совпадают")
             return
         }
-        
-        if var userDataModel = userDataModel {
-            userDataModel.password = password
-            dataProvider.register(user: userDataModel) { [weak self] result in
-                switch result {
-                case .success(let message):
-                    self?.secureAuthService.setPassword(userDataModel.password)
-                    self?.secureAuthService.setEmail(userDataModel.email)
-                    self?.output?.didSucceedPasswordSet()
-                case .failure(let error):
-                    print("error: \(error)")
-                    self?.output?.didFailPasswordSet()
+        switch mode {
+        case .set:
+            if var userDataModel = userDataModel {
+                userDataModel.password = password
+                dataProvider.register(user: userDataModel) { [weak self] result in
+                    switch result {
+                    case .success:
+                        self?.secureAuthService.setPassword(userDataModel.password)
+                        self?.secureAuthService.setEmail(userDataModel.email)
+                        self?.output?.didSucceedPasswordSet()
+                    case .failure(let error):
+                        print("error: \(error)")
+                        self?.output?.didFailPasswordSet()
+                    }
+                }
+            }
+        case .recover:
+            if var model = accessRecoveryDataModel {
+                model.new_password = password
+                model.confirm_password = confirmPassword
+                dataProvider.resetPassword(model: model) { [weak self] result in
+                    switch result {
+                    case .success(let message):
+                        if message.message == .success {
+                            if let password = self?.password {
+                                self?.secureAuthService.setEmail(model.email)
+                                self?.secureAuthService.setPassword(password)
+                            }
+                            self?.output?.didSucceedPasswordSet()
+                        } else {
+                            print("message failed")
+                            self?.output?.didFailPasswordSet()
+                        }
+                    case .failure(let error):
+                        print("error: \(error)")
+                        self?.output?.didFailPasswordSet()
+                    }
                 }
             }
         }
+        
     }
     
     private func updateButtonAvailability() {
@@ -90,6 +125,10 @@ class PasswordViewModel: PasswordViewOutput, PasswordModuleInput {
     
     func configure(userDataModel: UserDataModel) {
         self.userDataModel = userDataModel
+    }
+    
+    func configure(accessRecoveryDataModel: AccessRecoveryDataModel) {
+        self.accessRecoveryDataModel = accessRecoveryDataModel
     }
 }
 

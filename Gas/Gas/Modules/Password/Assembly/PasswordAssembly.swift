@@ -29,16 +29,18 @@ protocol PasswordModuleOutput {
 
 protocol PasswordModuleInput: class {
     func configure(userDataModel: UserDataModel)
+    func configure(accessRecoveryDataModel: AccessRecoveryDataModel)
 }
 
 typealias PasswordModuleConfiguration = (PasswordModuleInput) -> PasswordModuleOutput?
 
 class PasswordAssembly {
     
-    func assemble(_ configuration: PasswordModuleConfiguration? = nil) -> UIViewController {
+    func assemble(mode: PasswordMode, _ configuration: PasswordModuleConfiguration? = nil) -> UIViewController {
         let view = PasswordViewController()
         let passwordCheckerService = PasswordChecker()
-        let viewModel = PasswordViewModel(passwordChecker: passwordCheckerService,
+        let viewModel = PasswordViewModel(mode: mode,
+                                          passwordChecker: passwordCheckerService,
                                           dataProvider: AuthorizationService(),
                                           secureAuthService: SecureAuthentication(dataProvider: AuthorizationService()))
         
