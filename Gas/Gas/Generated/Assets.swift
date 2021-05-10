@@ -40,6 +40,7 @@ internal enum Asset {
   internal static let iconEyeOpen = ImageAsset(name: "icon_eye_open")
   internal static let infoIcon = ImageAsset(name: "info_icon")
   internal static let initialImage = ImageAsset(name: "initial_image")
+  internal static let lineGraph = ImageAsset(name: "line_graph")
   internal static let rpFail = ImageAsset(name: "rp_fail")
   internal static let rpSuccess = ImageAsset(name: "rp_success")
 }

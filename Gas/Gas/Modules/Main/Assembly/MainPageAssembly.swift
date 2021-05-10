@@ -10,7 +10,8 @@ import UIKit
 class MainPageAssembly {
     
     func assemble() -> UIViewController {
-        let view = MainPageViewController()
+        let analyticsView = AnalyticsAssembly().assemble()
+        let view = MainPageViewController(analyticsView: analyticsView)
         return view
     }
     

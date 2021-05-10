@@ -67,6 +67,10 @@
 		EF7B0A73264969DE00307772 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A72264969DE00307772 /* SettingsViewController.swift */; };
 		EF7B0A7A26497B5D00307772 /* ScanAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A7926497B5D00307772 /* ScanAssembly.swift */; };
 		EF7B0A8026497B6900307772 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A7F26497B6900307772 /* ScanViewController.swift */; };
+		EF7B0A9D264980CE00307772 /* AnalyticsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A9C264980CE00307772 /* AnalyticsAssembly.swift */; };
+		EF7B0AA4264980F300307772 /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AA3264980F300307772 /* AnalyticsViewController.swift */; };
+		EF7B0AAB264981B600307772 /* AnalyticsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AAA264981B600307772 /* AnalyticsCollectionViewCell.swift */; };
+		EF7B0AB2264996A600307772 /* AnalyticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AB1264996A600307772 /* AnalyticsViewModel.swift */; };
 		EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6B5261D773D00E9ECEA /* Button.swift */; };
 		EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6BA261D778400E9ECEA /* ViewExtension.swift */; };
 		EF92E6DA261D858C00E9ECEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF92E6DC261D858C00E9ECEA /* Localizable.strings */; };
@@ -186,6 +190,10 @@
 		EF7B0A72264969DE00307772 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EF7B0A7926497B5D00307772 /* ScanAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanAssembly.swift; sourceTree = "<group>"; };
 		EF7B0A7F26497B6900307772 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		EF7B0A9C264980CE00307772 /* AnalyticsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsAssembly.swift; sourceTree = "<group>"; };
+		EF7B0AA3264980F300307772 /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
+		EF7B0AAA264981B600307772 /* AnalyticsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF7B0AB1264996A600307772 /* AnalyticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewModel.swift; sourceTree = "<group>"; };
 		EF92E6B5261D773D00E9ECEA /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		EF92E6BA261D778400E9ECEA /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		EF92E6D0261D852400E9ECEA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -336,6 +344,7 @@
 		EF1D782426152A5300168CF9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EF7B0A9A264980B300307772 /* Analytics */,
 				EF7B0A7826497B0F00307772 /* Scan */,
 				EF7B0A6B264969A400307772 /* Settings */,
 				EF7B0A5E264965E000307772 /* PaymentHistory */,
@@ -649,6 +658,49 @@
 				EF7B0A7F26497B6900307772 /* ScanViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EF7B0A9A264980B300307772 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0AB02649969A00307772 /* ViewModel */,
+				EF7B0AA2264980E800307772 /* View */,
+				EF7B0A9B264980C300307772 /* Assembly */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		EF7B0A9B264980C300307772 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0A9C264980CE00307772 /* AnalyticsAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		EF7B0AA2264980E800307772 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0AA9264981A400307772 /* Additional */,
+				EF7B0AA3264980F300307772 /* AnalyticsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF7B0AA9264981A400307772 /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0AAA264981B600307772 /* AnalyticsCollectionViewCell.swift */,
+			);
+			path = Additional;
+			sourceTree = "<group>";
+		};
+		EF7B0AB02649969A00307772 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0AB1264996A600307772 /* AnalyticsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EF8947FC2625C64200338039 /* Base */ = {
@@ -1080,6 +1132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7B0AAB264981B600307772 /* AnalyticsCollectionViewCell.swift in Sources */,
 				EF7B09B4264566CB00307772 /* Moya+Alamofire.swift in Sources */,
 				EF7B09DC26456B9600307772 /* AuthorizationService.swift in Sources */,
 				EF79660B2615348F0052751C /* LabelExtension.swift in Sources */,
@@ -1128,6 +1181,7 @@
 				EF0952062623393300AD02BB /* LabeledTextField.swift in Sources */,
 				EF7B0A2C2649527F00307772 /* AccessRecoveryCoordinator.swift in Sources */,
 				EF92E75A261DA43E00E9ECEA /* RegistrationCoordinator.swift in Sources */,
+				EF7B0A9D264980CE00307772 /* AnalyticsAssembly.swift in Sources */,
 				EFAB6C54262912FA00250F4B /* CustomToolbar.swift in Sources */,
 				EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */,
 				EF7B09C92645685F00307772 /* Converter.swift in Sources */,
@@ -1165,6 +1219,7 @@
 				EF2E936E262906F400C0ADD9 /* BaseViewController.swift in Sources */,
 				EF7B0A6E264969B800307772 /* SettingsAssembly.swift in Sources */,
 				EFAB6C612629182200250F4B /* UserInformationAssembly.swift in Sources */,
+				EF7B0AB2264996A600307772 /* AnalyticsViewModel.swift in Sources */,
 				EF18EAE726092B1E00EA1F37 /* SceneDelegate.swift in Sources */,
 				EF09520E26233AD900AD02BB /* IndicatorExtension.swift in Sources */,
 				EF2DBAF32619E52F008C2B6E /* StringExtension.swift in Sources */,
@@ -1174,6 +1229,7 @@
 				EF7B09AA2645664400307772 /* NetworkDataProvider.swift in Sources */,
 				EF7B09C52645684000307772 /* ApiError.swift in Sources */,
 				EFAB6C99262B1B0A00250F4B /* AddEmailViewController.swift in Sources */,
+				EF7B0AA4264980F300307772 /* AnalyticsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
