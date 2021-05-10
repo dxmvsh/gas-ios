@@ -83,7 +83,7 @@ class LoginViewController: BaseViewController, LoginViewInput {
     
     @objc
     private func didTapForgotPassword() {
-        // TODO: add forgot password module
+        output?.didTapForgotPassword()
     }
     
     @objc
