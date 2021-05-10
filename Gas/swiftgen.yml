@@ -17,3 +17,12 @@ strings:
         output: Text.swift
         params:
             enumName: Text
+
+plist:
+-   inputs: Development/Configuration.plist
+    outputs:
+        templatePath: SwiftGenTemplates/Configs.stencil
+        output: AppConfigs.swift
+        params:
+            enumName: AppConfigs
+            publicAccess: public
