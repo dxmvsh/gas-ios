@@ -54,6 +54,8 @@
 		EF7B0A1826483F8D00307772 /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A1726483F8D00307772 /* LoginAssembly.swift */; };
 		EF7B0A1E2649410200307772 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A1D2649410200307772 /* SignInCoordinator.swift */; };
 		EF7B0A22264949DC00307772 /* LoginTokenDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A21264949DC00307772 /* LoginTokenDataModel.swift */; };
+		EF7B0A2C2649527F00307772 /* AccessRecoveryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A2B2649527F00307772 /* AccessRecoveryCoordinator.swift */; };
+		EF7B0A312649584400307772 /* AccessRecoveryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A302649584400307772 /* AccessRecoveryDataModel.swift */; };
 		EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6B5261D773D00E9ECEA /* Button.swift */; };
 		EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6BA261D778400E9ECEA /* ViewExtension.swift */; };
 		EF92E6DA261D858C00E9ECEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF92E6DC261D858C00E9ECEA /* Localizable.strings */; };
@@ -160,6 +162,8 @@
 		EF7B0A1726483F8D00307772 /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
 		EF7B0A1D2649410200307772 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
 		EF7B0A21264949DC00307772 /* LoginTokenDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTokenDataModel.swift; sourceTree = "<group>"; };
+		EF7B0A2B2649527F00307772 /* AccessRecoveryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessRecoveryCoordinator.swift; sourceTree = "<group>"; };
+		EF7B0A302649584400307772 /* AccessRecoveryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessRecoveryDataModel.swift; sourceTree = "<group>"; };
 		EF92E6B5261D773D00E9ECEA /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		EF92E6BA261D778400E9ECEA /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		EF92E6D0261D852400E9ECEA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -580,6 +584,7 @@
 			children = (
 				EF92E759261DA43E00E9ECEA /* RegistrationCoordinator.swift */,
 				EF7B0A1D2649410200307772 /* SignInCoordinator.swift */,
+				EF7B0A2B2649527F00307772 /* AccessRecoveryCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -733,6 +738,7 @@
 				EF7B09EB2645792A00307772 /* MessageStatusDataModel.swift */,
 				EF7B09F12645886400307772 /* UserDataModel.swift */,
 				EF7B0A21264949DC00307772 /* LoginTokenDataModel.swift */,
+				EF7B0A302649584400307772 /* AccessRecoveryDataModel.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -931,6 +937,7 @@
 				EFAB6C6A2629191200250F4B /* UserInformationDataModel.swift in Sources */,
 				EF7B0A1426483F7B00307772 /* LoginViewModel.swift in Sources */,
 				EF9D0BFE2636D8E5006E5472 /* PasscodeKeyboardButton.swift in Sources */,
+				EF7B0A312649584400307772 /* AccessRecoveryDataModel.swift in Sources */,
 				EF1D782826152A9D00168CF9 /* InitialViewController.swift in Sources */,
 				EF9D0BCE2636AC25006E5472 /* PasswordRuleViewAdapter.swift in Sources */,
 				EF9D0BF82636D838006E5472 /* PasscodeKeyboardView.swift in Sources */,
@@ -960,6 +967,7 @@
 				EF7965E326152D800052751C /* Constants.swift in Sources */,
 				EF9D0BE42636D6E8006E5472 /* PasscodeAssembly.swift in Sources */,
 				EF0952062623393300AD02BB /* LabeledTextField.swift in Sources */,
+				EF7B0A2C2649527F00307772 /* AccessRecoveryCoordinator.swift in Sources */,
 				EF92E75A261DA43E00E9ECEA /* RegistrationCoordinator.swift in Sources */,
 				EFAB6C54262912FA00250F4B /* CustomToolbar.swift in Sources */,
 				EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */,

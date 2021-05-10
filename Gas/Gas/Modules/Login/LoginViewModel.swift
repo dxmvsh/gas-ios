@@ -32,4 +32,8 @@ class LoginViewModel: LoginViewOutput {
         }
     }
     
+    func didTapForgotPassword() {
+        output?.didTapForgotPassword()
+    }
+    
 }

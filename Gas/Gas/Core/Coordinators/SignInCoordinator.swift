@@ -20,6 +20,7 @@ class SignInCoordinator: SignInCoordinatorProtocol {
     
     private let navigationController: UINavigationController
     private let secureAuth = SecureAuthentication(dataProvider: AuthorizationService())
+    var accessRecoveryCoordinator: AccessRecoveryCoordinatorProtocol?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -61,6 +62,10 @@ extension SignInCoordinator: LoginModuleOutput, PasscodeModuleOutput, BiometryMo
     
     func didLogin() {
         moveToSetPasscode()
+    }
+    
+    func didTapForgotPassword() {
+        accessRecoveryCoordinator?.start()
     }
     
     func didSucceedPasscodeModule() {

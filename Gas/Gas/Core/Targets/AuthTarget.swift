@@ -15,6 +15,7 @@ enum AuthTarget: TargetType {
     case emailInit(email: String)
     case register(user: UserDataModel)
     case login(phoneNumber: String, password: String)
+    case resetPassword(data: AccessRecoveryDataModel)
     
     var baseURL: URL {
         return URL(string: "http://130.61.58.200/api/")!
@@ -34,6 +35,8 @@ enum AuthTarget: TargetType {
             return "auth/registration/"
         case .login:
             return "auth/"
+        case .resetPassword:
+            return "auth/reset_password/"
         }
     }
     
@@ -41,7 +44,7 @@ enum AuthTarget: TargetType {
         switch self {
         case .accountNumber:
             return .get
-        case .smsInit, .login, .register, .emailInit, .verify:
+        case .smsInit, .login, .register, .emailInit, .verify, .resetPassword:
             return .post
         }
     }
@@ -62,6 +65,8 @@ enum AuthTarget: TargetType {
             return .requestParameters(parameters: ["otp_code": code], encoding: JSONEncoding.default)
         case .login(let phoneNumber, let password):
             return .requestParameters(parameters: ["mobile_phone": phoneNumber, "password": password], encoding: JSONEncoding.default)
+        case .resetPassword(let data):
+            return .requestParameters(parameters: data.toDict(), encoding: JSONEncoding.default)
         }
     }
     

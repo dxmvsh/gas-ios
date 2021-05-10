@@ -81,7 +81,7 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
     }
     
     func moveToSetPassword() {
-        let viewController = PasswordAssembly().assemble { [weak self] input -> PasswordModuleOutput? in
+        let viewController = PasswordAssembly().assemble(mode: .set) { [weak self] input -> PasswordModuleOutput? in
             if let phoneNumber = self?.phoneNumber,
                let email = self?.email,
                let accountNumber = self?.accountNumber {

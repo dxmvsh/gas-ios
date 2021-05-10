@@ -9,10 +9,12 @@ import UIKit
 
 protocol LoginModuleOutput {
     func didLogin()
+    func didTapForgotPassword()
 }
 
 protocol LoginViewOutput {
     func didTapLogin(email: String, password: String)
+    func didTapForgotPassword()
 }
 
 protocol LoginViewInput: class {
