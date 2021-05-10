@@ -24,9 +24,9 @@ protocol PasscodeModuleOutput {
 
 class PasscodeAssembly {
     
-    func assemble(_ moduleOutput: PasscodeModuleOutput) -> UIViewController {
-        let view = PasscodeViewController(mode: .set)
-        let viewModel = PasscodeViewModel(mode: .set, secureAuth: SecureAuthentication(dataProvider: AuthorizationService()))
+    func assemble(mode: PasscodeMode, _ moduleOutput: PasscodeModuleOutput) -> UIViewController {
+        let view = PasscodeViewController(mode: mode)
+        let viewModel = PasscodeViewModel(mode: mode, secureAuth: SecureAuthentication(dataProvider: AuthorizationService()))
         
         view.output = viewModel
         viewModel.view = view

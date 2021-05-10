@@ -75,6 +75,10 @@ internal enum Text {
   internal static var emailVerification: String {
       return Text.localized("Localizable", "email verification")
   }
+  /// Войти
+  internal static var enter: String {
+      return Text.localized("Localizable", "enter")
+  }
   /// Введите 4-значный код подтверждения, который мы выслали на ваш email адрес %@
   internal static func enter4DigitCodeSentTo(_ p1: String) -> String {
     return Text.localized("Localizable", "enter 4 digit code sent to %@", p1)
@@ -82,6 +86,10 @@ internal enum Text {
   /// Введите код
   internal static var enterCode: String {
       return Text.localized("Localizable", "enter code")
+  }
+  /// Введите логин и пароль для входа
+  internal static var enterLoginAndPasswordToLogin: String {
+      return Text.localized("Localizable", "enter login and password to login")
   }
   /// Введите номер телефона чтобы зарегистрироваться
   internal static var enterPhoneNumberToRegister: String {
@@ -103,6 +111,10 @@ internal enum Text {
   internal static var fio: String {
       return Text.localized("Localizable", "fio")
   }
+  /// Забыли пароль?
+  internal static var forgotPassword: String {
+      return Text.localized("Localizable", "forgot password")
+  }
   /// Получить код
   internal static var getCode: String {
       return Text.localized("Localizable", "get code")
@@ -115,9 +127,17 @@ internal enum Text {
   internal static var invalidCode: String {
       return Text.localized("Localizable", "invalid code")
   }
+  /// Пароль
+  internal static var password: String {
+      return Text.localized("Localizable", "password")
+  }
   /// Номер лицевого счета
   internal static var personalAccountNumber: String {
       return Text.localized("Localizable", "personal account number")
+  }
+  /// Номер телефона или эл.почта
+  internal static var phoneNumberOrEmail: String {
+      return Text.localized("Localizable", "phone number or email")
   }
   /// Пин-код
   internal static var pinCode: String {
@@ -127,9 +147,17 @@ internal enum Text {
   internal static var pleaseEnterEmail: String {
       return Text.localized("Localizable", "please enter email")
   }
+  /// Пожалуйста, введите номер телефона или эл. почту
+  internal static var pleaseEnterEmailOrPhone: String {
+      return Text.localized("Localizable", "please enter email or phone")
+  }
   /// Пожалуйста, заполните поле верно
   internal static var pleaseEnterFieldCorrectly: String {
       return Text.localized("Localizable", "please enter field correctly")
+  }
+  /// Пожалуйста, введите пароль
+  internal static var pleaseEnterPassword: String {
+      return Text.localized("Localizable", "please enter password")
   }
   /// Публичная оферта
   internal static var publicOffer: String {

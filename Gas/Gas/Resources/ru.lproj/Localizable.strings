@@ -52,3 +52,10 @@
 "error" = "Ошибка";
 "error happened while registering" = "Произошла ошибка при регистрации.";
 "try again" = "Попробуйте еще раз.";
+"enter" = "Войти";
+"enter login and password to login" = "Введите логин и пароль для входа";
+"phone number or email" = "Номер телефона или эл.почта";
+"password" = "Пароль";
+"forgot password" = "Забыли пароль?";
+"please enter password" = "Пожалуйста, введите пароль";
+"please enter email or phone" = "Пожалуйста, введите номер телефона или эл. почту";
