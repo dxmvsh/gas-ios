@@ -90,6 +90,7 @@ class InitialViewController: UIViewController {
     private func signInTapped() {
         guard let navigationController = navigationController else { return }
         let coordinator = SignInCoordinator(navigationController: navigationController)
+        coordinator.accessRecoveryCoordinator = AccessRecoveryCoordinator(navigationController: navigationController)
         coordinator.start()
     }
 }
