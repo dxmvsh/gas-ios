@@ -93,7 +93,7 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
     }
     
     func moveToSetPasscode() {
-        let viewController = PasscodeAssembly().assemble(self)
+        let viewController = PasscodeAssembly().assemble(mode: .set, self)
         navigationController.pushViewController(viewController, animated: true)
     }
     

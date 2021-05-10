@@ -20,7 +20,8 @@ class PasscodeViewModel: PasscodeViewOutput {
     }
     
     func didEnterPasscode(_ code: String) {
-        if mode == .set {
+        switch mode {
+        case .set:
             let firstPasscode = code.prefix(4)
             let secondPasscode = code.suffix(4)
             if firstPasscode == secondPasscode {
@@ -28,6 +29,14 @@ class PasscodeViewModel: PasscodeViewOutput {
                 output?.didSucceedPasscodeModule()
             } else {
                 view?.showError()
+            }
+        case .enter:
+            secureAuth.authenticateWithPasscode(code) { [weak self] (success) in
+                if success {
+                    self?.output?.didSucceedPasscodeModule()
+                } else {
+                    // TODO: Show alert to enter via email password
+                }
             }
         }
     }

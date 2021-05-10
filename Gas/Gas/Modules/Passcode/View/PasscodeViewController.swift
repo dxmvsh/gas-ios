@@ -102,13 +102,6 @@ class PasscodeViewController: BaseViewController, PasscodeViewInput {
                 break
             }
         }
-        
-//        statusView.completionHandler = { [weak self] in
-//            self?.statusView.showFailure(completionHandler: { [weak self] in
-//                guard let passcode = self?.enteredPasscode else { return }
-//                self?.output?.didEnterPasscode(passcode)
-//            })
-//        }
     }
     
     private func didChangePasscode() {

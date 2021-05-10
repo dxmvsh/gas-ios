@@ -11,12 +11,14 @@ import KeychainSwift
 
 protocol SecureAuthenticationProtocol {
     var canSetBiometry: Bool { get }
+    var isPasscodeSet: Bool { get }
     func authenticateWithPasscode(_ passcode: String, completion: @escaping ((_ success: Bool) -> Void))
     func authenticateWithBio(completion: @escaping ((_ success: Bool) -> Void))
     func setPasscode(_ code: String)
     func setEmail(_ email: String)
     func setPassword(_ password: String)
     func setBiometry()
+    func setToken(_ token: String)
 }
 
 fileprivate enum Constants {
@@ -24,12 +26,17 @@ fileprivate enum Constants {
     static let passwordKey: String = "Password"
     static let emailKey: String = "Email"
     static let biometryEnabledKey: String = "IsBiometryEnabled"
+    static let tokenKey: String = "token"
 }
 
 class SecureAuthentication: SecureAuthenticationProtocol {
     
     var canSetBiometry: Bool {
         return context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error)
+    }
+    
+    var isPasscodeSet: Bool {
+        return keychain.get(Constants.passcodeKey) != nil
     }
     
     let context = LAContext()
@@ -62,14 +69,11 @@ class SecureAuthentication: SecureAuthenticationProtocol {
         if passcode == passcodeSaved {
             if let password = keychain.get(Constants.passwordKey),
                let email = keychain.get(Constants.emailKey) {
-                dataProvider.login(email: email, password: password) { result in
+                dataProvider.login(phoneNumber: email, password: password) { [weak self] result in
                     switch result {
                     case .success(let message):
-                        if message.message == .success {
-                            completion(true)
-                        } else {
-                            completion(false)
-                        }
+                        self?.setToken(message.refresh)
+                        completion(true)
                     case .failure(let error):
                         completion(false)
                     }
@@ -105,4 +109,7 @@ class SecureAuthentication: SecureAuthenticationProtocol {
         keychain.set(true, forKey: Constants.biometryEnabledKey)
     }
     
+    func setToken(_ token: String) {
+        keychain.set(token, forKey: Constants.tokenKey)
+    }
 }

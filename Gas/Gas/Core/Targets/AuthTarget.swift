@@ -14,7 +14,7 @@ enum AuthTarget: TargetType {
     case verify(code: String)
     case emailInit(email: String)
     case register(user: UserDataModel)
-    case login(email: String, password: String)
+    case login(phoneNumber: String, password: String)
     
     var baseURL: URL {
         return URL(string: "http://130.61.58.200/api/")!
@@ -60,8 +60,8 @@ enum AuthTarget: TargetType {
             return .requestParameters(parameters: user.toDict(), encoding: JSONEncoding.default)
         case .verify(let code):
             return .requestParameters(parameters: ["otp_code": code], encoding: JSONEncoding.default)
-        case .login(let email, let password):
-            return .requestParameters(parameters: ["email": email, "password": password], encoding: JSONEncoding.default)
+        case .login(let phoneNumber, let password):
+            return .requestParameters(parameters: ["mobile_phone": phoneNumber, "password": password], encoding: JSONEncoding.default)
         }
     }
     

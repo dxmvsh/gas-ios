@@ -19,6 +19,7 @@ class Button: UIButton {
         button.roundCorners(radius: Constants.cornerRadius)
         button.backgroundColor = Color.main
         button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.textAlignment = .center
         button.setTitleColor(Color.buttonInactiveTitleColor, for: .disabled)
         return button
     }
@@ -28,6 +29,7 @@ class Button: UIButton {
         button.setTitle(title, for: .normal)
         button.backgroundColor = .none
         button.setTitleColor(Color.darkGray, for: .normal)
+        button.titleLabel?.textAlignment = .center
         return button
     }
     

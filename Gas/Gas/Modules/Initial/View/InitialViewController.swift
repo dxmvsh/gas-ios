@@ -81,12 +81,15 @@ class InitialViewController: UIViewController {
     @objc
     private func registrationTapped() {
         guard let navigationController = navigationController else { return }
-        let coordinator = RegistrationCoordinatorManager(navigationController: navigationController, secureAuth: SecureAuthentication(dataProvider: AuthorizationService()))
+        let coordinator = RegistrationCoordinatorManager(navigationController: navigationController,
+                                                         secureAuth: SecureAuthentication(dataProvider: AuthorizationService()))
         coordinator.start()
     }
     
     @objc
     private func signInTapped() {
-        print("signInTapped")
+        guard let navigationController = navigationController else { return }
+        let coordinator = SignInCoordinator(navigationController: navigationController)
+        coordinator.start()
     }
 }
