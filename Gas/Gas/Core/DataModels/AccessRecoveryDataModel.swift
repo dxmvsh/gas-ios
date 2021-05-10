@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct AccessRecoveryDataModel: Codable {
+    var email: String
+    var new_password: String?
+    var confirm_password: String?
+}
