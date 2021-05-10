@@ -16,6 +16,7 @@ protocol AuthorizationServiceProtocol {
     func verify(code: String, completion: @escaping ResponseCompletion<MessageStatusDataModel>)
     func register(user: UserDataModel, completion: @escaping ResponseCompletion<UserDataModel>)
     func login(phoneNumber: String, password: String, completion: @escaping ResponseCompletion<LoginTokenDataModel>)
+    func resetPassword(model: AccessRecoveryDataModel, completion: @escaping ResponseCompletion<MessageStatusDataModel>)
 }
 
 class AuthorizationService: AuthorizationServiceProtocol {
@@ -106,6 +107,21 @@ class AuthorizationService: AuthorizationServiceProtocol {
             switch result {
             case .success(let response):
                 guard let model = try? JSONDecoder().decode(LoginTokenDataModel.self, from: response.data) else {
+                    completion(.failure(.custom("JSON parsing error")))
+                    return
+                }
+                completion(.success(model))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func resetPassword(model: AccessRecoveryDataModel, completion: @escaping ResponseCompletion<MessageStatusDataModel>) {
+        dataProvider.request(.resetPassword(data: model)) { result in
+            switch result {
+            case .success(let response):
+                guard let model = try? JSONDecoder().decode(MessageStatusDataModel.self, from: response.data) else {
                     completion(.failure(.custom("JSON parsing error")))
                     return
                 }
