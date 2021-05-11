@@ -9,7 +9,7 @@ import Moya
 
 protocol UserServiceProtocol {
     func getAnalytics(completion: @escaping ResponseCompletion<AnalyticsDataModel>)
-    func getInformation(completion: @escaping ResponseCompletion<AccountInformationDataModel>)
+    func getInformation(completion: @escaping ResponseCompletion<[AccountInformationDataModel]>)
 }
 
 class UserService: UserServiceProtocol {
@@ -43,11 +43,11 @@ class UserService: UserServiceProtocol {
         }
     }
     
-    func getInformation(completion: @escaping ResponseCompletion<AccountInformationDataModel>) {
+    func getInformation(completion: @escaping ResponseCompletion<[AccountInformationDataModel]>) {
         dataProvider.request(.info) { result in
             switch result {
             case .success(let response):
-                guard let model = try? JSONDecoder().decode(AccountInformationDataModel.self, from: response.data) else {
+                guard let model = try? JSONDecoder().decode([AccountInformationDataModel].self, from: response.data) else {
                     completion(.failure(.custom("JSON Parsing error")))
                     return
                 }
