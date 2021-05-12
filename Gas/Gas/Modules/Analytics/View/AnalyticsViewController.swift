@@ -51,6 +51,7 @@ class AnalyticsViewController: BaseViewController, AnalyticsViewInput {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = Color.backgroundColor
         setupViews()
         output?.didLoad()
     }

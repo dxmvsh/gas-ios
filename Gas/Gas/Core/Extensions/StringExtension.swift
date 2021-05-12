@@ -41,4 +41,12 @@ extension String {
         let end = index(startIndex, offsetBy: range.upperBound)
         return String(self[Range(uncheckedBounds: (lower: start, upper: end))])
     }
+    
+    func toDate(format: DateFormat, locale: String = "ru") -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format.value
+        dateFormatter.locale = Locale(identifier: locale)
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        return dateFormatter.date(from: self) ?? Date()
+    }
 }

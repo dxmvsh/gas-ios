@@ -11,11 +11,14 @@ class MainPageViewController: BaseViewController {
     
     private let analyticsView: UIViewController
     private let accountInfoView: UIViewController
+    private let paymentHistoryView: UIViewController
     
     init(analyticsView: UIViewController,
-         accountInfoView: UIViewController) {
+         accountInfoView: UIViewController,
+         paymentHistoryView: UIViewController) {
         self.analyticsView = analyticsView
         self.accountInfoView = accountInfoView
+        self.paymentHistoryView = paymentHistoryView
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -36,7 +39,9 @@ class MainPageViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        [analyticsView, accountInfoView].forEach {
+        view.backgroundColor = Color.backgroundColor
+        
+        [analyticsView, accountInfoView, paymentHistoryView].forEach {
             view.addSubview($0.view)
             $0.view.translatesAutoresizingMaskIntoConstraints = false
         }
@@ -51,6 +56,11 @@ class MainPageViewController: BaseViewController {
             accountInfoView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LayoutGuidance.offset),
             accountInfoView.view.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -LayoutGuidance.offset),
             accountInfoView.view.heightAnchor.constraint(equalToConstant: 150),
+            
+            paymentHistoryView.view.topAnchor.constraint(equalTo: accountInfoView.view.bottomAnchor, constant: LayoutGuidance.offset),
+            paymentHistoryView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            paymentHistoryView.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            paymentHistoryView.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
     }
     
