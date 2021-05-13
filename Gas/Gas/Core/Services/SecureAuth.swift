@@ -20,6 +20,7 @@ protocol SecureAuthenticationProtocol {
     func setBiometry()
     func setToken(_ token: String)
     func getToken() -> String
+    func flush()
 }
 
 fileprivate enum Constants {
@@ -116,5 +117,13 @@ class SecureAuthentication: SecureAuthenticationProtocol {
     
     func getToken() -> String {
         keychain.get(Constants.tokenKey) ?? ""
+    }
+    
+    func flush() {
+        keychain.delete(Constants.biometryEnabledKey)
+        keychain.delete(Constants.emailKey)
+        keychain.delete(Constants.passcodeKey)
+        keychain.delete(Constants.passwordKey)
+        keychain.delete(Constants.tokenKey)
     }
 }
