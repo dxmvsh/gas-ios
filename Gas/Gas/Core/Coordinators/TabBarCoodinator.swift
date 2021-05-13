@@ -42,7 +42,9 @@ class TabBarCoordinator: TabBarCoordinatorProtocol {
                                                                image: Asset.iconReceipt.image,
                                                                selectedImage: Asset.iconReceipt.image)
         
-        let viewController2 = PaymentOrderAssembly().assemble()
+        let viewController2 = PaymentOrderAssembly().assemble { _ in
+            return self
+        }
         let scanViewController = UINavigationController(rootViewController: viewController2)
         scanViewController.tabBarItem = UITabBarItem(title: nil,
                                                      image: Asset.iconScan.image,
@@ -62,6 +64,18 @@ class TabBarCoordinator: TabBarCoordinatorProtocol {
                                                          selectedImage: Asset.iconSettingsSelected.image)
         
         tabBarController.setViewControllers([mainPageViewController, paymentHistoryViewController, scanViewController, profileViewController, settingsViewController], animated: false)
+    }
+    
+}
+
+extension TabBarCoordinator: PaymentOrderModuleOutput {
+    
+    func didSucceedPayment() {
+        tabBarController.selectedIndex = 1
+    }
+    
+    func didFailPayment() {
+        
     }
     
 }

@@ -76,6 +76,7 @@ class Button: UIButton {
     func setDisabled() {
         isEnabled = false
         backgroundColor = Color.buttonInactiveBackgroundColor
+        isUserInteractionEnabled = false
         leftLabel.textColor = Color.buttonInactiveTitleColor
         rightLabel.textColor = Color.buttonInactiveTitleColor
     }
@@ -83,6 +84,7 @@ class Button: UIButton {
     func setEnabled() {
         isEnabled = true
         backgroundColor = Color.main
+        isUserInteractionEnabled = true
         leftLabel.textColor = .white
         rightLabel.textColor = .white
     }

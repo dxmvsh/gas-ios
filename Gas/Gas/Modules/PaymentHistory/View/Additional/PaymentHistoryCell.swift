@@ -40,7 +40,7 @@ class PaymentHistoryCell: UITableViewCell {
             accountNumberLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: LayoutGuidance.offsetHalf),
             
             consumptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -LayoutGuidance.offsetDouble),
-            consumptionLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
+            consumptionLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: LayoutGuidance.offset),
             
             priceLabel.trailingAnchor.constraint(equalTo: consumptionLabel.trailingAnchor),
             priceLabel.bottomAnchor.constraint(equalTo: accountNumberLabel.bottomAnchor),

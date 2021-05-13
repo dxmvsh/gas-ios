@@ -10,6 +10,8 @@ import Foundation
 class PaymentOrderViewModel: PaymentOrderViewOutput, PaymentOrderModuleInput {
     
     weak var view: PaymentOrderViewInput?
+    var moduleOutput: PaymentOrderModuleOutput?
+    var router: PaymentOrderRouterInput?
     private let dataProvider: PaymentServiceProtocol
     private let accountProvider: UserServiceProtocol = UserService()
     private var account: AccountInformationDataModel?
@@ -46,6 +48,7 @@ class PaymentOrderViewModel: PaymentOrderViewOutput, PaymentOrderModuleInput {
         dataProvider.calculate(data: payload.toDict()) { [weak self] result in
             switch result {
             case .success(let model):
+                self?.payload.principal = model.amount
                 self?.view?.display(calculation: model)
             case .failure(let error):
                 print("error: \(error)")
@@ -64,6 +67,33 @@ class PaymentOrderViewModel: PaymentOrderViewOutput, PaymentOrderModuleInput {
         history.forEach({ lastIndicator = max($0.volume, lastIndicator) })
         payload.last_indicators = lastIndicator
         view?.set(lastIndicator: "\(lastIndicator)")
+    }
+    
+    func didTapPay() {
+        guard payload.current_indicators != nil,
+              payload.account_number != nil,
+              payload.principal != nil else { return }
+        
+        dataProvider.pay(params: payload.toDict()) { [weak self] result in
+            switch result {
+            case .success:
+                self?.router?.showResultViewController(isSuccess: true,
+                                                       title: "Успешно оплачено!",
+                                                       subtitle: "",
+                                                       image: Asset.checkMark.image,
+                                                       completion: { [weak self] in
+                                                        self?.moduleOutput?.didSucceedPayment()
+                                                       })
+            case .failure:
+                self?.router?.showResultViewController(isSuccess: false,
+                                                       title: "Ошибка",
+                                                       subtitle: "Попробуйте еще раз",
+                                                       image: Asset.rpFail.image,
+                                                       completion: { [weak self] in
+                                                        self?.moduleOutput?.didSucceedPayment()
+                                                       })
+            }
+        }
     }
     
 }

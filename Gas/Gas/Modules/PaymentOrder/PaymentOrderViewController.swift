@@ -41,6 +41,7 @@ class PaymentOrderViewController: BaseViewController, PaymentOrderViewInput {
         title = "Показатели"
         view.backgroundColor = Color.backgroundColor
         button.setDisabled()
+        button.addTarget(self, action: #selector(didTapPay), for: .touchUpInside)
         output?.didLoad()
         setupViews()
     }
@@ -95,6 +96,11 @@ class PaymentOrderViewController: BaseViewController, PaymentOrderViewInput {
     
     func set(lastIndicator: String) {
         counterInfoView.setLastIndicator("\(lastIndicator) \(UnitVolume.cubicMeters.symbol)")
+    }
+    
+    @objc
+    private func didTapPay() {
+        output?.didTapPay()
     }
     
 }

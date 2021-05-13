@@ -36,6 +36,7 @@ internal enum Asset {
   internal static let iconSettingsSelected = ImageAsset(name: "icon_settings_selected")
   internal static let backspace = ImageAsset(name: "backspace")
   internal static let biometry = ImageAsset(name: "biometry")
+  internal static let checkMark = ImageAsset(name: "checkMark")
   internal static let iconClear = ImageAsset(name: "icon_clear")
   internal static let iconEyeClosed = ImageAsset(name: "icon_eye_closed")
   internal static let iconEyeOpen = ImageAsset(name: "icon_eye_open")

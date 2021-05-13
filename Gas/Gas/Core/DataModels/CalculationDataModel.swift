@@ -11,6 +11,7 @@ struct CalculationRequestDataModel: Codable {
     var current_indicators: Decimal?
     var last_indicators: Decimal?
     var account_number: String?
+    var principal: Decimal?
 }
 
 struct CalculationDataModel: Codable {

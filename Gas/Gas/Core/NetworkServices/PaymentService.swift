@@ -12,6 +12,7 @@ protocol PaymentServiceProtocol {
     func getHistory(dateFrom: String?, dateTo: String?, completion: @escaping ResponseCompletion<[PaymentHistoryItemDataModel]>)
     func getPayment(id: Int, completion: @escaping ResponseCompletion<PaymentHistoryItemDataModel>)
     func calculate(data: [String: Any], completion: @escaping ResponseCompletion<CalculationDataModel>)
+    func pay(params: [String: Any], completion: @escaping ResponseCompletion<String>)
 }
 
 class PaymentService: PaymentServiceProtocol {
@@ -69,6 +70,21 @@ class PaymentService: PaymentServiceProtocol {
                     return
                 }
                 completion(.success(model))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func pay(params: [String : Any], completion: @escaping ResponseCompletion<String>) {
+        dataProvider.request(.pay(params: params)) { result in
+            switch result {
+            case .success(let response):
+                guard let model = try? JSONDecoder().decode(PaymentUrlWrapper.self, from: response.data) else {
+                    completion(.failure(.custom("JSON Parsing error")))
+                    return
+                }
+                completion(.success(model.payment_url))
             case .failure(let error):
                 completion(.failure(error))
             }

@@ -115,6 +115,8 @@
 		EF9C273B264D642F006DEFED /* PaymentOrderCounterInfoAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C273A264D642F006DEFED /* PaymentOrderCounterInfoAdapter.swift */; };
 		EF9C2741264D6579006DEFED /* PaymentOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C2740264D6579006DEFED /* PaymentOrderViewModel.swift */; };
 		EF9C2746264D6985006DEFED /* PaymentOrderAccountInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C2745264D6985006DEFED /* PaymentOrderAccountInfoView.swift */; };
+		EF9C274A264DAAF3006DEFED /* PaymentUrlWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C2749264DAAF3006DEFED /* PaymentUrlWrapper.swift */; };
+		EF9C274E264DAE32006DEFED /* PaymentOrderRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C274D264DAE32006DEFED /* PaymentOrderRouter.swift */; };
 		EF9D0BB526367C8E006E5472 /* OfferInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BB426367C8E006E5472 /* OfferInformationViewController.swift */; };
 		EF9D0BB926367D1E006E5472 /* CheckBoxTitledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BB826367D1E006E5472 /* CheckBoxTitledView.swift */; };
 		EF9D0BBD26368274006E5472 /* OfferConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BBC26368274006E5472 /* OfferConfirmationView.swift */; };
@@ -275,6 +277,8 @@
 		EF9C273A264D642F006DEFED /* PaymentOrderCounterInfoAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrderCounterInfoAdapter.swift; sourceTree = "<group>"; };
 		EF9C2740264D6579006DEFED /* PaymentOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrderViewModel.swift; sourceTree = "<group>"; };
 		EF9C2745264D6985006DEFED /* PaymentOrderAccountInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrderAccountInfoView.swift; sourceTree = "<group>"; };
+		EF9C2749264DAAF3006DEFED /* PaymentUrlWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentUrlWrapper.swift; sourceTree = "<group>"; };
+		EF9C274D264DAE32006DEFED /* PaymentOrderRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrderRouter.swift; sourceTree = "<group>"; };
 		EF9D0BB426367C8E006E5472 /* OfferInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferInformationViewController.swift; sourceTree = "<group>"; };
 		EF9D0BB826367D1E006E5472 /* CheckBoxTitledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxTitledView.swift; sourceTree = "<group>"; };
 		EF9D0BBC26368274006E5472 /* OfferConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferConfirmationView.swift; sourceTree = "<group>"; };
@@ -982,6 +986,7 @@
 				EF9C26EE264CECB8006DEFED /* PaymentOrderAssembly.swift */,
 				EF9C26F6264CEF28006DEFED /* PaymentOrderViewController.swift */,
 				EF9C2740264D6579006DEFED /* PaymentOrderViewModel.swift */,
+				EF9C274D264DAE32006DEFED /* PaymentOrderRouter.swift */,
 			);
 			path = PaymentOrder;
 			sourceTree = "<group>";
@@ -1158,6 +1163,7 @@
 				EF7B0AD42649B79000307772 /* AccountInformationDataModel.swift */,
 				EF140728264AAFAE003722CD /* PaymentHistoryItemDataModel.swift */,
 				EF9C26F2264CEDC0006DEFED /* CalculationDataModel.swift */,
+				EF9C2749264DAAF3006DEFED /* PaymentUrlWrapper.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -1423,6 +1429,7 @@
 				EF9C26EF264CECB8006DEFED /* PaymentOrderAssembly.swift in Sources */,
 				EF4428CA263AD45900ADD537 /* BiometryViewModel.swift in Sources */,
 				EF9D0BCA26369BA6006E5472 /* PasswordRulesView.swift in Sources */,
+				EF9C274A264DAAF3006DEFED /* PaymentUrlWrapper.swift in Sources */,
 				EF9D0BD22636BA55006E5472 /* PasswordViewModel.swift in Sources */,
 				EF92E6E6261D86BD00E9ECEA /* Assets.swift in Sources */,
 				EF7B0A22264949DC00307772 /* LoginTokenDataModel.swift in Sources */,
@@ -1450,6 +1457,7 @@
 				EF9D0BC2263698FB006E5472 /* PasswordAssembly.swift in Sources */,
 				EF9D0BF12636D71D006E5472 /* PasscodeViewController.swift in Sources */,
 				EF7B0A45264964EE00307772 /* MainPageViewController.swift in Sources */,
+				EF9C274E264DAE32006DEFED /* PaymentOrderRouter.swift in Sources */,
 				EF7B09F6264588E800307772 /* EncodableExtension.swift in Sources */,
 				EF9D0BBD26368274006E5472 /* OfferConfirmationView.swift in Sources */,
 				EFAB6C90262AFCD400250F4B /* SmsVerificationViewModel.swift in Sources */,

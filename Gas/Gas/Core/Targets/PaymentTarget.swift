@@ -12,6 +12,7 @@ enum PaymentTarget: TargetType, AccessTokenAuthorizable {
     case history(from: String?, to: String?)
     case payment(id: Int)
     case calculate(data: [String: Any])
+    case pay(params: [String: Any])
     
     var baseURL: URL {
         URL(string: AppConfigs.baseUrl)!
@@ -25,6 +26,8 @@ enum PaymentTarget: TargetType, AccessTokenAuthorizable {
             return "payment/history/\(id)"
         case .calculate:
             return "payment/calculate"
+        case .pay:
+            return "payment/pay/"
         }
     }
     
@@ -32,6 +35,8 @@ enum PaymentTarget: TargetType, AccessTokenAuthorizable {
         switch self {
         case .history, .payment, .calculate:
             return .get
+        case .pay:
+            return .post
         }
     }
     
@@ -52,6 +57,8 @@ enum PaymentTarget: TargetType, AccessTokenAuthorizable {
             return .requestParameters(parameters: params, encoding: QueryEncoding.default)
         case .payment:
             return .requestPlain
+        case .pay(let params):
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         }
     }
     
