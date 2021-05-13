@@ -29,7 +29,7 @@ class SignInCoordinator: SignInCoordinatorProtocol {
     
     func start() {
         moveToLogin()
-        if secureAuth.isPasscodeSet {
+        if !secureAuth.getToken().isEmpty {
             moveToEnterPasscode()
         }
     }
