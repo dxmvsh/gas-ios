@@ -14,6 +14,8 @@ fileprivate enum Constants {
 
 class InitialViewController: UIViewController {
     
+    weak var window: UIWindow?
+    
     private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -91,6 +93,7 @@ class InitialViewController: UIViewController {
         guard let navigationController = navigationController else { return }
         let coordinator = SignInCoordinator(navigationController: navigationController)
         coordinator.accessRecoveryCoordinator = AccessRecoveryCoordinator(navigationController: navigationController)
+        coordinator.mainTabsCoordinator = TabBarCoordinator(tabBarController: UITabBarController(), window: window)
         coordinator.start()
     }
 }

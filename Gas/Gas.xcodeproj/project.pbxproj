@@ -15,6 +15,15 @@
 		EF09520E26233AD900AD02BB /* IndicatorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF09520D26233AD900AD02BB /* IndicatorExtension.swift */; };
 		EF09521226233AF300AD02BB /* IndicatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF09521126233AF300AD02BB /* IndicatorProtocol.swift */; };
 		EF09521926233B2C00AD02BB /* EditingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF09521826233B2C00AD02BB /* EditingAction.swift */; };
+		EF1407102649BD57003722CD /* AccountInfoKeyValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14070F2649BD56003722CD /* AccountInfoKeyValueView.swift */; };
+		EF14071A264A7F41003722CD /* BottomSheetContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF140719264A7F41003722CD /* BottomSheetContainerViewController.swift */; };
+		EF14071F264AAC62003722CD /* PaymentHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14071E264AAC62003722CD /* PaymentHistoryCell.swift */; };
+		EF140725264AAF2E003722CD /* PaymentHistoryCellAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF140724264AAF2E003722CD /* PaymentHistoryCellAdapter.swift */; };
+		EF140729264AAFAE003722CD /* PaymentHistoryItemDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF140728264AAFAE003722CD /* PaymentHistoryItemDataModel.swift */; };
+		EF14072E264AB0C5003722CD /* PaymentHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14072D264AB0C5003722CD /* PaymentHistoryViewModel.swift */; };
+		EF140732264AB0E1003722CD /* PaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF140731264AB0E1003722CD /* PaymentService.swift */; };
+		EF140736264AB103003722CD /* PaymentTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF140735264AB103003722CD /* PaymentTarget.swift */; };
+		EF14073A264ABB2F003722CD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF140739264ABB2F003722CD /* DateExtension.swift */; };
 		EF18EAE526092B1E00EA1F37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF18EAE426092B1E00EA1F37 /* AppDelegate.swift */; };
 		EF18EAE726092B1E00EA1F37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF18EAE626092B1E00EA1F37 /* SceneDelegate.swift */; };
 		EF18EAEE26092B1F00EA1F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF18EAED26092B1F00EA1F37 /* Assets.xcassets */; };
@@ -56,6 +65,32 @@
 		EF7B0A22264949DC00307772 /* LoginTokenDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A21264949DC00307772 /* LoginTokenDataModel.swift */; };
 		EF7B0A2C2649527F00307772 /* AccessRecoveryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A2B2649527F00307772 /* AccessRecoveryCoordinator.swift */; };
 		EF7B0A312649584400307772 /* AccessRecoveryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A302649584400307772 /* AccessRecoveryDataModel.swift */; };
+		EF7B0A3B264963E900307772 /* TabBarCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A3A264963E900307772 /* TabBarCoodinator.swift */; };
+		EF7B0A40264964C300307772 /* MainPageAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A3F264964C300307772 /* MainPageAssembly.swift */; };
+		EF7B0A45264964EE00307772 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A44264964EE00307772 /* MainPageViewController.swift */; };
+		EF7B0A522649657300307772 /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A512649657300307772 /* ProfileAssembly.swift */; };
+		EF7B0A592649659F00307772 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A582649659F00307772 /* ProfileViewController.swift */; };
+		EF7B0A61264965F600307772 /* PaymentHistoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A60264965F600307772 /* PaymentHistoryAssembly.swift */; };
+		EF7B0A662649661800307772 /* PaymentHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A652649661800307772 /* PaymentHistoryViewController.swift */; };
+		EF7B0A6E264969B800307772 /* SettingsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A6D264969B800307772 /* SettingsAssembly.swift */; };
+		EF7B0A73264969DE00307772 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A72264969DE00307772 /* SettingsViewController.swift */; };
+		EF7B0A7A26497B5D00307772 /* ScanAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A7926497B5D00307772 /* ScanAssembly.swift */; };
+		EF7B0A8026497B6900307772 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A7F26497B6900307772 /* ScanViewController.swift */; };
+		EF7B0A9D264980CE00307772 /* AnalyticsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0A9C264980CE00307772 /* AnalyticsAssembly.swift */; };
+		EF7B0AA4264980F300307772 /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AA3264980F300307772 /* AnalyticsViewController.swift */; };
+		EF7B0AAB264981B600307772 /* AnalyticsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AAA264981B600307772 /* AnalyticsCollectionViewCell.swift */; };
+		EF7B0AB2264996A600307772 /* AnalyticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AB1264996A600307772 /* AnalyticsViewModel.swift */; };
+		EF7B0AB8264997E800307772 /* UserTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AB7264997E800307772 /* UserTarget.swift */; };
+		EF7B0ABC2649A29E00307772 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF7B0ABB2649A29E00307772 /* Configuration.plist */; };
+		EF7B0AC12649A4A200307772 /* AppConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AC02649A4A200307772 /* AppConfigs.swift */; };
+		EF7B0AC52649A5A000307772 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AC42649A5A000307772 /* UserService.swift */; };
+		EF7B0AC92649AC9E00307772 /* AuthTokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AC82649AC9E00307772 /* AuthTokenStorage.swift */; };
+		EF7B0ACD2649B46D00307772 /* AnalyticsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0ACC2649B46D00307772 /* AnalyticsDataModel.swift */; };
+		EF7B0AD12649B55800307772 /* AnalyticsViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AD02649B55700307772 /* AnalyticsViewAdapter.swift */; };
+		EF7B0AD52649B79000307772 /* AccountInformationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AD42649B79000307772 /* AccountInformationDataModel.swift */; };
+		EF7B0ADD2649B85200307772 /* AccountInformationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0ADC2649B85200307772 /* AccountInformationAssembly.swift */; };
+		EF7B0AE52649B87D00307772 /* AccountInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AE42649B87D00307772 /* AccountInformationViewController.swift */; };
+		EF7B0AEB2649B88700307772 /* AccountInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B0AEA2649B88700307772 /* AccountInformationViewModel.swift */; };
 		EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6B5261D773D00E9ECEA /* Button.swift */; };
 		EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E6BA261D778400E9ECEA /* ViewExtension.swift */; };
 		EF92E6DA261D858C00E9ECEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF92E6DC261D858C00E9ECEA /* Localizable.strings */; };
@@ -66,6 +101,22 @@
 		EF92E725261D8FD200E9ECEA /* GasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E721261D8FD200E9ECEA /* GasTests.swift */; };
 		EF92E749261DA3F600E9ECEA /* AddPersonalAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E748261DA3F600E9ECEA /* AddPersonalAccountViewController.swift */; };
 		EF92E75A261DA43E00E9ECEA /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E759261DA43E00E9ECEA /* RegistrationCoordinator.swift */; };
+		EF9C26D2264BF47A006DEFED /* MainPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C26D1264BF47A006DEFED /* MainPageViewModel.swift */; };
+		EF9C26D9264BFB5F006DEFED /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C26D8264BFB5F006DEFED /* AccountListViewController.swift */; };
+		EF9C26DD264BFB89006DEFED /* AccountListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C26DC264BFB89006DEFED /* AccountListViewModel.swift */; };
+		EF9C26E2264CE197006DEFED /* AccountListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C26E1264CE197006DEFED /* AccountListCell.swift */; };
+		EF9C26E6264CE47E006DEFED /* AccountListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C26E5264CE47E006DEFED /* AccountListHeaderView.swift */; };
+		EF9C26EA264CE6DA006DEFED /* AccountListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C26E9264CE6DA006DEFED /* AccountListAssembly.swift */; };
+		EF9C26EF264CECB8006DEFED /* PaymentOrderAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C26EE264CECB8006DEFED /* PaymentOrderAssembly.swift */; };
+		EF9C26F3264CEDC0006DEFED /* CalculationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C26F2264CEDC0006DEFED /* CalculationDataModel.swift */; };
+		EF9C26F7264CEF28006DEFED /* PaymentOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C26F6264CEF28006DEFED /* PaymentOrderViewController.swift */; };
+		EF9C272D264D463F006DEFED /* PaymentOrderCounterInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C272C264D463F006DEFED /* PaymentOrderCounterInfoView.swift */; };
+		EF9C2735264D4823006DEFED /* CounterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C2734264D4823006DEFED /* CounterTextField.swift */; };
+		EF9C273B264D642F006DEFED /* PaymentOrderCounterInfoAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C273A264D642F006DEFED /* PaymentOrderCounterInfoAdapter.swift */; };
+		EF9C2741264D6579006DEFED /* PaymentOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C2740264D6579006DEFED /* PaymentOrderViewModel.swift */; };
+		EF9C2746264D6985006DEFED /* PaymentOrderAccountInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C2745264D6985006DEFED /* PaymentOrderAccountInfoView.swift */; };
+		EF9C274A264DAAF3006DEFED /* PaymentUrlWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C2749264DAAF3006DEFED /* PaymentUrlWrapper.swift */; };
+		EF9C274E264DAE32006DEFED /* PaymentOrderRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C274D264DAE32006DEFED /* PaymentOrderRouter.swift */; };
 		EF9D0BB526367C8E006E5472 /* OfferInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BB426367C8E006E5472 /* OfferInformationViewController.swift */; };
 		EF9D0BB926367D1E006E5472 /* CheckBoxTitledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BB826367D1E006E5472 /* CheckBoxTitledView.swift */; };
 		EF9D0BBD26368274006E5472 /* OfferConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BBC26368274006E5472 /* OfferConfirmationView.swift */; };
@@ -120,6 +171,15 @@
 		EF09520D26233AD900AD02BB /* IndicatorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorExtension.swift; sourceTree = "<group>"; };
 		EF09521126233AF300AD02BB /* IndicatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorProtocol.swift; sourceTree = "<group>"; };
 		EF09521826233B2C00AD02BB /* EditingAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingAction.swift; sourceTree = "<group>"; };
+		EF14070F2649BD56003722CD /* AccountInfoKeyValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoKeyValueView.swift; sourceTree = "<group>"; };
+		EF140719264A7F41003722CD /* BottomSheetContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetContainerViewController.swift; sourceTree = "<group>"; };
+		EF14071E264AAC62003722CD /* PaymentHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHistoryCell.swift; sourceTree = "<group>"; };
+		EF140724264AAF2E003722CD /* PaymentHistoryCellAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHistoryCellAdapter.swift; sourceTree = "<group>"; };
+		EF140728264AAFAE003722CD /* PaymentHistoryItemDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHistoryItemDataModel.swift; sourceTree = "<group>"; };
+		EF14072D264AB0C5003722CD /* PaymentHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHistoryViewModel.swift; sourceTree = "<group>"; };
+		EF140731264AB0E1003722CD /* PaymentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentService.swift; sourceTree = "<group>"; };
+		EF140735264AB103003722CD /* PaymentTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTarget.swift; sourceTree = "<group>"; };
+		EF140739264ABB2F003722CD /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		EF18EAE126092B1E00EA1F37 /* Gas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF18EAE426092B1E00EA1F37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF18EAE626092B1E00EA1F37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +224,32 @@
 		EF7B0A21264949DC00307772 /* LoginTokenDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTokenDataModel.swift; sourceTree = "<group>"; };
 		EF7B0A2B2649527F00307772 /* AccessRecoveryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessRecoveryCoordinator.swift; sourceTree = "<group>"; };
 		EF7B0A302649584400307772 /* AccessRecoveryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessRecoveryDataModel.swift; sourceTree = "<group>"; };
+		EF7B0A3A264963E900307772 /* TabBarCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoodinator.swift; sourceTree = "<group>"; };
+		EF7B0A3F264964C300307772 /* MainPageAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageAssembly.swift; sourceTree = "<group>"; };
+		EF7B0A44264964EE00307772 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		EF7B0A512649657300307772 /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
+		EF7B0A582649659F00307772 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EF7B0A60264965F600307772 /* PaymentHistoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHistoryAssembly.swift; sourceTree = "<group>"; };
+		EF7B0A652649661800307772 /* PaymentHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHistoryViewController.swift; sourceTree = "<group>"; };
+		EF7B0A6D264969B800307772 /* SettingsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAssembly.swift; sourceTree = "<group>"; };
+		EF7B0A72264969DE00307772 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		EF7B0A7926497B5D00307772 /* ScanAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanAssembly.swift; sourceTree = "<group>"; };
+		EF7B0A7F26497B6900307772 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		EF7B0A9C264980CE00307772 /* AnalyticsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsAssembly.swift; sourceTree = "<group>"; };
+		EF7B0AA3264980F300307772 /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
+		EF7B0AAA264981B600307772 /* AnalyticsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF7B0AB1264996A600307772 /* AnalyticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewModel.swift; sourceTree = "<group>"; };
+		EF7B0AB7264997E800307772 /* UserTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTarget.swift; sourceTree = "<group>"; };
+		EF7B0ABB2649A29E00307772 /* Configuration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
+		EF7B0AC02649A4A200307772 /* AppConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfigs.swift; sourceTree = "<group>"; };
+		EF7B0AC42649A5A000307772 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		EF7B0AC82649AC9E00307772 /* AuthTokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenStorage.swift; sourceTree = "<group>"; };
+		EF7B0ACC2649B46D00307772 /* AnalyticsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDataModel.swift; sourceTree = "<group>"; };
+		EF7B0AD02649B55700307772 /* AnalyticsViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewAdapter.swift; sourceTree = "<group>"; };
+		EF7B0AD42649B79000307772 /* AccountInformationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInformationDataModel.swift; sourceTree = "<group>"; };
+		EF7B0ADC2649B85200307772 /* AccountInformationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInformationAssembly.swift; sourceTree = "<group>"; };
+		EF7B0AE42649B87D00307772 /* AccountInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInformationViewController.swift; sourceTree = "<group>"; };
+		EF7B0AEA2649B88700307772 /* AccountInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInformationViewModel.swift; sourceTree = "<group>"; };
 		EF92E6B5261D773D00E9ECEA /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		EF92E6BA261D778400E9ECEA /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		EF92E6D0261D852400E9ECEA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -177,6 +263,22 @@
 		EF92E722261D8FD200E9ECEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF92E748261DA3F600E9ECEA /* AddPersonalAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonalAccountViewController.swift; sourceTree = "<group>"; };
 		EF92E759261DA43E00E9ECEA /* RegistrationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationCoordinator.swift; sourceTree = "<group>"; };
+		EF9C26D1264BF47A006DEFED /* MainPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewModel.swift; sourceTree = "<group>"; };
+		EF9C26D8264BFB5F006DEFED /* AccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewController.swift; sourceTree = "<group>"; };
+		EF9C26DC264BFB89006DEFED /* AccountListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewModel.swift; sourceTree = "<group>"; };
+		EF9C26E1264CE197006DEFED /* AccountListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListCell.swift; sourceTree = "<group>"; };
+		EF9C26E5264CE47E006DEFED /* AccountListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListHeaderView.swift; sourceTree = "<group>"; };
+		EF9C26E9264CE6DA006DEFED /* AccountListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListAssembly.swift; sourceTree = "<group>"; };
+		EF9C26EE264CECB8006DEFED /* PaymentOrderAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrderAssembly.swift; sourceTree = "<group>"; };
+		EF9C26F2264CEDC0006DEFED /* CalculationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationDataModel.swift; sourceTree = "<group>"; };
+		EF9C26F6264CEF28006DEFED /* PaymentOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrderViewController.swift; sourceTree = "<group>"; };
+		EF9C272C264D463F006DEFED /* PaymentOrderCounterInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrderCounterInfoView.swift; sourceTree = "<group>"; };
+		EF9C2734264D4823006DEFED /* CounterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterTextField.swift; sourceTree = "<group>"; };
+		EF9C273A264D642F006DEFED /* PaymentOrderCounterInfoAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrderCounterInfoAdapter.swift; sourceTree = "<group>"; };
+		EF9C2740264D6579006DEFED /* PaymentOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrderViewModel.swift; sourceTree = "<group>"; };
+		EF9C2745264D6985006DEFED /* PaymentOrderAccountInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrderAccountInfoView.swift; sourceTree = "<group>"; };
+		EF9C2749264DAAF3006DEFED /* PaymentUrlWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentUrlWrapper.swift; sourceTree = "<group>"; };
+		EF9C274D264DAE32006DEFED /* PaymentOrderRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrderRouter.swift; sourceTree = "<group>"; };
 		EF9D0BB426367C8E006E5472 /* OfferInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferInformationViewController.swift; sourceTree = "<group>"; };
 		EF9D0BB826367D1E006E5472 /* CheckBoxTitledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxTitledView.swift; sourceTree = "<group>"; };
 		EF9D0BBC26368274006E5472 /* OfferConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferConfirmationView.swift; sourceTree = "<group>"; };
@@ -270,8 +372,34 @@
 				EF79661526153F810052751C /* MaskedTextField.swift */,
 				EF0952052623393300AD02BB /* LabeledTextField.swift */,
 				EFAB6C86262AD3BF00250F4B /* SmsCodeTextField.swift */,
+				EF9C2734264D4823006DEFED /* CounterTextField.swift */,
 			);
 			path = TextFields;
+			sourceTree = "<group>";
+		};
+		EF14070E2649BD4C003722CD /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				EF14070F2649BD56003722CD /* AccountInfoKeyValueView.swift */,
+			);
+			path = Additional;
+			sourceTree = "<group>";
+		};
+		EF14071D264AAC57003722CD /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				EF14071E264AAC62003722CD /* PaymentHistoryCell.swift */,
+				EF140724264AAF2E003722CD /* PaymentHistoryCellAdapter.swift */,
+			);
+			path = Additional;
+			sourceTree = "<group>";
+		};
+		EF14072C264AB0B6003722CD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF14072D264AB0C5003722CD /* PaymentHistoryViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EF18EAD826092B1E00EA1F37 = {
@@ -314,6 +442,16 @@
 		EF1D782426152A5300168CF9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EF9C2744264D6972006DEFED /* PaymentOrderAccountInfo */,
+				EF9C26ED264CECA3006DEFED /* PaymentOrder */,
+				EF9C26D7264BFB4F006DEFED /* AccountList */,
+				EF7B0ADA2649B83000307772 /* AccountInformation */,
+				EF7B0A9A264980B300307772 /* Analytics */,
+				EF7B0A7826497B0F00307772 /* Scan */,
+				EF7B0A6B264969A400307772 /* Settings */,
+				EF7B0A5E264965E000307772 /* PaymentHistory */,
+				EF7B0A4D2649655600307772 /* Profile */,
+				EF7B0A3E264964B500307772 /* Main */,
 				EF7B0A0C2645BB2E00307772 /* Login */,
 				EF4428CD263ADFDC00ADD537 /* ResultPage */,
 				EF4428BD263AD3D900ADD537 /* Biometry */,
@@ -439,6 +577,7 @@
 				EF09520926233A6E00AD02BB /* FontExtension.swift */,
 				EF09520D26233AD900AD02BB /* IndicatorExtension.swift */,
 				EF7B09F5264588E800307772 /* EncodableExtension.swift */,
+				EF140739264ABB2F003722CD /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -454,6 +593,7 @@
 				EF07B74E26233F1A007A45CE /* ClearableDelegate.swift */,
 				EFAB6C53262912FA00250F4B /* CustomToolbar.swift */,
 				EF9D0BB826367D1E006E5472 /* CheckBoxTitledView.swift */,
+				EF140719264A7F41003722CD /* BottomSheetContainerViewController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -477,6 +617,8 @@
 			isa = PBXGroup;
 			children = (
 				EF7B09D526456A3200307772 /* AuthTarget.swift */,
+				EF7B0AB7264997E800307772 /* UserTarget.swift */,
+				EF140735264AB103003722CD /* PaymentTarget.swift */,
 			);
 			path = Targets;
 			sourceTree = "<group>";
@@ -485,6 +627,8 @@
 			isa = PBXGroup;
 			children = (
 				EF7B09DB26456B9600307772 /* AuthorizationService.swift */,
+				EF7B0AC42649A5A000307772 /* UserService.swift */,
+				EF140731264AB0E1003722CD /* PaymentService.swift */,
 			);
 			path = NetworkServices;
 			sourceTree = "<group>";
@@ -497,6 +641,221 @@
 				EF7B0A1326483F7B00307772 /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		EF7B0A3E264964B500307772 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EF9C26D0264BF470006DEFED /* ViewModel */,
+				EF7B0A43264964E200307772 /* View */,
+				EF7B0A4A2649654D00307772 /* Assembly */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		EF7B0A43264964E200307772 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0A44264964EE00307772 /* MainPageViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF7B0A4A2649654D00307772 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0A3F264964C300307772 /* MainPageAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		EF7B0A4D2649655600307772 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0A572649659500307772 /* View */,
+				EF7B0A502649656600307772 /* Assembly */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		EF7B0A502649656600307772 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0A512649657300307772 /* ProfileAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		EF7B0A572649659500307772 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0A582649659F00307772 /* ProfileViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF7B0A5E264965E000307772 /* PaymentHistory */ = {
+			isa = PBXGroup;
+			children = (
+				EF14072C264AB0B6003722CD /* ViewModel */,
+				EF7B0A642649660F00307772 /* View */,
+				EF7B0A5F264965E900307772 /* Assembly */,
+			);
+			path = PaymentHistory;
+			sourceTree = "<group>";
+		};
+		EF7B0A5F264965E900307772 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0A60264965F600307772 /* PaymentHistoryAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		EF7B0A642649660F00307772 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF14071D264AAC57003722CD /* Additional */,
+				EF7B0A652649661800307772 /* PaymentHistoryViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF7B0A6B264969A400307772 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0A71264969D300307772 /* View */,
+				EF7B0A6C264969AC00307772 /* Assembly */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		EF7B0A6C264969AC00307772 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0A6D264969B800307772 /* SettingsAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		EF7B0A71264969D300307772 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0A72264969DE00307772 /* SettingsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF7B0A7826497B0F00307772 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0A8326497B6C00307772 /* Assembly */,
+				EF7B0A8826497B7300307772 /* View */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		EF7B0A8326497B6C00307772 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0A7926497B5D00307772 /* ScanAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		EF7B0A8826497B7300307772 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0A7F26497B6900307772 /* ScanViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF7B0A9A264980B300307772 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0AB02649969A00307772 /* ViewModel */,
+				EF7B0AA2264980E800307772 /* View */,
+				EF7B0A9B264980C300307772 /* Assembly */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		EF7B0A9B264980C300307772 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0A9C264980CE00307772 /* AnalyticsAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		EF7B0AA2264980E800307772 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0AA9264981A400307772 /* Additional */,
+				EF7B0AA3264980F300307772 /* AnalyticsViewController.swift */,
+				EF7B0AD02649B55700307772 /* AnalyticsViewAdapter.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF7B0AA9264981A400307772 /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0AAA264981B600307772 /* AnalyticsCollectionViewCell.swift */,
+			);
+			path = Additional;
+			sourceTree = "<group>";
+		};
+		EF7B0AB02649969A00307772 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0AB1264996A600307772 /* AnalyticsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF7B0ABF2649A2A600307772 /* Development */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0ABB2649A29E00307772 /* Configuration.plist */,
+			);
+			path = Development;
+			sourceTree = "<group>";
+		};
+		EF7B0ADA2649B83000307772 /* AccountInformation */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0AE32649B86B00307772 /* ViewModel */,
+				EF7B0AE22649B85800307772 /* View */,
+				EF7B0ADB2649B83F00307772 /* Assembly */,
+			);
+			path = AccountInformation;
+			sourceTree = "<group>";
+		};
+		EF7B0ADB2649B83F00307772 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0ADC2649B85200307772 /* AccountInformationAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		EF7B0AE22649B85800307772 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF14070E2649BD4C003722CD /* Additional */,
+				EF7B0AE42649B87D00307772 /* AccountInformationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF7B0AE32649B86B00307772 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B0AEA2649B88700307772 /* AccountInformationViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EF8947FC2625C64200338039 /* Base */ = {
@@ -520,6 +879,7 @@
 			children = (
 				EF18EAED26092B1F00EA1F37 /* Assets.xcassets */,
 				EF92E6DC261D858C00E9ECEA /* Localizable.strings */,
+				EF7B0ABF2649A2A600307772 /* Development */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -527,6 +887,7 @@
 		EF92E6E1261D86BD00E9ECEA /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				EF7B0AC02649A4A200307772 /* AppConfigs.swift */,
 				EF92E6E2261D86BD00E9ECEA /* Assets.swift */,
 				EF92E6E5261D86BD00E9ECEA /* Text.swift */,
 			);
@@ -585,8 +946,66 @@
 				EF92E759261DA43E00E9ECEA /* RegistrationCoordinator.swift */,
 				EF7B0A1D2649410200307772 /* SignInCoordinator.swift */,
 				EF7B0A2B2649527F00307772 /* AccessRecoveryCoordinator.swift */,
+				EF7B0A3A264963E900307772 /* TabBarCoodinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		EF9C26D0264BF470006DEFED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF9C26D1264BF47A006DEFED /* MainPageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF9C26D7264BFB4F006DEFED /* AccountList */ = {
+			isa = PBXGroup;
+			children = (
+				EF9C26E0264CE187006DEFED /* Additional */,
+				EF9C26D8264BFB5F006DEFED /* AccountListViewController.swift */,
+				EF9C26DC264BFB89006DEFED /* AccountListViewModel.swift */,
+				EF9C26E9264CE6DA006DEFED /* AccountListAssembly.swift */,
+			);
+			path = AccountList;
+			sourceTree = "<group>";
+		};
+		EF9C26E0264CE187006DEFED /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				EF9C26E1264CE197006DEFED /* AccountListCell.swift */,
+				EF9C26E5264CE47E006DEFED /* AccountListHeaderView.swift */,
+			);
+			path = Additional;
+			sourceTree = "<group>";
+		};
+		EF9C26ED264CECA3006DEFED /* PaymentOrder */ = {
+			isa = PBXGroup;
+			children = (
+				EF9C272B264D4600006DEFED /* PaymentOrderCounterInfo */,
+				EF9C26EE264CECB8006DEFED /* PaymentOrderAssembly.swift */,
+				EF9C26F6264CEF28006DEFED /* PaymentOrderViewController.swift */,
+				EF9C2740264D6579006DEFED /* PaymentOrderViewModel.swift */,
+				EF9C274D264DAE32006DEFED /* PaymentOrderRouter.swift */,
+			);
+			path = PaymentOrder;
+			sourceTree = "<group>";
+		};
+		EF9C272B264D4600006DEFED /* PaymentOrderCounterInfo */ = {
+			isa = PBXGroup;
+			children = (
+				EF9C273A264D642F006DEFED /* PaymentOrderCounterInfoAdapter.swift */,
+				EF9C272C264D463F006DEFED /* PaymentOrderCounterInfoView.swift */,
+			);
+			path = PaymentOrderCounterInfo;
+			sourceTree = "<group>";
+		};
+		EF9C2744264D6972006DEFED /* PaymentOrderAccountInfo */ = {
+			isa = PBXGroup;
+			children = (
+				EF9C2745264D6985006DEFED /* PaymentOrderAccountInfoView.swift */,
+			);
+			path = PaymentOrderAccountInfo;
 			sourceTree = "<group>";
 		};
 		EF9D0BB326367C79006E5472 /* OfferInformation */ = {
@@ -613,6 +1032,7 @@
 			children = (
 				EF9D0BD62636BD95006E5472 /* PasswordCheckerService.swift */,
 				EF7B09F92645A32000307772 /* SecureAuth.swift */,
+				EF7B0AC82649AC9E00307772 /* AuthTokenStorage.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -739,6 +1159,11 @@
 				EF7B09F12645886400307772 /* UserDataModel.swift */,
 				EF7B0A21264949DC00307772 /* LoginTokenDataModel.swift */,
 				EF7B0A302649584400307772 /* AccessRecoveryDataModel.swift */,
+				EF7B0ACC2649B46D00307772 /* AnalyticsDataModel.swift */,
+				EF7B0AD42649B79000307772 /* AccountInformationDataModel.swift */,
+				EF140728264AAFAE003722CD /* PaymentHistoryItemDataModel.swift */,
+				EF9C26F2264CEDC0006DEFED /* CalculationDataModel.swift */,
+				EF9C2749264DAAF3006DEFED /* PaymentUrlWrapper.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -866,6 +1291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF18EAF126092B1F00EA1F37 /* LaunchScreen.storyboard in Resources */,
+				EF7B0ABC2649A29E00307772 /* Configuration.plist in Resources */,
 				EF92E6DA261D858C00E9ECEA /* Localizable.strings in Resources */,
 				EF18EAEE26092B1F00EA1F37 /* Assets.xcassets in Resources */,
 			);
@@ -927,36 +1353,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7B0AAB264981B600307772 /* AnalyticsCollectionViewCell.swift in Sources */,
 				EF7B09B4264566CB00307772 /* Moya+Alamofire.swift in Sources */,
 				EF7B09DC26456B9600307772 /* AuthorizationService.swift in Sources */,
 				EF79660B2615348F0052751C /* LabelExtension.swift in Sources */,
 				EFAB6C772629372600250F4B /* AddPhoneViewModel.swift in Sources */,
+				EF14071A264A7F41003722CD /* BottomSheetContainerViewController.swift in Sources */,
 				EF79661626153F810052751C /* MaskedTextField.swift in Sources */,
 				EFAB6C5D2629181000250F4B /* UserInformationViewModel.swift in Sources */,
+				EF7B0A592649659F00307772 /* ProfileViewController.swift in Sources */,
 				EF796610261536CC0052751C /* SpaceFactory.swift in Sources */,
+				EF7B0A3B264963E900307772 /* TabBarCoodinator.swift in Sources */,
+				EF140725264AAF2E003722CD /* PaymentHistoryCellAdapter.swift in Sources */,
 				EFAB6C6A2629191200250F4B /* UserInformationDataModel.swift in Sources */,
 				EF7B0A1426483F7B00307772 /* LoginViewModel.swift in Sources */,
+				EF9C26D2264BF47A006DEFED /* MainPageViewModel.swift in Sources */,
 				EF9D0BFE2636D8E5006E5472 /* PasscodeKeyboardButton.swift in Sources */,
+				EF7B0A61264965F600307772 /* PaymentHistoryAssembly.swift in Sources */,
 				EF7B0A312649584400307772 /* AccessRecoveryDataModel.swift in Sources */,
 				EF1D782826152A9D00168CF9 /* InitialViewController.swift in Sources */,
+				EF9C26D9264BFB5F006DEFED /* AccountListViewController.swift in Sources */,
+				EF9C2746264D6985006DEFED /* PaymentOrderAccountInfoView.swift in Sources */,
+				EF7B0A73264969DE00307772 /* SettingsViewController.swift in Sources */,
 				EF9D0BCE2636AC25006E5472 /* PasswordRuleViewAdapter.swift in Sources */,
+				EF7B0A7A26497B5D00307772 /* ScanAssembly.swift in Sources */,
 				EF9D0BF82636D838006E5472 /* PasscodeKeyboardView.swift in Sources */,
+				EF9C273B264D642F006DEFED /* PaymentOrderCounterInfoAdapter.swift in Sources */,
 				EF09521926233B2C00AD02BB /* EditingAction.swift in Sources */,
+				EF9C2741264D6579006DEFED /* PaymentOrderViewModel.swift in Sources */,
 				EF7B0A1E2649410200307772 /* SignInCoordinator.swift in Sources */,
 				EFAB6C732629371A00250F4B /* AddPhoneViewController.swift in Sources */,
 				EF92E6E9261D86BD00E9ECEA /* Text.swift in Sources */,
+				EF9C26F3264CEDC0006DEFED /* CalculationDataModel.swift in Sources */,
 				EFAB6CA3262B1C8500250F4B /* AddEmailViewModel.swift in Sources */,
+				EF140736264AB103003722CD /* PaymentTarget.swift in Sources */,
 				EF07B74F26233F1A007A45CE /* ClearableDelegate.swift in Sources */,
 				EFAB6C7B2629373400250F4B /* AddPhoneAssembly.swift in Sources */,
 				EF7B09F22645886400307772 /* UserDataModel.swift in Sources */,
+				EF9C26E6264CE47E006DEFED /* AccountListHeaderView.swift in Sources */,
+				EF14073A264ABB2F003722CD /* DateExtension.swift in Sources */,
 				EF77B8A5263802FE00B34B3E /* PasscodeStatusView.swift in Sources */,
 				EF09521226233AF300AD02BB /* IndicatorProtocol.swift in Sources */,
 				EF7B0A0E2645BB3F00307772 /* LoginViewController.swift in Sources */,
 				EFAB6C812629924D00250F4B /* SmsVerificationViewController.swift in Sources */,
+				EF9C272D264D463F006DEFED /* PaymentOrderCounterInfoView.swift in Sources */,
 				EF7965F626152FEC0052751C /* Colors.swift in Sources */,
+				EF7B0AC12649A4A200307772 /* AppConfigs.swift in Sources */,
 				EF7B09D12645694700307772 /* NetworkReachabilityChecking.swift in Sources */,
 				EF7B09E82645747200307772 /* QueryEncoding.swift in Sources */,
 				EF09520A26233A6E00AD02BB /* FontExtension.swift in Sources */,
+				EF14071F264AAC62003722CD /* PaymentHistoryCell.swift in Sources */,
 				EF4428C6263AD43000ADD537 /* BiometryViewController.swift in Sources */,
 				EF2E937626290D6000C0ADD9 /* AddPersonalAccountAssembly.swift in Sources */,
 				EFAB6C8C262AF8B100250F4B /* SmsCodeDigitLabel.swift in Sources */,
@@ -966,33 +1412,52 @@
 				EF4428C2263AD40800ADD537 /* BiometryAssembly.swift in Sources */,
 				EF7965E326152D800052751C /* Constants.swift in Sources */,
 				EF9D0BE42636D6E8006E5472 /* PasscodeAssembly.swift in Sources */,
+				EF7B0A662649661800307772 /* PaymentHistoryViewController.swift in Sources */,
+				EF1407102649BD57003722CD /* AccountInfoKeyValueView.swift in Sources */,
 				EF0952062623393300AD02BB /* LabeledTextField.swift in Sources */,
 				EF7B0A2C2649527F00307772 /* AccessRecoveryCoordinator.swift in Sources */,
 				EF92E75A261DA43E00E9ECEA /* RegistrationCoordinator.swift in Sources */,
+				EF9C26DD264BFB89006DEFED /* AccountListViewModel.swift in Sources */,
+				EF7B0A9D264980CE00307772 /* AnalyticsAssembly.swift in Sources */,
 				EFAB6C54262912FA00250F4B /* CustomToolbar.swift in Sources */,
 				EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */,
+				EF9C26F7264CEF28006DEFED /* PaymentOrderViewController.swift in Sources */,
 				EF7B09C92645685F00307772 /* Converter.swift in Sources */,
 				EF7B09FA2645A32000307772 /* SecureAuth.swift in Sources */,
+				EF140732264AB0E1003722CD /* PaymentService.swift in Sources */,
 				EFAB6C592629176000250F4B /* UserInformationViewController.swift in Sources */,
+				EF9C26EF264CECB8006DEFED /* PaymentOrderAssembly.swift in Sources */,
 				EF4428CA263AD45900ADD537 /* BiometryViewModel.swift in Sources */,
 				EF9D0BCA26369BA6006E5472 /* PasswordRulesView.swift in Sources */,
+				EF9C274A264DAAF3006DEFED /* PaymentUrlWrapper.swift in Sources */,
 				EF9D0BD22636BA55006E5472 /* PasswordViewModel.swift in Sources */,
 				EF92E6E6261D86BD00E9ECEA /* Assets.swift in Sources */,
 				EF7B0A22264949DC00307772 /* LoginTokenDataModel.swift in Sources */,
+				EF7B0AC92649AC9E00307772 /* AuthTokenStorage.swift in Sources */,
 				EF9D0C042636E155006E5472 /* PasscodeInputView.swift in Sources */,
 				EF92E749261DA3F600E9ECEA /* AddPersonalAccountViewController.swift in Sources */,
+				EF7B0AD52649B79000307772 /* AccountInformationDataModel.swift in Sources */,
 				EFAB6C9F262B1C5400250F4B /* AddEmailAssembly.swift in Sources */,
+				EF14072E264AB0C5003722CD /* PaymentHistoryViewModel.swift in Sources */,
+				EF140729264AAFAE003722CD /* PaymentHistoryItemDataModel.swift in Sources */,
+				EF7B0A522649657300307772 /* ProfileAssembly.swift in Sources */,
 				EF7B09E026456EEE00307772 /* JSONCodingKeys.swift in Sources */,
 				EF7B09EC2645792A00307772 /* MessageStatusDataModel.swift in Sources */,
+				EF7B0AEB2649B88700307772 /* AccountInformationViewModel.swift in Sources */,
 				EFAB6CA7262B1F9B00250F4B /* EmailVerificationViewModel.swift in Sources */,
 				EFAB6C94262AFCF100250F4B /* SmsVerificationAssembly.swift in Sources */,
 				EFAB6C87262AD3BF00250F4B /* SmsCodeTextField.swift in Sources */,
+				EF9C2735264D4823006DEFED /* CounterTextField.swift in Sources */,
 				EF2E937A26290DA100C0ADD9 /* AddPersonalAccountViewModel.swift in Sources */,
 				EF7B0A1826483F8D00307772 /* LoginAssembly.swift in Sources */,
+				EF7B0A8026497B6900307772 /* ScanViewController.swift in Sources */,
 				EF9D0BB526367C8E006E5472 /* OfferInformationViewController.swift in Sources */,
+				EF7B0A40264964C300307772 /* MainPageAssembly.swift in Sources */,
 				EF7B09CD2645690400307772 /* CodableContainersExtension.swift in Sources */,
 				EF9D0BC2263698FB006E5472 /* PasswordAssembly.swift in Sources */,
 				EF9D0BF12636D71D006E5472 /* PasscodeViewController.swift in Sources */,
+				EF7B0A45264964EE00307772 /* MainPageViewController.swift in Sources */,
+				EF9C274E264DAE32006DEFED /* PaymentOrderRouter.swift in Sources */,
 				EF7B09F6264588E800307772 /* EncodableExtension.swift in Sources */,
 				EF9D0BBD26368274006E5472 /* OfferConfirmationView.swift in Sources */,
 				EFAB6C90262AFCD400250F4B /* SmsVerificationViewModel.swift in Sources */,
@@ -1000,16 +1465,27 @@
 				EF9D0BD72636BD95006E5472 /* PasswordCheckerService.swift in Sources */,
 				EF18EAE526092B1E00EA1F37 /* AppDelegate.swift in Sources */,
 				EF2E936E262906F400C0ADD9 /* BaseViewController.swift in Sources */,
+				EF7B0A6E264969B800307772 /* SettingsAssembly.swift in Sources */,
 				EFAB6C612629182200250F4B /* UserInformationAssembly.swift in Sources */,
+				EF7B0AB2264996A600307772 /* AnalyticsViewModel.swift in Sources */,
 				EF18EAE726092B1E00EA1F37 /* SceneDelegate.swift in Sources */,
 				EF09520E26233AD900AD02BB /* IndicatorExtension.swift in Sources */,
 				EF2DBAF32619E52F008C2B6E /* StringExtension.swift in Sources */,
 				EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */,
 				EF4428CF263ADFF000ADD537 /* ResultViewController.swift in Sources */,
+				EF7B0AE52649B87D00307772 /* AccountInformationViewController.swift in Sources */,
+				EF7B0ADD2649B85200307772 /* AccountInformationAssembly.swift in Sources */,
+				EF7B0ACD2649B46D00307772 /* AnalyticsDataModel.swift in Sources */,
+				EF7B0AB8264997E800307772 /* UserTarget.swift in Sources */,
+				EF7B0AD12649B55800307772 /* AnalyticsViewAdapter.swift in Sources */,
 				EF9D0BEB2636D710006E5472 /* PasscodeViewModel.swift in Sources */,
 				EF7B09AA2645664400307772 /* NetworkDataProvider.swift in Sources */,
 				EF7B09C52645684000307772 /* ApiError.swift in Sources */,
+				EF9C26E2264CE197006DEFED /* AccountListCell.swift in Sources */,
 				EFAB6C99262B1B0A00250F4B /* AddEmailViewController.swift in Sources */,
+				EF7B0AC52649A5A000307772 /* UserService.swift in Sources */,
+				EF7B0AA4264980F300307772 /* AnalyticsViewController.swift in Sources */,
+				EF9C26EA264CE6DA006DEFED /* AccountListAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

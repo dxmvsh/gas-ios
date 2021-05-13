@@ -9,4 +9,5 @@ import Foundation
 
 struct LoginTokenDataModel: Codable {
     var refresh: String
+    var access: String
 }

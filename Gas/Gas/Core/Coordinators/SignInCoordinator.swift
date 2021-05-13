@@ -21,6 +21,7 @@ class SignInCoordinator: SignInCoordinatorProtocol {
     private let navigationController: UINavigationController
     private let secureAuth = SecureAuthentication(dataProvider: AuthorizationService())
     var accessRecoveryCoordinator: AccessRecoveryCoordinatorProtocol?
+    var mainTabsCoordinator: TabBarCoordinatorProtocol?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -54,7 +55,7 @@ class SignInCoordinator: SignInCoordinatorProtocol {
     }
     
     func moveToMainPage() {
-        // TODO: Add main page
+        mainTabsCoordinator?.start(index: 0)
     }
 }
 

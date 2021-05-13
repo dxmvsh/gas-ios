@@ -110,6 +110,7 @@ class LabeledTextField: MaskedTextfield {
     private var indicator: UIView & IndicatorProtocol = UIActivityIndicatorView(style: .gray)
     fileprivate var isPastingAvailable = true
     private var editingActions: [EditingAction]?
+    var borderLayer = CAShapeLayer()
     var isEditable: Bool = true
     var isErrorShown: Bool {
         return isErrorTextShown
@@ -261,6 +262,7 @@ class LabeledTextField: MaskedTextfield {
         errorMessageLabel.frame = errorRectForBounds(bounds)
         commentMessageLabel.frame = commentRectForBounds(bounds)
         indicator.frame = getRectForRightView(bounds)
+        addBottomBorder()
     }
     
     private func updateTitleVisibility(animated: Bool = true) {
@@ -324,6 +326,19 @@ class LabeledTextField: MaskedTextfield {
     
     override func textChanged() {
         hideError()
+    }
+    
+    func addBottomBorder() {
+        if layer.sublayers?.first(where: { $0.name == "BorderSublayer" }) != nil {
+            return
+        }
+
+        borderLayer.name = "BorderSublayer"
+        
+        borderLayer.frame = CGRect(x: 0, y: self.frame.size.height + LayoutGuidance.offsetHalf, width: self.frame.size.width - LayoutGuidance.offset, height: 1)
+        borderLayer.backgroundColor = Color.lineGray2.cgColor
+        borderStyle = .none
+        layer.insertSublayer(borderLayer, at: 0)
     }
     
     private func addErrorBorder() {

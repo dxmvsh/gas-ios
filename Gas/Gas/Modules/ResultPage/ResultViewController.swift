@@ -54,13 +54,17 @@ class ResultViewController: BaseViewController {
         ])
     }
     
-    func setSuccessState() {
+    func setSuccessState(title: String? = Text.congrats,
+                         subtitle: String? = Text.youRegisteredSuccessfully,
+                         image: UIImage? = Asset.rpSuccess.image) {
         resultTitleLabel.text = Text.congrats
         resultSubtiteLabel.text = Text.youRegisteredSuccessfully
         imageView.image = Asset.rpSuccess.image
     }
     
-    func setFailureState() {
+    func setFailureState(title: String? = Text.congrats,
+                         subtitle: String? = Text.youRegisteredSuccessfully,
+                         image: UIImage? = Asset.rpSuccess.image) {
         resultTitleLabel.text = Text.error
         resultSubtiteLabel.text = "\(Text.errorHappenedWhileRegistering)/n\(Text.tryAgain)"
         imageView.image = Asset.rpFail.image

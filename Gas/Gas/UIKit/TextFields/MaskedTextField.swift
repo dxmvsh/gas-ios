@@ -45,7 +45,6 @@ class MaskedTextfield: UITextField {
     private let upperCaseLetterReplacementChar: String = "A"
     private let digitsReplacementChar: String = "#"
     private var allReplacements: [String] = []
-    var borderLayer = CAShapeLayer() 
     /**
      Var that holds the format pattern that you wish to apply
      to some text
@@ -385,21 +384,8 @@ class MaskedTextfield: UITextField {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        addBottomBorder()
     }
     
-    func addBottomBorder() {
-        if layer.sublayers?.first(where: { $0.name == "BorderSublayer" }) != nil {
-            return
-        }
-
-        borderLayer.name = "BorderSublayer"
-        
-        borderLayer.frame = CGRect(x: 0, y: self.frame.size.height + LayoutGuidance.offsetHalf, width: self.frame.size.width - LayoutGuidance.offset, height: 1)
-        borderLayer.backgroundColor = Color.lineGray2.cgColor
-        borderStyle = .none
-        layer.insertSublayer(borderLayer, at: 0)
-    }
 }
 
 // MARK: - UITextFieldDelegate methods

@@ -19,6 +19,7 @@ protocol SecureAuthenticationProtocol {
     func setPassword(_ password: String)
     func setBiometry()
     func setToken(_ token: String)
+    func getToken() -> String
 }
 
 fileprivate enum Constants {
@@ -72,7 +73,7 @@ class SecureAuthentication: SecureAuthenticationProtocol {
                 dataProvider.login(phoneNumber: email, password: password) { [weak self] result in
                     switch result {
                     case .success(let message):
-                        self?.setToken(message.refresh)
+                        self?.setToken(message.access)
                         completion(true)
                     case .failure(let error):
                         completion(false)
@@ -111,5 +112,9 @@ class SecureAuthentication: SecureAuthenticationProtocol {
     
     func setToken(_ token: String) {
         keychain.set(token, forKey: Constants.tokenKey)
+    }
+    
+    func getToken() -> String {
+        keychain.get(Constants.tokenKey) ?? ""
     }
 }
