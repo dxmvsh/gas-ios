@@ -45,8 +45,6 @@ class PaymentHistoryViewController: UIViewController, PaymentHistoryViewInput {
             view.addSubview($0)
         }
         
-        noPaymentsLabel.isHidden = true
-        
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: LayoutGuidance.offset),
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LayoutGuidance.offsetDouble),
@@ -64,8 +62,10 @@ class PaymentHistoryViewController: UIViewController, PaymentHistoryViewInput {
     func display(adapters: [PaymentHistoryCellAdapter]) {
         if adapters.isEmpty {
             noPaymentsLabel.isHidden = false
+            tableView.isHidden = true
         } else {
             noPaymentsLabel.isHidden = true
+            tableView.isHidden = false
         }
         self.adapters = adapters
     }

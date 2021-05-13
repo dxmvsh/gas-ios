@@ -36,7 +36,7 @@ enum AuthTarget: TargetType {
         case .login:
             return "auth/"
         case .resetPassword:
-            return "auth/reset_password/"
+            return "auth/reset_password"
         }
     }
     

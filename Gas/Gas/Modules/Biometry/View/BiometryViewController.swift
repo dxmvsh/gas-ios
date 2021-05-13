@@ -83,12 +83,12 @@ class BiometryViewController: BaseViewController {
     
     @objc
     private func primaryButtonTapped() {
-        
+        output?.didTapPrimaryButton()
     }
     
     @objc
     private func secondaryButtonTapped() {
-        
+        output?.didTapSecondaryButton()
     }
     
 }
