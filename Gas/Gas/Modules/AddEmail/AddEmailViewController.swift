@@ -26,6 +26,7 @@ class AddEmailViewController: BaseViewController, AddEmailViewInput {
         
         emailTextField.title = Text.email
         emailTextField.keyboardType = .emailAddress
+        emailTextField.autocapitalizationType = .none
         continueButton.addTarget(self, action: #selector(didTapContinue), for: .touchUpInside)
         
         setupViews()
