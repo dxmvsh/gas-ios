@@ -18,6 +18,7 @@ class BiometryViewModel: BiometryViewOutput {
     
     func didTapPrimaryButton() {
         secureAuth.setBiometry()
+        output?.didSucceedBiometry()
     }
     
     func didTapSecondaryButton() {

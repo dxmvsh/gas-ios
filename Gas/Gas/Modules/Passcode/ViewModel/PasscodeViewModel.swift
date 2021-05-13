@@ -41,4 +41,8 @@ class PasscodeViewModel: PasscodeViewOutput {
         }
     }
     
+    func didTapBack() {
+        secureAuth.flush()
+    }
+    
 }

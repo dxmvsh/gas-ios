@@ -24,7 +24,9 @@ class LoginViewModel: LoginViewOutput {
         dataProvider.login(phoneNumber: email, password: password) { [weak self] result in
             switch result {
             case .success(let message):
-                self?.secureAuth.setToken(message.refresh)
+                self?.secureAuth.setToken(message.access)
+                self?.secureAuth.setEmail(email)
+                self?.secureAuth.setPassword(password)
                 self?.output?.didLogin()
             case .failure(let error):
                 print("error: \(error)")

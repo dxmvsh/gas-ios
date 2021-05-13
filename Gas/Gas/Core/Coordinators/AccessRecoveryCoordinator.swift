@@ -58,7 +58,15 @@ class AccessRecoveryCoordinator: AccessRecoveryCoordinatorProtocol {
     }
     
     func moveToMainPage() {
-        // TODO: add main page
+        let viewController = ResultViewController()
+        viewController.setSuccessState(title: "Вы успешно сменили пароль", subtitle: "Можете зайти в приложение с новым паролем")
+        viewController.modalPresentationStyle = .fullScreen
+        navigationController.present(viewController, animated: true) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+                viewController.dismiss(animated: true)
+                self?.navigationController.popToRootViewController(animated: true)
+            }
+        }
     }
 }
 
@@ -96,6 +104,6 @@ extension AccessRecoveryCoordinator: AddEmailModuleOutput, EmailVerificationModu
     }
     
     func didFailBiometry() {
-        
+        moveToMainPage()
     }
 }

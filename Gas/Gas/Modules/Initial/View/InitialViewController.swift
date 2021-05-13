@@ -40,9 +40,13 @@ class InitialViewController: UIViewController {
     
     private let registrationButton = Button.makePrimary(title: Text.registration)
     private let signInButton = Button.makeSecondary(title: Text.signInToApp)
+    private let secureAuth = SecureAuthentication(dataProvider: AuthorizationService())
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if !secureAuth.getToken().isEmpty {
+            signInTapped()
+        }
         addViews()
         setConstraints()
         configureButtons()

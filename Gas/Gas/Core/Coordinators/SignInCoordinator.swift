@@ -29,7 +29,7 @@ class SignInCoordinator: SignInCoordinatorProtocol {
     
     func start() {
         moveToLogin()
-        if secureAuth.isPasscodeSet {
+        if !secureAuth.getToken().isEmpty {
             moveToEnterPasscode()
         }
     }
@@ -70,7 +70,7 @@ extension SignInCoordinator: LoginModuleOutput, PasscodeModuleOutput, BiometryMo
     }
     
     func didSucceedPasscodeModule() {
-        if secureAuth.isPasscodeSet {
+        if !secureAuth.getToken().isEmpty {
             moveToMainPage()
         } else {
             moveToSetBiometry()
