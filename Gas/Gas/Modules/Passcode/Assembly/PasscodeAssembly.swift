@@ -9,6 +9,7 @@ import UIKit
 
 protocol PasscodeViewOutput {
     func didEnterPasscode(_ code: String)
+    func didTapBack()
 }
 
 protocol PasscodeViewInput: class {

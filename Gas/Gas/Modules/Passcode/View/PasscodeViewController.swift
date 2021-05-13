@@ -65,6 +65,10 @@ class PasscodeViewController: BaseViewController, PasscodeViewInput {
         case .set:
             addTitleAndSubtitleLabels(title: Text.pinCode, subtitle: Text.setPinCodeForFastAccess)
         case .enter:
+            backButtonTapHandler = { [weak self] in
+                self?.output?.didTapBack()
+                self?.navigationController?.popViewController(animated: true)
+            }
             addTitleAndSubtitleLabels(title: Text.pinCode, subtitle: Text.enterPinCodeForAccess)
         }
         
