@@ -11,6 +11,7 @@ enum PaymentTarget: TargetType, AccessTokenAuthorizable {
     
     case history(from: String?, to: String?)
     case payment(id: Int)
+    case calculate(data: [String: Any])
     
     var baseURL: URL {
         URL(string: AppConfigs.baseUrl)!
@@ -22,12 +23,14 @@ enum PaymentTarget: TargetType, AccessTokenAuthorizable {
             return "payment/history/"
         case .payment(let id):
             return "payment/history/\(id)"
+        case .calculate:
+            return "payment/calculate"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .history, .payment:
+        case .history, .payment, .calculate:
             return .get
         }
     }
@@ -36,6 +39,8 @@ enum PaymentTarget: TargetType, AccessTokenAuthorizable {
     
     var task: Task {
         switch self {
+        case .calculate(let data):
+            return .requestParameters(parameters: data, encoding: QueryEncoding.default)
         case .history(let from, let to):
             var params: [String: Any] = [:]
             if let from = from {

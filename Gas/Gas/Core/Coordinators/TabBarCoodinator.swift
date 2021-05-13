@@ -42,7 +42,7 @@ class TabBarCoordinator: TabBarCoordinatorProtocol {
                                                                image: Asset.iconReceipt.image,
                                                                selectedImage: Asset.iconReceipt.image)
         
-        let viewController2 = ScanAssembly().assemble()
+        let viewController2 = PaymentOrderAssembly().assemble()
         let scanViewController = UINavigationController(rootViewController: viewController2)
         scanViewController.tabBarItem = UITabBarItem(title: nil,
                                                      image: Asset.iconScan.image,

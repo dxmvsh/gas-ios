@@ -33,14 +33,62 @@ class Button: UIButton {
         return button
     }
     
+    static func makePaymentButton(leftTitle: String = "", rightTitle: String = "") -> Button {
+        let button = Button()
+        button.leftLabel.text = leftTitle
+        button.rightLabel.text = rightTitle
+        button.roundCorners(radius: Constants.cornerRadius)
+        button.setTitle(nil, for: .normal)
+        button.backgroundColor = Color.main
+        return button
+    }
+    
+    private let leftLabel = UILabel().with(textColor: .white).with(font: .systemFont(ofSize: 16))
+    
+    private let rightLabel = UILabel().with(textColor: .white).with(font: .systemFont(ofSize: 16, weight: .medium))
+    
+    init() {
+        super.init(frame: .zero)
+        setupViews()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupViews() {
+        [leftLabel, rightLabel].forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            addSubview($0)
+        }
+        
+        NSLayoutConstraint.activate([
+            leftLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: LayoutGuidance.offset),
+            leftLabel.topAnchor.constraint(equalTo: topAnchor, constant: LayoutGuidance.offset),
+            leftLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -LayoutGuidance.offset),
+            
+            rightLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -LayoutGuidance.offset),
+            rightLabel.topAnchor.constraint(equalTo: topAnchor, constant: LayoutGuidance.offset),
+            rightLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -LayoutGuidance.offset),
+        ])
+    }
+    
     func setDisabled() {
         isEnabled = false
         backgroundColor = Color.buttonInactiveBackgroundColor
+        leftLabel.textColor = Color.buttonInactiveTitleColor
+        rightLabel.textColor = Color.buttonInactiveTitleColor
     }
     
     func setEnabled() {
         isEnabled = true
         backgroundColor = Color.main
+        leftLabel.textColor = .white
+        rightLabel.textColor = .white
+    }
+    
+    func setLeftTitle(_ text: String) {
+        leftLabel.text = text
     }
     
 }

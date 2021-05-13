@@ -9,17 +9,36 @@ import UIKit
 
 class AccountInfoKeyValueView: UIView {
     
-    private let titleLabel = UILabel().with(font: .systemFont(ofSize: 15))
+    private let stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = LayoutGuidance.offsetHalf
+        return stackView
+    }()
+    
+    let titleLabel = UILabel().with(font: .systemFont(ofSize: 15))
                                       .with(textColor: Color.gray)
     
-    private let valueLabel = UILabel().with(font: .systemFont(ofSize: 13))
+    let valueLabel = UILabel().with(font: .systemFont(ofSize: 13))
                                       .with(textColor: Color.darkGray)
                                       .with(numberOfLines: 0)
     
-    init(title: String = "", value: String = "") {
+    private let bottomLine: UIView = {
+        let view = UIView()
+        view.backgroundColor = Color.lineGray2
+        return view
+    }()
+    
+    private let iconView = UIButton()
+    
+    var didTapIconViewClosure: (() -> Void)?
+    
+    init(title: String = "", value: String = "", hasBottomLine: Bool = false, hasClearIconView: Bool = false) {
         super.init(frame: .zero)
         titleLabel.text = title
         valueLabel.text = value
+        bottomLine.isHidden = !hasBottomLine
+        iconView.isHidden = !hasClearIconView
         setupViews()
     }
     
@@ -28,21 +47,38 @@ class AccountInfoKeyValueView: UIView {
     }
     
     private func setupViews() {
-        [titleLabel, valueLabel].forEach {
+        [stackView, iconView].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             addSubview($0)
         }
         
+        [titleLabel, valueLabel, bottomLine].forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            stackView.addArrangedSubview($0)
+        }
+        
+        iconView.setBackgroundImage(Asset.iconClear.image, for: .normal)
+        iconView.addTarget(self, action: #selector(didTapIconView), for: .touchUpInside)
+        
         NSLayoutConstraint.activate([
-            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            titleLabel.topAnchor.constraint(equalTo: topAnchor),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            stackView.topAnchor.constraint(equalTo: topAnchor),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            stackView.bottomAnchor.constraint(greaterThanOrEqualTo: bottomAnchor),
             
-            valueLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: LayoutGuidance.offsetHalf),
-            valueLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            valueLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            valueLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
+            iconView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            iconView.centerYAnchor.constraint(equalTo: valueLabel.centerYAnchor),
+            iconView.widthAnchor.constraint(equalToConstant: 20),
+            iconView.heightAnchor.constraint(equalToConstant: 20),
+            
+            bottomLine.bottomAnchor.constraint(equalTo: bottomAnchor),
+            bottomLine.heightAnchor.constraint(equalToConstant: 1)
         ])
+    }
+    
+    @objc
+    private func didTapIconView() {
+        didTapIconViewClosure?()
     }
     
     func setTitle(_ text: String) {

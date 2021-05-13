@@ -11,6 +11,7 @@ import Moya
 protocol PaymentServiceProtocol {
     func getHistory(dateFrom: String?, dateTo: String?, completion: @escaping ResponseCompletion<[PaymentHistoryItemDataModel]>)
     func getPayment(id: Int, completion: @escaping ResponseCompletion<PaymentHistoryItemDataModel>)
+    func calculate(data: [String: Any], completion: @escaping ResponseCompletion<CalculationDataModel>)
 }
 
 class PaymentService: PaymentServiceProtocol {
@@ -50,6 +51,21 @@ class PaymentService: PaymentServiceProtocol {
             case .success(let response):
                 guard let model = try? JSONDecoder().decode(PaymentHistoryItemDataModel.self, from: response.data) else {
                     completion(.failure(.custom("JSON parsing error")))
+                    return
+                }
+                completion(.success(model))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func calculate(data: [String: Any], completion: @escaping ResponseCompletion<CalculationDataModel>) {
+        dataProvider.request(.calculate(data: data)) { result in
+            switch result {
+            case .success(let response):
+                guard let model = try? JSONDecoder().decode(CalculationDataModel.self, from: response.data) else {
+                    completion(.failure(.custom("JSON Parsing error")))
                     return
                 }
                 completion(.success(model))

@@ -102,6 +102,19 @@
 		EF92E749261DA3F600E9ECEA /* AddPersonalAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E748261DA3F600E9ECEA /* AddPersonalAccountViewController.swift */; };
 		EF92E75A261DA43E00E9ECEA /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E759261DA43E00E9ECEA /* RegistrationCoordinator.swift */; };
 		EF9C26D2264BF47A006DEFED /* MainPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C26D1264BF47A006DEFED /* MainPageViewModel.swift */; };
+		EF9C26D9264BFB5F006DEFED /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C26D8264BFB5F006DEFED /* AccountListViewController.swift */; };
+		EF9C26DD264BFB89006DEFED /* AccountListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C26DC264BFB89006DEFED /* AccountListViewModel.swift */; };
+		EF9C26E2264CE197006DEFED /* AccountListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C26E1264CE197006DEFED /* AccountListCell.swift */; };
+		EF9C26E6264CE47E006DEFED /* AccountListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C26E5264CE47E006DEFED /* AccountListHeaderView.swift */; };
+		EF9C26EA264CE6DA006DEFED /* AccountListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C26E9264CE6DA006DEFED /* AccountListAssembly.swift */; };
+		EF9C26EF264CECB8006DEFED /* PaymentOrderAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C26EE264CECB8006DEFED /* PaymentOrderAssembly.swift */; };
+		EF9C26F3264CEDC0006DEFED /* CalculationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C26F2264CEDC0006DEFED /* CalculationDataModel.swift */; };
+		EF9C26F7264CEF28006DEFED /* PaymentOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C26F6264CEF28006DEFED /* PaymentOrderViewController.swift */; };
+		EF9C272D264D463F006DEFED /* PaymentOrderCounterInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C272C264D463F006DEFED /* PaymentOrderCounterInfoView.swift */; };
+		EF9C2735264D4823006DEFED /* CounterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C2734264D4823006DEFED /* CounterTextField.swift */; };
+		EF9C273B264D642F006DEFED /* PaymentOrderCounterInfoAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C273A264D642F006DEFED /* PaymentOrderCounterInfoAdapter.swift */; };
+		EF9C2741264D6579006DEFED /* PaymentOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C2740264D6579006DEFED /* PaymentOrderViewModel.swift */; };
+		EF9C2746264D6985006DEFED /* PaymentOrderAccountInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C2745264D6985006DEFED /* PaymentOrderAccountInfoView.swift */; };
 		EF9D0BB526367C8E006E5472 /* OfferInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BB426367C8E006E5472 /* OfferInformationViewController.swift */; };
 		EF9D0BB926367D1E006E5472 /* CheckBoxTitledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BB826367D1E006E5472 /* CheckBoxTitledView.swift */; };
 		EF9D0BBD26368274006E5472 /* OfferConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D0BBC26368274006E5472 /* OfferConfirmationView.swift */; };
@@ -249,6 +262,19 @@
 		EF92E748261DA3F600E9ECEA /* AddPersonalAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonalAccountViewController.swift; sourceTree = "<group>"; };
 		EF92E759261DA43E00E9ECEA /* RegistrationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationCoordinator.swift; sourceTree = "<group>"; };
 		EF9C26D1264BF47A006DEFED /* MainPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewModel.swift; sourceTree = "<group>"; };
+		EF9C26D8264BFB5F006DEFED /* AccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewController.swift; sourceTree = "<group>"; };
+		EF9C26DC264BFB89006DEFED /* AccountListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewModel.swift; sourceTree = "<group>"; };
+		EF9C26E1264CE197006DEFED /* AccountListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListCell.swift; sourceTree = "<group>"; };
+		EF9C26E5264CE47E006DEFED /* AccountListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListHeaderView.swift; sourceTree = "<group>"; };
+		EF9C26E9264CE6DA006DEFED /* AccountListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListAssembly.swift; sourceTree = "<group>"; };
+		EF9C26EE264CECB8006DEFED /* PaymentOrderAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrderAssembly.swift; sourceTree = "<group>"; };
+		EF9C26F2264CEDC0006DEFED /* CalculationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationDataModel.swift; sourceTree = "<group>"; };
+		EF9C26F6264CEF28006DEFED /* PaymentOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrderViewController.swift; sourceTree = "<group>"; };
+		EF9C272C264D463F006DEFED /* PaymentOrderCounterInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrderCounterInfoView.swift; sourceTree = "<group>"; };
+		EF9C2734264D4823006DEFED /* CounterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterTextField.swift; sourceTree = "<group>"; };
+		EF9C273A264D642F006DEFED /* PaymentOrderCounterInfoAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrderCounterInfoAdapter.swift; sourceTree = "<group>"; };
+		EF9C2740264D6579006DEFED /* PaymentOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrderViewModel.swift; sourceTree = "<group>"; };
+		EF9C2745264D6985006DEFED /* PaymentOrderAccountInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOrderAccountInfoView.swift; sourceTree = "<group>"; };
 		EF9D0BB426367C8E006E5472 /* OfferInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferInformationViewController.swift; sourceTree = "<group>"; };
 		EF9D0BB826367D1E006E5472 /* CheckBoxTitledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxTitledView.swift; sourceTree = "<group>"; };
 		EF9D0BBC26368274006E5472 /* OfferConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferConfirmationView.swift; sourceTree = "<group>"; };
@@ -342,6 +368,7 @@
 				EF79661526153F810052751C /* MaskedTextField.swift */,
 				EF0952052623393300AD02BB /* LabeledTextField.swift */,
 				EFAB6C86262AD3BF00250F4B /* SmsCodeTextField.swift */,
+				EF9C2734264D4823006DEFED /* CounterTextField.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -411,6 +438,9 @@
 		EF1D782426152A5300168CF9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EF9C2744264D6972006DEFED /* PaymentOrderAccountInfo */,
+				EF9C26ED264CECA3006DEFED /* PaymentOrder */,
+				EF9C26D7264BFB4F006DEFED /* AccountList */,
 				EF7B0ADA2649B83000307772 /* AccountInformation */,
 				EF7B0A9A264980B300307772 /* Analytics */,
 				EF7B0A7826497B0F00307772 /* Scan */,
@@ -925,6 +955,54 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		EF9C26D7264BFB4F006DEFED /* AccountList */ = {
+			isa = PBXGroup;
+			children = (
+				EF9C26E0264CE187006DEFED /* Additional */,
+				EF9C26D8264BFB5F006DEFED /* AccountListViewController.swift */,
+				EF9C26DC264BFB89006DEFED /* AccountListViewModel.swift */,
+				EF9C26E9264CE6DA006DEFED /* AccountListAssembly.swift */,
+			);
+			path = AccountList;
+			sourceTree = "<group>";
+		};
+		EF9C26E0264CE187006DEFED /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				EF9C26E1264CE197006DEFED /* AccountListCell.swift */,
+				EF9C26E5264CE47E006DEFED /* AccountListHeaderView.swift */,
+			);
+			path = Additional;
+			sourceTree = "<group>";
+		};
+		EF9C26ED264CECA3006DEFED /* PaymentOrder */ = {
+			isa = PBXGroup;
+			children = (
+				EF9C272B264D4600006DEFED /* PaymentOrderCounterInfo */,
+				EF9C26EE264CECB8006DEFED /* PaymentOrderAssembly.swift */,
+				EF9C26F6264CEF28006DEFED /* PaymentOrderViewController.swift */,
+				EF9C2740264D6579006DEFED /* PaymentOrderViewModel.swift */,
+			);
+			path = PaymentOrder;
+			sourceTree = "<group>";
+		};
+		EF9C272B264D4600006DEFED /* PaymentOrderCounterInfo */ = {
+			isa = PBXGroup;
+			children = (
+				EF9C273A264D642F006DEFED /* PaymentOrderCounterInfoAdapter.swift */,
+				EF9C272C264D463F006DEFED /* PaymentOrderCounterInfoView.swift */,
+			);
+			path = PaymentOrderCounterInfo;
+			sourceTree = "<group>";
+		};
+		EF9C2744264D6972006DEFED /* PaymentOrderAccountInfo */ = {
+			isa = PBXGroup;
+			children = (
+				EF9C2745264D6985006DEFED /* PaymentOrderAccountInfoView.swift */,
+			);
+			path = PaymentOrderAccountInfo;
+			sourceTree = "<group>";
+		};
 		EF9D0BB326367C79006E5472 /* OfferInformation */ = {
 			isa = PBXGroup;
 			children = (
@@ -1079,6 +1157,7 @@
 				EF7B0ACC2649B46D00307772 /* AnalyticsDataModel.swift */,
 				EF7B0AD42649B79000307772 /* AccountInformationDataModel.swift */,
 				EF140728264AAFAE003722CD /* PaymentHistoryItemDataModel.swift */,
+				EF9C26F2264CEDC0006DEFED /* CalculationDataModel.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -1287,24 +1366,31 @@
 				EF7B0A61264965F600307772 /* PaymentHistoryAssembly.swift in Sources */,
 				EF7B0A312649584400307772 /* AccessRecoveryDataModel.swift in Sources */,
 				EF1D782826152A9D00168CF9 /* InitialViewController.swift in Sources */,
+				EF9C26D9264BFB5F006DEFED /* AccountListViewController.swift in Sources */,
+				EF9C2746264D6985006DEFED /* PaymentOrderAccountInfoView.swift in Sources */,
 				EF7B0A73264969DE00307772 /* SettingsViewController.swift in Sources */,
 				EF9D0BCE2636AC25006E5472 /* PasswordRuleViewAdapter.swift in Sources */,
 				EF7B0A7A26497B5D00307772 /* ScanAssembly.swift in Sources */,
 				EF9D0BF82636D838006E5472 /* PasscodeKeyboardView.swift in Sources */,
+				EF9C273B264D642F006DEFED /* PaymentOrderCounterInfoAdapter.swift in Sources */,
 				EF09521926233B2C00AD02BB /* EditingAction.swift in Sources */,
+				EF9C2741264D6579006DEFED /* PaymentOrderViewModel.swift in Sources */,
 				EF7B0A1E2649410200307772 /* SignInCoordinator.swift in Sources */,
 				EFAB6C732629371A00250F4B /* AddPhoneViewController.swift in Sources */,
 				EF92E6E9261D86BD00E9ECEA /* Text.swift in Sources */,
+				EF9C26F3264CEDC0006DEFED /* CalculationDataModel.swift in Sources */,
 				EFAB6CA3262B1C8500250F4B /* AddEmailViewModel.swift in Sources */,
 				EF140736264AB103003722CD /* PaymentTarget.swift in Sources */,
 				EF07B74F26233F1A007A45CE /* ClearableDelegate.swift in Sources */,
 				EFAB6C7B2629373400250F4B /* AddPhoneAssembly.swift in Sources */,
 				EF7B09F22645886400307772 /* UserDataModel.swift in Sources */,
+				EF9C26E6264CE47E006DEFED /* AccountListHeaderView.swift in Sources */,
 				EF14073A264ABB2F003722CD /* DateExtension.swift in Sources */,
 				EF77B8A5263802FE00B34B3E /* PasscodeStatusView.swift in Sources */,
 				EF09521226233AF300AD02BB /* IndicatorProtocol.swift in Sources */,
 				EF7B0A0E2645BB3F00307772 /* LoginViewController.swift in Sources */,
 				EFAB6C812629924D00250F4B /* SmsVerificationViewController.swift in Sources */,
+				EF9C272D264D463F006DEFED /* PaymentOrderCounterInfoView.swift in Sources */,
 				EF7965F626152FEC0052751C /* Colors.swift in Sources */,
 				EF7B0AC12649A4A200307772 /* AppConfigs.swift in Sources */,
 				EF7B09D12645694700307772 /* NetworkReachabilityChecking.swift in Sources */,
@@ -1325,13 +1411,16 @@
 				EF0952062623393300AD02BB /* LabeledTextField.swift in Sources */,
 				EF7B0A2C2649527F00307772 /* AccessRecoveryCoordinator.swift in Sources */,
 				EF92E75A261DA43E00E9ECEA /* RegistrationCoordinator.swift in Sources */,
+				EF9C26DD264BFB89006DEFED /* AccountListViewModel.swift in Sources */,
 				EF7B0A9D264980CE00307772 /* AnalyticsAssembly.swift in Sources */,
 				EFAB6C54262912FA00250F4B /* CustomToolbar.swift in Sources */,
 				EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */,
+				EF9C26F7264CEF28006DEFED /* PaymentOrderViewController.swift in Sources */,
 				EF7B09C92645685F00307772 /* Converter.swift in Sources */,
 				EF7B09FA2645A32000307772 /* SecureAuth.swift in Sources */,
 				EF140732264AB0E1003722CD /* PaymentService.swift in Sources */,
 				EFAB6C592629176000250F4B /* UserInformationViewController.swift in Sources */,
+				EF9C26EF264CECB8006DEFED /* PaymentOrderAssembly.swift in Sources */,
 				EF4428CA263AD45900ADD537 /* BiometryViewModel.swift in Sources */,
 				EF9D0BCA26369BA6006E5472 /* PasswordRulesView.swift in Sources */,
 				EF9D0BD22636BA55006E5472 /* PasswordViewModel.swift in Sources */,
@@ -1351,6 +1440,7 @@
 				EFAB6CA7262B1F9B00250F4B /* EmailVerificationViewModel.swift in Sources */,
 				EFAB6C94262AFCF100250F4B /* SmsVerificationAssembly.swift in Sources */,
 				EFAB6C87262AD3BF00250F4B /* SmsCodeTextField.swift in Sources */,
+				EF9C2735264D4823006DEFED /* CounterTextField.swift in Sources */,
 				EF2E937A26290DA100C0ADD9 /* AddPersonalAccountViewModel.swift in Sources */,
 				EF7B0A1826483F8D00307772 /* LoginAssembly.swift in Sources */,
 				EF7B0A8026497B6900307772 /* ScanViewController.swift in Sources */,
@@ -1383,9 +1473,11 @@
 				EF9D0BEB2636D710006E5472 /* PasscodeViewModel.swift in Sources */,
 				EF7B09AA2645664400307772 /* NetworkDataProvider.swift in Sources */,
 				EF7B09C52645684000307772 /* ApiError.swift in Sources */,
+				EF9C26E2264CE197006DEFED /* AccountListCell.swift in Sources */,
 				EFAB6C99262B1B0A00250F4B /* AddEmailViewController.swift in Sources */,
 				EF7B0AC52649A5A000307772 /* UserService.swift in Sources */,
 				EF7B0AA4264980F300307772 /* AnalyticsViewController.swift in Sources */,
+				EF9C26EA264CE6DA006DEFED /* AccountListAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
