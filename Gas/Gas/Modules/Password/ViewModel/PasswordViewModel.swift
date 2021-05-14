@@ -10,6 +10,7 @@ import Foundation
 enum PasswordMode {
     case set
     case recover
+    case change
 }
 
 class PasswordViewModel: PasswordViewOutput, PasswordModuleInput {
@@ -31,6 +32,7 @@ class PasswordViewModel: PasswordViewOutput, PasswordModuleInput {
     
     private let passwordChecker: PasswordCheckerService
     
+    private var oldPassword: String = ""
     private var password: String = ""
     private var confirmPassword: String = ""
     
@@ -54,6 +56,9 @@ class PasswordViewModel: PasswordViewOutput, PasswordModuleInput {
     
     func didLoad() {
         view?.setPasswordRules(rules)
+        if mode == .change {
+            view?.setOldPassword(isHidden: false)
+        }
     }
     
     func didChangePassword(_ password: String) {
@@ -69,6 +74,10 @@ class PasswordViewModel: PasswordViewOutput, PasswordModuleInput {
     func didSetConfirmPassword(_ password: String) {
         self.confirmPassword = password
         updateButtonAvailability()
+    }
+    
+    func didSetOldPassword(_ password: String) {
+        self.oldPassword = password
     }
     
     func didTapContinue() {
@@ -113,6 +122,24 @@ class PasswordViewModel: PasswordViewOutput, PasswordModuleInput {
                         print("error: \(error)")
                         self?.output?.didFailPasswordSet()
                     }
+                }
+            }
+        case .change:
+            dataProvider.changePassword(oldPassword: oldPassword, newPassword: password, confirmedPassword: confirmPassword) { [weak self] result in
+                switch result {
+                case .success(let message):
+                    if message.message == .success {
+                        if let password = self?.password {
+                            self?.secureAuthService.setPassword(password)
+                        }
+                        self?.output?.didSucceedPasswordSet()
+                    } else {
+                        print("message failed")
+                        self?.output?.didFailPasswordSet()
+                    }
+                case .failure(let error):
+                    print("error: \(error)")
+                    self?.output?.didFailPasswordSet()
                 }
             }
         }

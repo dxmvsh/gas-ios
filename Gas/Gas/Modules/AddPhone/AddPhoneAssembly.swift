@@ -31,4 +31,15 @@ class AddPhoneAssembly {
         return view
     }
     
+    func assembleForChangeNumber(_ moduleOutput: AddPhoneModuleOutput? = nil) -> UIViewController {
+        let view = AddPhoneViewController()
+        let dataProvider = AuthorizationService()
+        let viewModel = AddPhoneViewModel(dataProvider: dataProvider)
+        view.setTitleAndSubtitle(title: "Номер телефона", subtitle: "Введите новый номер телефона")
+        viewModel.view = view
+        view.output = viewModel
+        viewModel.output = moduleOutput
+        return view
+    }
+    
 }

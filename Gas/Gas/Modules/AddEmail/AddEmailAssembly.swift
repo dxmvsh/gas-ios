@@ -31,4 +31,14 @@ class AddEmailAssembly {
         return view
     }
     
+    func assembleForChangeEmail(_ moduleOutput: AddEmailModuleOutput? = nil) -> UIViewController {
+        let view = AddEmailViewController()
+        let dataProvider = AuthorizationService()
+        let viewModel = AddEmailViewModel(dataProvider: dataProvider)
+        view.setTitleAndSubtitle(title: "Эл. почта", subtitle: "Введите новый электронный адрес")
+        viewModel.view = view
+        view.output = viewModel
+        viewModel.output = moduleOutput
+        return view
+    }
 }

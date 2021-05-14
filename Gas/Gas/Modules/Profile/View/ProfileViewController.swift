@@ -119,6 +119,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         cell.configure(text: content[indexPath.section][indexPath.row].localizedDescription)
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -127,6 +128,71 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let action = content[indexPath.section][indexPath.row] as? ProfilePersonalItem {
+            switch action {
+            case .email:
+                let view = AddEmailAssembly().assembleForChangeEmail(self)
+                view.hidesBottomBarWhenPushed = true
+                navigationController?.pushViewController(view, animated: true)
+            case .personalAccount:
+                break
+            case .phoneNumber:
+                let view = AddPhoneAssembly().assembleForChangeNumber(self)
+                view.hidesBottomBarWhenPushed = true
+                navigationController?.pushViewController(view, animated: true)
+            }
+        } else if let action = content[indexPath.section][indexPath.row] as? ProfileManagementItem {
+            switch action {
+            case .changePassword:
+                let view = PasswordAssembly().assemble(mode: .change) { (input) -> PasswordModuleOutput? in
+                    return self
+                }
+                view.hidesBottomBarWhenPushed = true
+                navigationController?.pushViewController(view, animated: true)
+            default:
+                break
+            }
+        }
         
     }
+}
+
+extension ProfileViewController: AddEmailModuleOutput, EmailVerificationModuleOutput, AddPhoneModuleOutput, SmsVerificationModuleOutput, PasswordModuleOutput {
+    
+    func didAdd(email: String) {
+        let view = SmsVerificationAssembly().assembleChangeEmail(self, email: email)
+        view.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(view, animated: true)
+    }
+    
+    func didSucceedEmailVerification(email: String) {
+        navigationController?.popToViewController(self, animated: true)
+    }
+    
+    func didFailEmailVerification() {
+        navigationController?.popToViewController(self, animated: true)
+    }
+    
+    func didFinish(with phoneNumber: String) {
+        let view = SmsVerificationAssembly().assembleChangePhone(self, phoneNumber: "+\(phoneNumber)")
+        view.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(view, animated: true)
+    }
+    
+    func didSucceed(phoneNumber: String) {
+        navigationController?.popToViewController(self, animated: true)
+    }
+    
+    func didFail() {
+        navigationController?.popToViewController(self, animated: true)
+    }
+    
+    func didSucceedPasswordSet() {
+        navigationController?.popToViewController(self, animated: true)
+    }
+    
+    func didFailPasswordSet() {
+        navigationController?.popToViewController(self, animated: true)
+    }
+    
 }

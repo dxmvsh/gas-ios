@@ -7,7 +7,7 @@
 
 import Moya
 
-enum AuthTarget: TargetType {
+enum AuthTarget: TargetType, AccessTokenAuthorizable {
     
     case accountNumber(number: String)
     case smsInit(phoneNumber: String)
@@ -16,6 +16,9 @@ enum AuthTarget: TargetType {
     case register(user: UserDataModel)
     case login(phoneNumber: String, password: String)
     case resetPassword(data: AccessRecoveryDataModel)
+    case changeNumber(phoneNumber: String, code: String)
+    case changeEmail(email: String, code: String)
+    case changePassword(oldPassword: String, newPassword: String, confirmedPassword: String)
     
     var baseURL: URL {
         return URL(string: AppConfigs.baseUrl)!
@@ -37,6 +40,12 @@ enum AuthTarget: TargetType {
             return "auth/"
         case .resetPassword:
             return "auth/reset_password"
+        case .changeNumber:
+            return "users/profile/change_number"
+        case .changeEmail:
+            return "users/profile/change_email"
+        case .changePassword:
+            return "users/settings/password/"
         }
     }
     
@@ -44,8 +53,10 @@ enum AuthTarget: TargetType {
         switch self {
         case .accountNumber:
             return .get
-        case .smsInit, .login, .register, .emailInit, .verify, .resetPassword:
+        case .smsInit, .login, .register, .emailInit, .verify, .resetPassword, .changeNumber, .changeEmail:
             return .post
+        case .changePassword:
+            return .put
         }
     }
     
@@ -67,6 +78,22 @@ enum AuthTarget: TargetType {
             return .requestParameters(parameters: ["mobile_phone": phoneNumber, "password": password], encoding: JSONEncoding.default)
         case .resetPassword(let data):
             return .requestParameters(parameters: data.toDict(), encoding: JSONEncoding.default)
+        case .changeNumber(let phoneNumber, let code):
+            return .requestParameters(parameters: ["mobile_phone": phoneNumber, "otp_code": code], encoding: JSONEncoding.default)
+        case .changeEmail(let email, let code):
+            return .requestParameters(parameters: ["email": email, "otp_code": code], encoding: JSONEncoding.default)
+        case .changePassword(let old, let new, let conf):
+            return .requestParameters(parameters: ["old_password": old, "password": new, "confirmed_password": conf], encoding: JSONEncoding.default)
+        }
+    }
+    
+    
+    var authorizationType: AuthorizationType? {
+        switch self {
+        case .changeEmail, .changeNumber, .changePassword:
+            return .custom("JWT")
+        default:
+            return nil
         }
     }
     

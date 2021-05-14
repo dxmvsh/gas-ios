@@ -42,11 +42,39 @@ class SmsVerificationAssembly {
         return view
     }
     
+    func assembleChangePhone(_ moduleOutput: SmsVerificationModuleOutput? = nil, phoneNumber: String) -> UIViewController {
+        let view = SmsVerificationViewController()
+        let dataProvider = AuthorizationService()
+        let viewModel = SmsVerificationViewModel(dataProvider: dataProvider)
+        
+        viewModel.changesNumber = true
+        view.output = viewModel
+        viewModel.phoneNumber = phoneNumber
+        viewModel.view = view
+        viewModel.output = moduleOutput
+        
+        return view
+    }
+    
     func assembleEmail(_ moduleOutput: EmailVerificationModuleOutput? = nil, email: String) -> UIViewController {
         let view = SmsVerificationViewController()
         let dataProvider = AuthorizationService()
         let viewModel = EmailVerificationViewModel(dataProvider: dataProvider)
         
+        view.output = viewModel
+        viewModel.view = view
+        viewModel.output = moduleOutput
+        viewModel.email = email
+        
+        return view
+    }
+    
+    func assembleChangeEmail(_ moduleOutput: EmailVerificationModuleOutput? = nil, email: String) -> UIViewController {
+        let view = SmsVerificationViewController()
+        let dataProvider = AuthorizationService()
+        let viewModel = EmailVerificationViewModel(dataProvider: dataProvider)
+        
+        viewModel.changesEmail = true
         view.output = viewModel
         viewModel.view = view
         viewModel.output = moduleOutput

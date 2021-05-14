@@ -33,6 +33,18 @@ class PasswordViewController: BaseViewController, PasswordViewInput {
         return textField
     }()
     
+    private let oldPasswordTextField: LabeledTextField = {
+        let textField = LabeledTextField()
+        textField.title = "Текущий пароль"
+        textField.isSecureTextEntry = true
+        let rightView = UIButton()
+        rightView.setImage(Asset.iconEyeClosed.image, for: .normal)
+        rightView.addTarget(self, action: #selector(didTapRightView(_:)), for: .touchUpInside)
+        textField.rightView = rightView
+        textField.rightViewMode = .always
+        return textField
+    }()
+    
     private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -61,7 +73,7 @@ class PasswordViewController: BaseViewController, PasswordViewInput {
     }
     
     private func setupViews() {
-        [passwordTextField, confirmPasswordTextField].forEach {
+        [oldPasswordTextField, passwordTextField, confirmPasswordTextField].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             stackView.addArrangedSubview($0)
         }
@@ -71,11 +83,13 @@ class PasswordViewController: BaseViewController, PasswordViewInput {
             view.addSubview($0)
         }
         
+        oldPasswordTextField.isHidden = true
+        oldPasswordTextField.maskedDelegate = self
         passwordTextField.maskedDelegate = self
         confirmPasswordTextField.maskedDelegate = self
         continueButton.addTarget(self, action: #selector(didTapContinue), for: .touchUpInside)
         continueButton.setDisabled()
-        view.addInputAccessoryForViews([passwordTextField, confirmPasswordTextField])
+        view.addInputAccessoryForViews([oldPasswordTextField, passwordTextField, confirmPasswordTextField])
         
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LayoutGuidance.offset),
@@ -91,6 +105,10 @@ class PasswordViewController: BaseViewController, PasswordViewInput {
             continueButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -LayoutGuidance.offset),
             continueButton.heightAnchor.constraint(equalToConstant: ViewSize.buttonHeight),
         ])
+    }
+    
+    func setOldPassword(isHidden: Bool) {
+        oldPasswordTextField.isHidden = isHidden
     }
     
     func setPasswordRules(_ rules: [PasswordRuleViewAdapter]) {
@@ -137,6 +155,13 @@ class PasswordViewController: BaseViewController, PasswordViewInput {
                 button.setImage(Asset.iconEyeClosed.image, for: .normal)
             }
             confirmPasswordTextField.isSecureTextEntry.toggle()
+        case oldPasswordTextField.rightView:
+            if oldPasswordTextField.isSecureTextEntry {
+                button.setImage(Asset.iconEyeOpen.image, for: .normal)
+            } else {
+                button.setImage(Asset.iconEyeClosed.image, for: .normal)
+            }
+            oldPasswordTextField.isSecureTextEntry.toggle()
         default:
             break
         }
@@ -164,6 +189,9 @@ extension PasswordViewController: MaskedTextFieldDelegate {
         case confirmPasswordTextField:
             let password = textField.publicRealString
             output?.didSetConfirmPassword(password)
+        case oldPasswordTextField:
+            let password = textField.publicRealString
+            output?.didSetOldPassword(password)
         default:
             break
         }
