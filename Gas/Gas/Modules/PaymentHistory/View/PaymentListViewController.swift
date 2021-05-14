@@ -38,7 +38,7 @@ class PaymentListViewController: BaseViewController, PaymentHistoryViewInput {
         super.viewDidLoad()
         
         setupDefaultNavigationBarStyle()
-        title = "История оплаты"
+        navigationItem.title = "История оплаты"
         
         output?.didLoad()
         setupViews()
@@ -62,6 +62,7 @@ class PaymentListViewController: BaseViewController, PaymentHistoryViewInput {
             filterButton.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             filterButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             filterButton.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            filterButton.heightAnchor.constraint(equalToConstant: 40),
             
             noPaymentsLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             noPaymentsLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
