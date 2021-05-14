@@ -39,4 +39,10 @@ extension Date {
         dateFormatter.timeZone = timeZone
         return dateFormatter.string(from: self)
     }
+    
+    func adjust(_ component: Calendar.Component, offset: Int) -> Date {
+        var dateComp = DateComponents()
+        dateComp.setValue(offset, for: component)
+        return Calendar.current.date(byAdding: dateComp, to: self)!
+    }
 }

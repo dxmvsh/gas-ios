@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		A0B2C983150FEA7F989B43F7 /* Pods_Gas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C595ACD0122E19A1CEABE50 /* Pods_Gas.framework */; };
+		EF066064264DE1E30067FD89 /* PaymentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF066063264DE1E30067FD89 /* PaymentListViewController.swift */; };
+		EF066068264DE26A0067FD89 /* PaymentFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF066067264DE26A0067FD89 /* PaymentFilterButton.swift */; };
+		EF06606D264DE8880067FD89 /* PaymentHistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF06606C264DE8880067FD89 /* PaymentHistoryRouter.swift */; };
+		EF066078264DE92D0067FD89 /* PaymentListFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF066077264DE92D0067FD89 /* PaymentListFilterViewController.swift */; };
+		EF06607C264DEAE20067FD89 /* CheckBoxDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF06607B264DEAE20067FD89 /* CheckBoxDescriptionView.swift */; };
+		EF066082264DEBE10067FD89 /* PaymentFilterDateSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF066081264DEBE10067FD89 /* PaymentFilterDateSelectionView.swift */; };
+		EF066086264DEED50067FD89 /* PaymentFilterDateSelectionComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF066085264DEED50067FD89 /* PaymentFilterDateSelectionComponentView.swift */; };
 		EF07B74F26233F1A007A45CE /* ClearableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF07B74E26233F1A007A45CE /* ClearableDelegate.swift */; };
 		EF0951FF262334C800AD02BB /* AddPersonalAccountTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0951FE262334C800AD02BB /* AddPersonalAccountTest.swift */; };
 		EF0952062623393300AD02BB /* LabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0952052623393300AD02BB /* LabeledTextField.swift */; };
@@ -164,6 +171,13 @@
 /* Begin PBXFileReference section */
 		1FDA8AA05A8F9DAD45AF6D99 /* Pods-Gas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gas.release.xcconfig"; path = "Target Support Files/Pods-Gas/Pods-Gas.release.xcconfig"; sourceTree = "<group>"; };
 		2C595ACD0122E19A1CEABE50 /* Pods_Gas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF066063264DE1E30067FD89 /* PaymentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListViewController.swift; sourceTree = "<group>"; };
+		EF066067264DE26A0067FD89 /* PaymentFilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFilterButton.swift; sourceTree = "<group>"; };
+		EF06606C264DE8880067FD89 /* PaymentHistoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHistoryRouter.swift; sourceTree = "<group>"; };
+		EF066077264DE92D0067FD89 /* PaymentListFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListFilterViewController.swift; sourceTree = "<group>"; };
+		EF06607B264DEAE20067FD89 /* CheckBoxDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxDescriptionView.swift; sourceTree = "<group>"; };
+		EF066081264DEBE10067FD89 /* PaymentFilterDateSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFilterDateSelectionView.swift; sourceTree = "<group>"; };
+		EF066085264DEED50067FD89 /* PaymentFilterDateSelectionComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFilterDateSelectionComponentView.swift; sourceTree = "<group>"; };
 		EF07B74E26233F1A007A45CE /* ClearableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearableDelegate.swift; sourceTree = "<group>"; };
 		EF0951FE262334C800AD02BB /* AddPersonalAccountTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonalAccountTest.swift; sourceTree = "<group>"; };
 		EF0952052623393300AD02BB /* LabeledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
@@ -350,6 +364,24 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EF06606B264DE87E0067FD89 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EF06606C264DE8880067FD89 /* PaymentHistoryRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EF066076264DE9180067FD89 /* PaymentListFilter */ = {
+			isa = PBXGroup;
+			children = (
+				EF066077264DE92D0067FD89 /* PaymentListFilterViewController.swift */,
+				EF066081264DEBE10067FD89 /* PaymentFilterDateSelectionView.swift */,
+				EF066085264DEED50067FD89 /* PaymentFilterDateSelectionComponentView.swift */,
+			);
+			path = PaymentListFilter;
+			sourceTree = "<group>";
+		};
 		EF0951FC262334A600AD02BB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +422,7 @@
 			children = (
 				EF14071E264AAC62003722CD /* PaymentHistoryCell.swift */,
 				EF140724264AAF2E003722CD /* PaymentHistoryCellAdapter.swift */,
+				EF066067264DE26A0067FD89 /* PaymentFilterButton.swift */,
 			);
 			path = Additional;
 			sourceTree = "<group>";
@@ -442,6 +475,7 @@
 		EF1D782426152A5300168CF9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EF066076264DE9180067FD89 /* PaymentListFilter */,
 				EF9C2744264D6972006DEFED /* PaymentOrderAccountInfo */,
 				EF9C26ED264CECA3006DEFED /* PaymentOrder */,
 				EF9C26D7264BFB4F006DEFED /* AccountList */,
@@ -594,6 +628,7 @@
 				EFAB6C53262912FA00250F4B /* CustomToolbar.swift */,
 				EF9D0BB826367D1E006E5472 /* CheckBoxTitledView.swift */,
 				EF140719264A7F41003722CD /* BottomSheetContainerViewController.swift */,
+				EF06607B264DEAE20067FD89 /* CheckBoxDescriptionView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -697,6 +732,7 @@
 		EF7B0A5E264965E000307772 /* PaymentHistory */ = {
 			isa = PBXGroup;
 			children = (
+				EF06606B264DE87E0067FD89 /* Router */,
 				EF14072C264AB0B6003722CD /* ViewModel */,
 				EF7B0A642649660F00307772 /* View */,
 				EF7B0A5F264965E900307772 /* Assembly */,
@@ -717,6 +753,7 @@
 			children = (
 				EF14071D264AAC57003722CD /* Additional */,
 				EF7B0A652649661800307772 /* PaymentHistoryViewController.swift */,
+				EF066063264DE1E30067FD89 /* PaymentListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1363,16 +1400,19 @@
 				EFAB6C5D2629181000250F4B /* UserInformationViewModel.swift in Sources */,
 				EF7B0A592649659F00307772 /* ProfileViewController.swift in Sources */,
 				EF796610261536CC0052751C /* SpaceFactory.swift in Sources */,
+				EF066086264DEED50067FD89 /* PaymentFilterDateSelectionComponentView.swift in Sources */,
 				EF7B0A3B264963E900307772 /* TabBarCoodinator.swift in Sources */,
 				EF140725264AAF2E003722CD /* PaymentHistoryCellAdapter.swift in Sources */,
 				EFAB6C6A2629191200250F4B /* UserInformationDataModel.swift in Sources */,
 				EF7B0A1426483F7B00307772 /* LoginViewModel.swift in Sources */,
 				EF9C26D2264BF47A006DEFED /* MainPageViewModel.swift in Sources */,
 				EF9D0BFE2636D8E5006E5472 /* PasscodeKeyboardButton.swift in Sources */,
+				EF06607C264DEAE20067FD89 /* CheckBoxDescriptionView.swift in Sources */,
 				EF7B0A61264965F600307772 /* PaymentHistoryAssembly.swift in Sources */,
 				EF7B0A312649584400307772 /* AccessRecoveryDataModel.swift in Sources */,
 				EF1D782826152A9D00168CF9 /* InitialViewController.swift in Sources */,
 				EF9C26D9264BFB5F006DEFED /* AccountListViewController.swift in Sources */,
+				EF066078264DE92D0067FD89 /* PaymentListFilterViewController.swift in Sources */,
 				EF9C2746264D6985006DEFED /* PaymentOrderAccountInfoView.swift in Sources */,
 				EF7B0A73264969DE00307772 /* SettingsViewController.swift in Sources */,
 				EF9D0BCE2636AC25006E5472 /* PasswordRuleViewAdapter.swift in Sources */,
@@ -1399,6 +1439,7 @@
 				EF9C272D264D463F006DEFED /* PaymentOrderCounterInfoView.swift in Sources */,
 				EF7965F626152FEC0052751C /* Colors.swift in Sources */,
 				EF7B0AC12649A4A200307772 /* AppConfigs.swift in Sources */,
+				EF06606D264DE8880067FD89 /* PaymentHistoryRouter.swift in Sources */,
 				EF7B09D12645694700307772 /* NetworkReachabilityChecking.swift in Sources */,
 				EF7B09E82645747200307772 /* QueryEncoding.swift in Sources */,
 				EF09520A26233A6E00AD02BB /* FontExtension.swift in Sources */,
@@ -1448,6 +1489,7 @@
 				EFAB6C94262AFCF100250F4B /* SmsVerificationAssembly.swift in Sources */,
 				EFAB6C87262AD3BF00250F4B /* SmsCodeTextField.swift in Sources */,
 				EF9C2735264D4823006DEFED /* CounterTextField.swift in Sources */,
+				EF066064264DE1E30067FD89 /* PaymentListViewController.swift in Sources */,
 				EF2E937A26290DA100C0ADD9 /* AddPersonalAccountViewModel.swift in Sources */,
 				EF7B0A1826483F8D00307772 /* LoginAssembly.swift in Sources */,
 				EF7B0A8026497B6900307772 /* ScanViewController.swift in Sources */,
@@ -1457,6 +1499,7 @@
 				EF9D0BC2263698FB006E5472 /* PasswordAssembly.swift in Sources */,
 				EF9D0BF12636D71D006E5472 /* PasscodeViewController.swift in Sources */,
 				EF7B0A45264964EE00307772 /* MainPageViewController.swift in Sources */,
+				EF066068264DE26A0067FD89 /* PaymentFilterButton.swift in Sources */,
 				EF9C274E264DAE32006DEFED /* PaymentOrderRouter.swift in Sources */,
 				EF7B09F6264588E800307772 /* EncodableExtension.swift in Sources */,
 				EF9D0BBD26368274006E5472 /* OfferConfirmationView.swift in Sources */,
@@ -1476,6 +1519,7 @@
 				EF7B0AE52649B87D00307772 /* AccountInformationViewController.swift in Sources */,
 				EF7B0ADD2649B85200307772 /* AccountInformationAssembly.swift in Sources */,
 				EF7B0ACD2649B46D00307772 /* AnalyticsDataModel.swift in Sources */,
+				EF066082264DEBE10067FD89 /* PaymentFilterDateSelectionView.swift in Sources */,
 				EF7B0AB8264997E800307772 /* UserTarget.swift in Sources */,
 				EF7B0AD12649B55800307772 /* AnalyticsViewAdapter.swift in Sources */,
 				EF9D0BEB2636D710006E5472 /* PasscodeViewModel.swift in Sources */,
