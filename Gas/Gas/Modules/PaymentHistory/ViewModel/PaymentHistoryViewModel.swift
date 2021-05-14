@@ -11,6 +11,7 @@ class PaymentHistoryViewModel: PaymentHistoryViewOutput, PaymentHistoryModuleInp
     
     weak var view: PaymentHistoryViewInput?
     var output: PaymentHistoryModuleOutput?
+    var router: PaymentHistoryRouterInput?
     private let dataProvider: PaymentServiceProtocol
     private var payments: [PaymentHistoryItemDataModel] = []
     init(dataProvider: PaymentServiceProtocol) {
@@ -38,5 +39,31 @@ class PaymentHistoryViewModel: PaymentHistoryViewOutput, PaymentHistoryModuleInp
     
     func didSelectPayment(at index: Int) {
         output?.didSelect(paymentId: payments[index].id)
+    }
+    
+    func didTapFilter() {
+        router?.showFiltrationModule(filterType: .all, submitHandler: { [weak self] type in
+            var dateFrom: String? = nil
+            var dateTo: String? = nil
+            switch type {
+            case .all:
+                break
+            case .period(let from, let to):
+                dateFrom = from?.toString(format: .formatted_ISO8601)
+                dateTo = to?.toString(format: .formatted_ISO8601)
+            }
+            self?.dataProvider.getHistory(dateFrom: dateFrom, dateTo: dateTo) { [weak self] result in
+                switch result {
+                case .success(let models):
+                    let adapters = models.compactMap { model -> PaymentHistoryCellAdapter? in
+                        return PaymentHistoryCellAdapter(data: model)
+                    }
+                    self?.view?.display(adapters: adapters)
+                    self?.payments = models
+                case .failure(let error):
+                    print("error: \(error)")
+                }
+            }
+        })
     }
 }

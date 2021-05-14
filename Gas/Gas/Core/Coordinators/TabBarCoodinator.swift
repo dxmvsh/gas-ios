@@ -35,7 +35,7 @@ class TabBarCoordinator: TabBarCoordinatorProtocol {
         mainPageViewController.tabBarItem = UITabBarItem(title: nil,
                                                          image: Asset.iconHome.image,
                                                          selectedImage: Asset.iconHomeSelected.image)
-        let viewController1 = PaymentHistoryAssembly().assemble()
+        let viewController1 = PaymentHistoryAssembly().assembleList()
         let paymentHistoryViewController = UINavigationController(rootViewController: viewController1)
         
         paymentHistoryViewController.tabBarItem = UITabBarItem(title: nil,

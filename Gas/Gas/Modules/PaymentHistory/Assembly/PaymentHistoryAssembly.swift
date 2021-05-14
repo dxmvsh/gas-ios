@@ -15,6 +15,11 @@ protocol PaymentHistoryViewInput: class {
 protocol PaymentHistoryViewOutput {
     func didLoad()
     func didSelectPayment(at index: Int)
+    func didTapFilter()
+}
+
+extension PaymentHistoryViewOutput {
+    func didTapFilter() {}
 }
 
 protocol PaymentHistoryModuleInput {
@@ -23,6 +28,10 @@ protocol PaymentHistoryModuleInput {
 
 protocol PaymentHistoryModuleOutput {
     func didSelect(paymentId: Int)
+}
+
+protocol PaymentHistoryRouterInput {
+    func showFiltrationModule(filterType: PaymentListFilterType, submitHandler: @escaping ((PaymentListFilterType) -> Void))
 }
 
 typealias PaymentHistoryConfiguration = (PaymentHistoryModuleInput) -> PaymentHistoryModuleOutput?
@@ -36,6 +45,20 @@ class PaymentHistoryAssembly {
         view.output = viewModel
         viewModel.view = view
         viewModel.output = configuration?(viewModel)
+        
+        return view
+    }
+    
+    func assembleList(_ configuration: PaymentHistoryConfiguration? = nil) -> UIViewController {
+        let view = PaymentListViewController()
+        let viewModel = PaymentHistoryViewModel(dataProvider: PaymentService())
+        let router = PaymentHistoryRouter()
+        
+        router.viewController = view
+        view.output = viewModel
+        viewModel.view = view
+        viewModel.output = configuration?(viewModel)
+        viewModel.router = router
         
         return view
     }
