@@ -126,4 +126,8 @@ class SecureAuthentication: SecureAuthenticationProtocol {
         keychain.delete(Constants.passwordKey)
         keychain.delete(Constants.tokenKey)
     }
+    
+    func flushToken() {
+        keychain.delete(Constants.tokenKey)
+    }
 }

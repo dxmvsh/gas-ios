@@ -57,7 +57,13 @@ class TabBarCoordinator: TabBarCoordinatorProtocol {
                                                         image: Asset.iconAccount.image,
                                                         selectedImage: Asset.iconAccountSelected.image)
         
-        let viewController4 = SettingsAssembly().assemble()
+        let viewController4 = SettingsAssembly().assemble { [weak self] in
+            let navController = UINavigationController(rootViewController: InitialViewController())
+            let signInCoordinator = SignInCoordinator(navigationController: navController)
+            self?.window?.rootViewController = navController
+            self?.window?.makeKeyAndVisible()
+            signInCoordinator.start()
+        }
         let settingsViewController = UINavigationController(rootViewController: viewController4)
         settingsViewController.tabBarItem = UITabBarItem(title: nil,
                                                          image: Asset.iconSettings.image,

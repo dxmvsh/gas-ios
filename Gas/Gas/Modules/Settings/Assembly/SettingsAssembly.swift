@@ -9,9 +9,9 @@ import UIKit
 
 class SettingsAssembly {
     
-    func assemble() -> UIViewController {
+    func assemble(logoutHandler: (() -> Void)?) -> UIViewController {
         let view = SettingsViewController()
-        
+        view.logoutHandler = logoutHandler
         return view
     }
     
