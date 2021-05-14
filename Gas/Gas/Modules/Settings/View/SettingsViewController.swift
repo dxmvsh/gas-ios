@@ -77,7 +77,7 @@ class SettingsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Настройки"
+        navigationItem.title = "Настройки"
         button.setTitleColor(Color.fail, for: .normal)
         view.backgroundColor = .white
         [tableView, button].forEach {
