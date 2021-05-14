@@ -15,6 +15,9 @@
 		EF06607C264DEAE20067FD89 /* CheckBoxDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF06607B264DEAE20067FD89 /* CheckBoxDescriptionView.swift */; };
 		EF066082264DEBE10067FD89 /* PaymentFilterDateSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF066081264DEBE10067FD89 /* PaymentFilterDateSelectionView.swift */; };
 		EF066086264DEED50067FD89 /* PaymentFilterDateSelectionComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF066085264DEED50067FD89 /* PaymentFilterDateSelectionComponentView.swift */; };
+		EF0660A7264E09BA0067FD89 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0660A6264E09BA0067FD89 /* SettingsCell.swift */; };
+		EF0660AB264E11700067FD89 /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0660AA264E11700067FD89 /* SettingsHeaderView.swift */; };
+		EF0660AF264E15440067FD89 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0660AE264E15440067FD89 /* TextViewController.swift */; };
 		EF07B74F26233F1A007A45CE /* ClearableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF07B74E26233F1A007A45CE /* ClearableDelegate.swift */; };
 		EF0951FF262334C800AD02BB /* AddPersonalAccountTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0951FE262334C800AD02BB /* AddPersonalAccountTest.swift */; };
 		EF0952062623393300AD02BB /* LabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0952052623393300AD02BB /* LabeledTextField.swift */; };
@@ -178,6 +181,9 @@
 		EF06607B264DEAE20067FD89 /* CheckBoxDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxDescriptionView.swift; sourceTree = "<group>"; };
 		EF066081264DEBE10067FD89 /* PaymentFilterDateSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFilterDateSelectionView.swift; sourceTree = "<group>"; };
 		EF066085264DEED50067FD89 /* PaymentFilterDateSelectionComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFilterDateSelectionComponentView.swift; sourceTree = "<group>"; };
+		EF0660A6264E09BA0067FD89 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		EF0660AA264E11700067FD89 /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
+		EF0660AE264E15440067FD89 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		EF07B74E26233F1A007A45CE /* ClearableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearableDelegate.swift; sourceTree = "<group>"; };
 		EF0951FE262334C800AD02BB /* AddPersonalAccountTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonalAccountTest.swift; sourceTree = "<group>"; };
 		EF0952052623393300AD02BB /* LabeledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
@@ -629,6 +635,7 @@
 				EF9D0BB826367D1E006E5472 /* CheckBoxTitledView.swift */,
 				EF140719264A7F41003722CD /* BottomSheetContainerViewController.swift */,
 				EF06607B264DEAE20067FD89 /* CheckBoxDescriptionView.swift */,
+				EF0660AE264E15440067FD89 /* TextViewController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -779,6 +786,8 @@
 			isa = PBXGroup;
 			children = (
 				EF7B0A72264969DE00307772 /* SettingsViewController.swift */,
+				EF0660A6264E09BA0067FD89 /* SettingsCell.swift */,
+				EF0660AA264E11700067FD89 /* SettingsHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1446,6 +1455,7 @@
 				EF14071F264AAC62003722CD /* PaymentHistoryCell.swift in Sources */,
 				EF4428C6263AD43000ADD537 /* BiometryViewController.swift in Sources */,
 				EF2E937626290D6000C0ADD9 /* AddPersonalAccountAssembly.swift in Sources */,
+				EF0660A7264E09BA0067FD89 /* SettingsCell.swift in Sources */,
 				EFAB6C8C262AF8B100250F4B /* SmsCodeDigitLabel.swift in Sources */,
 				EF9D0BB926367D1E006E5472 /* CheckBoxTitledView.swift in Sources */,
 				EF7B09D626456A3200307772 /* AuthTarget.swift in Sources */,
@@ -1466,6 +1476,7 @@
 				EF7B09C92645685F00307772 /* Converter.swift in Sources */,
 				EF7B09FA2645A32000307772 /* SecureAuth.swift in Sources */,
 				EF140732264AB0E1003722CD /* PaymentService.swift in Sources */,
+				EF0660AF264E15440067FD89 /* TextViewController.swift in Sources */,
 				EFAB6C592629176000250F4B /* UserInformationViewController.swift in Sources */,
 				EF9C26EF264CECB8006DEFED /* PaymentOrderAssembly.swift in Sources */,
 				EF4428CA263AD45900ADD537 /* BiometryViewModel.swift in Sources */,
@@ -1515,6 +1526,7 @@
 				EF09520E26233AD900AD02BB /* IndicatorExtension.swift in Sources */,
 				EF2DBAF32619E52F008C2B6E /* StringExtension.swift in Sources */,
 				EF92E6B6261D773D00E9ECEA /* Button.swift in Sources */,
+				EF0660AB264E11700067FD89 /* SettingsHeaderView.swift in Sources */,
 				EF4428CF263ADFF000ADD537 /* ResultViewController.swift in Sources */,
 				EF7B0AE52649B87D00307772 /* AccountInformationViewController.swift in Sources */,
 				EF7B0ADD2649B85200307772 /* AccountInformationAssembly.swift in Sources */,

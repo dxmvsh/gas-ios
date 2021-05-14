@@ -36,4 +36,6 @@ enum Color {
     static let inactiveRuleColor: UIColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
     /// rgba(251, 251, 251, 251)
     static let backgroundColor: UIColor = #colorLiteral(red: 0.9843137255, green: 0.9843137255, blue: 0.9843137255, alpha: 1)
+    /// rgba(247, 248, 249, 1)
+    static let headerBackground: UIColor = #colorLiteral(red: 0.968627451, green: 0.9725490196, blue: 0.9764705882, alpha: 1)
 }
