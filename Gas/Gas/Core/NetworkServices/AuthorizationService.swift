@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Moya
 
 typealias ResponseCompletion<T> = (Result<T, GeneralError>) -> Void
 
@@ -17,13 +18,28 @@ protocol AuthorizationServiceProtocol {
     func register(user: UserDataModel, completion: @escaping ResponseCompletion<UserDataModel>)
     func login(phoneNumber: String, password: String, completion: @escaping ResponseCompletion<LoginTokenDataModel>)
     func resetPassword(model: AccessRecoveryDataModel, completion: @escaping ResponseCompletion<MessageStatusDataModel>)
+    func changePhoneNumber(phoneNumber: String, code: String, completion: @escaping ResponseCompletion<MessageStatusDataModel>)
+    func changeEmail(email: String, code: String, completion: @escaping ResponseCompletion<MessageStatusDataModel>)
+    func changePassword(oldPassword: String, newPassword: String, confirmedPassword: String, completion: @escaping ResponseCompletion<MessageStatusDataModel>)
 }
 
 class AuthorizationService: AuthorizationServiceProtocol {
     
     private let dataProvider: NetworkDataProvider<AuthTarget>
     
-    init(dataProvider: NetworkDataProvider<AuthTarget> = NetworkDataProvider<AuthTarget>()) {
+    init(dataProvider: NetworkDataProvider<AuthTarget> = NetworkDataProvider<AuthTarget>(plugins: [
+        NetworkLoggerPlugin(configuration: NetworkLoggerPlugin.Configuration(formatter: NetworkLoggerPlugin.Configuration.Formatter(),
+                                                                                                      output: NetworkLoggerPlugin.Configuration.defaultOutput(target:items:),
+                                                                                                      logOptions: NetworkLoggerPlugin.Configuration.LogOptions.verbose)),
+        AccessTokenPlugin(tokenClosure: { type -> String in
+            switch type {
+            case .basic, .bearer:
+                return ""
+            case .custom:
+                return "\(AuthTokenStorage.shared.getToken())"
+            }
+        })
+    ])) {
         self.dataProvider = dataProvider
     }
     
@@ -119,6 +135,51 @@ class AuthorizationService: AuthorizationServiceProtocol {
     
     func resetPassword(model: AccessRecoveryDataModel, completion: @escaping ResponseCompletion<MessageStatusDataModel>) {
         dataProvider.request(.resetPassword(data: model)) { result in
+            switch result {
+            case .success(let response):
+                guard let model = try? JSONDecoder().decode(MessageStatusDataModel.self, from: response.data) else {
+                    completion(.failure(.custom("JSON parsing error")))
+                    return
+                }
+                completion(.success(model))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func changePhoneNumber(phoneNumber: String, code: String, completion: @escaping ResponseCompletion<MessageStatusDataModel>) {
+        dataProvider.request(.changeNumber(phoneNumber: phoneNumber, code: code)) { (result) in
+            switch result {
+            case .success(let response):
+                guard let model = try? JSONDecoder().decode(MessageStatusDataModel.self, from: response.data) else {
+                    completion(.failure(.custom("JSON parsing error")))
+                    return
+                }
+                completion(.success(model))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func changeEmail(email: String, code: String, completion: @escaping ResponseCompletion<MessageStatusDataModel>) {
+        dataProvider.request(.changeEmail(email: email, code: code)) { (result) in
+            switch result {
+            case .success(let response):
+                guard let model = try? JSONDecoder().decode(MessageStatusDataModel.self, from: response.data) else {
+                    completion(.failure(.custom("JSON parsing error")))
+                    return
+                }
+                completion(.success(model))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func changePassword(oldPassword: String, newPassword: String, confirmedPassword: String, completion: @escaping ResponseCompletion<MessageStatusDataModel>) {
+        dataProvider.request(.changePassword(oldPassword: oldPassword, newPassword: newPassword, confirmedPassword: confirmedPassword)) { (result) in
             switch result {
             case .success(let response):
                 guard let model = try? JSONDecoder().decode(MessageStatusDataModel.self, from: response.data) else {

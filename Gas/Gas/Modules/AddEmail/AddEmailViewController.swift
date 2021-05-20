@@ -57,4 +57,8 @@ class AddEmailViewController: BaseViewController, AddEmailViewInput {
         output?.didTapSubmit(with: emailTextField.publicRealString)
     }
     
+    func setTitleAndSubtitle(title: String, subtitle: String) {
+        titleLabel.text = title
+        subtitleLabel.text = subtitle
+    }
 }

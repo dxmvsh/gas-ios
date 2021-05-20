@@ -14,15 +14,16 @@ class AddPhoneViewController: BaseViewController, AddPhoneViewInput {
     private let continueButton = Button.makePrimary(title: Text.getCode)
     
     var output: AddPhoneViewOutput?
-    
+    var titleLabelText: String = Text.userRegistration
+    var subtitle: String = Text.enterPhoneNumberToRegister
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupDefaultNavigationBarStyle()
         setupBackButton()
         setupContactSupportButton()
-        addTitleAndSubtitleLabels(title: Text.userRegistration,
-                                  subtitle: Text.enterPhoneNumberToRegister)
+        addTitleAndSubtitleLabels(title: titleLabelText,
+                                  subtitle: subtitle)
         
         continueButton.addTarget(self, action: #selector(didTapContinue), for: .touchUpInside)
         
@@ -54,4 +55,8 @@ class AddPhoneViewController: BaseViewController, AddPhoneViewInput {
         output?.didTapSubmit(with: phoneNumberTextField.publicRealString.onlyDigits)
     }
     
+    func setTitleAndSubtitle(title: String, subtitle: String) {
+        titleLabelText = title
+        self.subtitle = subtitle
+    }
 }

@@ -10,12 +10,14 @@ import UIKit
 protocol PasswordViewOutput {
     func didLoad()
     func didChangePassword(_ password: String)
+    func didSetOldPassword(_ password: String)
     func didSetPassword(_ password: String)
     func didSetConfirmPassword(_ password: String)
     func didTapContinue()
 }
 
 protocol PasswordViewInput: class {
+    func setOldPassword(isHidden: Bool)
     func setPasswordRules(_ rules: [PasswordRuleViewAdapter])
     func setRulesHighlighted(_ highlighted: [Bool])
     func setButton(active: Bool)

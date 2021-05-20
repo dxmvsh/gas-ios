@@ -18,6 +18,7 @@
 		EF0660A7264E09BA0067FD89 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0660A6264E09BA0067FD89 /* SettingsCell.swift */; };
 		EF0660AB264E11700067FD89 /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0660AA264E11700067FD89 /* SettingsHeaderView.swift */; };
 		EF0660AF264E15440067FD89 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0660AE264E15440067FD89 /* TextViewController.swift */; };
+		EF0660B7264E3D270067FD89 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0660B6264E3D270067FD89 /* HelpViewController.swift */; };
 		EF07B74F26233F1A007A45CE /* ClearableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF07B74E26233F1A007A45CE /* ClearableDelegate.swift */; };
 		EF0951FF262334C800AD02BB /* AddPersonalAccountTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0951FE262334C800AD02BB /* AddPersonalAccountTest.swift */; };
 		EF0952062623393300AD02BB /* LabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0952052623393300AD02BB /* LabeledTextField.swift */; };
@@ -184,6 +185,7 @@
 		EF0660A6264E09BA0067FD89 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		EF0660AA264E11700067FD89 /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
 		EF0660AE264E15440067FD89 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		EF0660B6264E3D270067FD89 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		EF07B74E26233F1A007A45CE /* ClearableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearableDelegate.swift; sourceTree = "<group>"; };
 		EF0951FE262334C800AD02BB /* AddPersonalAccountTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonalAccountTest.swift; sourceTree = "<group>"; };
 		EF0952052623393300AD02BB /* LabeledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
@@ -732,6 +734,7 @@
 			isa = PBXGroup;
 			children = (
 				EF7B0A582649659F00307772 /* ProfileViewController.swift */,
+				EF0660B6264E3D270067FD89 /* HelpViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1538,6 +1541,7 @@
 				EF7B09AA2645664400307772 /* NetworkDataProvider.swift in Sources */,
 				EF7B09C52645684000307772 /* ApiError.swift in Sources */,
 				EF9C26E2264CE197006DEFED /* AccountListCell.swift in Sources */,
+				EF0660B7264E3D270067FD89 /* HelpViewController.swift in Sources */,
 				EFAB6C99262B1B0A00250F4B /* AddEmailViewController.swift in Sources */,
 				EF7B0AC52649A5A000307772 /* UserService.swift in Sources */,
 				EF7B0AA4264980F300307772 /* AnalyticsViewController.swift in Sources */,
@@ -1713,7 +1717,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWQV2UJ2MD;
 				INFOPLIST_FILE = Gas/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1732,7 +1738,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWQV2UJ2MD;
 				INFOPLIST_FILE = Gas/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1749,7 +1757,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWQV2UJ2MD;
 				INFOPLIST_FILE = GasTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1770,7 +1780,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWQV2UJ2MD;
 				INFOPLIST_FILE = GasTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
