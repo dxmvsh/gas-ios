@@ -149,6 +149,10 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
                 }
                 view.hidesBottomBarWhenPushed = true
                 navigationController?.pushViewController(view, animated: true)
+            case .help:
+                let view = HelpViewController()
+                view.hidesBottomBarWhenPushed = true
+                navigationController?.pushViewController(view, animated: true)
             default:
                 break
             }
