@@ -39,4 +39,11 @@ class PaymentHistoryRouter: PaymentHistoryRouterInput {
         self.viewController?.navigationController?.present(viewController, animated: true)
     }
     
+    func showShareActivity(for url: URL) {
+        let activity = UIActivityViewController(
+            activityItems: [url],
+            applicationActivities: nil)
+        viewController?.present(activity, animated: true, completion: nil)
+    }
+    
 }

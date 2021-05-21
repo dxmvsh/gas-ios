@@ -32,6 +32,7 @@ protocol PaymentHistoryModuleOutput {
 
 protocol PaymentHistoryRouterInput {
     func showFiltrationModule(filterType: PaymentListFilterType, submitHandler: @escaping ((PaymentListFilterType) -> Void))
+    func showShareActivity(for url: URL)
 }
 
 typealias PaymentHistoryConfiguration = (PaymentHistoryModuleInput) -> PaymentHistoryModuleOutput?

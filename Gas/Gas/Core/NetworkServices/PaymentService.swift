@@ -10,7 +10,7 @@ import Moya
 
 protocol PaymentServiceProtocol {
     func getHistory(dateFrom: String?, dateTo: String?, completion: @escaping ResponseCompletion<[PaymentHistoryItemDataModel]>)
-    func getPayment(id: Int, completion: @escaping ResponseCompletion<PaymentHistoryItemDataModel>)
+    func getPayment(id: Int, completion: @escaping ResponseCompletion<URL>)
     func calculate(data: [String: Any], completion: @escaping ResponseCompletion<CalculationDataModel>)
     func pay(params: [String: Any], completion: @escaping ResponseCompletion<String>)
 }
@@ -31,6 +31,8 @@ class PaymentService: PaymentServiceProtocol {
         })
     ])
     
+    private let writer: FileWriterProtocol = FileWriter()
+    
     func getHistory(dateFrom: String?, dateTo: String?, completion: @escaping ResponseCompletion<[PaymentHistoryItemDataModel]>) {
         dataProvider.request(.history(from: dateFrom, to: dateTo)) { result in
             switch result {
@@ -46,17 +48,15 @@ class PaymentService: PaymentServiceProtocol {
         }
     }
     
-    func getPayment(id: Int, completion: @escaping ResponseCompletion<PaymentHistoryItemDataModel>) {
-        dataProvider.request(.payment(id: id)) { result in
-            switch result {
-            case .success(let response):
-                guard let model = try? JSONDecoder().decode(PaymentHistoryItemDataModel.self, from: response.data) else {
-                    completion(.failure(.custom("JSON parsing error")))
-                    return
+    func getPayment(id: Int, completion: @escaping ResponseCompletion<URL>) {
+        dataProvider.request(.payment(id: id)) { [weak self] result in
+            self?.writer.writeExportedFile(result: result) { (result) in
+                switch result {
+                case .success(let url):
+                    completion(.success(url))
+                case .failure(let error):
+                    completion(.failure(error))
                 }
-                completion(.success(model))
-            case .failure(let error):
-                completion(.failure(error))
             }
         }
     }

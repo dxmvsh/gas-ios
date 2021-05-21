@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol MainPageRouterInput {
+    func showShareActivity(for url: URL)
+}
+
 class MainPageAssembly {
     
     func assemble() -> UIViewController {
@@ -16,11 +20,12 @@ class MainPageAssembly {
         let paymentHistoryView = PaymentHistoryAssembly().assemble { (input) -> PaymentHistoryModuleOutput? in
             return viewModel
         }
+        let router = MainPageRouter()
         let view = MainPageViewController(analyticsView: analyticsView,
                                           accountInfoView: accountInformationView,
                                           paymentHistoryView: paymentHistoryView)
-        
-        
+        router.viewController = view
+        viewModel.router = router
         return view
     }
     
