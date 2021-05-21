@@ -48,6 +48,8 @@
 		EF4428C6263AD43000ADD537 /* BiometryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4428C5263AD43000ADD537 /* BiometryViewController.swift */; };
 		EF4428CA263AD45900ADD537 /* BiometryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4428C9263AD45900ADD537 /* BiometryViewModel.swift */; };
 		EF4428CF263ADFF000ADD537 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4428CE263ADFF000ADD537 /* ResultViewController.swift */; };
+		EF54EA07265778D0000CF45C /* FileWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF54EA06265778D0000CF45C /* FileWriter.swift */; };
+		EF54EA0C26577AB3000CF45C /* MainPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF54EA0B26577AB3000CF45C /* MainPageRouter.swift */; };
 		EF77B8A5263802FE00B34B3E /* PasscodeStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77B8A4263802FE00B34B3E /* PasscodeStatusView.swift */; };
 		EF7965E326152D800052751C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7965E226152D800052751C /* Constants.swift */; };
 		EF7965F626152FEC0052751C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7965F526152FEC0052751C /* Colors.swift */; };
@@ -218,6 +220,8 @@
 		EF4428C5263AD43000ADD537 /* BiometryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometryViewController.swift; sourceTree = "<group>"; };
 		EF4428C9263AD45900ADD537 /* BiometryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometryViewModel.swift; sourceTree = "<group>"; };
 		EF4428CE263ADFF000ADD537 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		EF54EA06265778D0000CF45C /* FileWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWriter.swift; sourceTree = "<group>"; };
+		EF54EA0B26577AB3000CF45C /* MainPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageRouter.swift; sourceTree = "<group>"; };
 		EF77B8A4263802FE00B34B3E /* PasscodeStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeStatusView.swift; sourceTree = "<group>"; };
 		EF7965E226152D800052751C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EF7965F526152FEC0052751C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -568,6 +572,14 @@
 			path = ResultPage;
 			sourceTree = "<group>";
 		};
+		EF54EA0A26577AAA000CF45C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EF54EA0B26577AB3000CF45C /* MainPageRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		EF77B8A3263802EE00B34B3E /* Status */ = {
 			isa = PBXGroup;
 			children = (
@@ -690,6 +702,7 @@
 		EF7B0A3E264964B500307772 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				EF54EA0A26577AAA000CF45C /* Router */,
 				EF9C26D0264BF470006DEFED /* ViewModel */,
 				EF7B0A43264964E200307772 /* View */,
 				EF7B0A4A2649654D00307772 /* Assembly */,
@@ -1082,6 +1095,7 @@
 				EF9D0BD62636BD95006E5472 /* PasswordCheckerService.swift */,
 				EF7B09F92645A32000307772 /* SecureAuth.swift */,
 				EF7B0AC82649AC9E00307772 /* AuthTokenStorage.swift */,
+				EF54EA06265778D0000CF45C /* FileWriter.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1467,6 +1481,7 @@
 				EF7B0A0E2645BB3F00307772 /* LoginViewController.swift in Sources */,
 				EFAB6C812629924D00250F4B /* SmsVerificationViewController.swift in Sources */,
 				EF9C272D264D463F006DEFED /* PaymentOrderCounterInfoView.swift in Sources */,
+				EF54EA07265778D0000CF45C /* FileWriter.swift in Sources */,
 				EF7965F626152FEC0052751C /* Colors.swift in Sources */,
 				EF7B0AC12649A4A200307772 /* AppConfigs.swift in Sources */,
 				EF06606D264DE8880067FD89 /* PaymentHistoryRouter.swift in Sources */,
@@ -1509,6 +1524,7 @@
 				EF7B0AC92649AC9E00307772 /* AuthTokenStorage.swift in Sources */,
 				EF9D0C042636E155006E5472 /* PasscodeInputView.swift in Sources */,
 				EF92E749261DA3F600E9ECEA /* AddPersonalAccountViewController.swift in Sources */,
+				EF54EA0C26577AB3000CF45C /* MainPageRouter.swift in Sources */,
 				EF7B0AD52649B79000307772 /* AccountInformationDataModel.swift in Sources */,
 				EFAB6C9F262B1C5400250F4B /* AddEmailAssembly.swift in Sources */,
 				EF14072E264AB0C5003722CD /* PaymentHistoryViewModel.swift in Sources */,

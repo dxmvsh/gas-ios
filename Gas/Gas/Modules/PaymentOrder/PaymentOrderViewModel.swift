@@ -38,10 +38,10 @@ class PaymentOrderViewModel: PaymentOrderViewOutput, PaymentOrderModuleInput {
                 print("error: \(error)")
             }
         }
-        router?.routeToScan(completion: { [weak self] result in
-            guard let indicator = Double(result as String) else { return }
-            self?.didSetIndicator(Int(indicator))
-        })
+//        router?.routeToScan(completion: { [weak self] result in
+//            guard let indicator = Double(result as String) else { return }
+//            self?.didSetIndicator(Int(indicator))
+//        })
     }
     
     func didSetIndicator(_ indicator: Int) {

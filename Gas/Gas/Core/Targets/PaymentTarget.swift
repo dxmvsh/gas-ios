@@ -23,7 +23,7 @@ enum PaymentTarget: TargetType, AccessTokenAuthorizable {
         case .history:
             return "payment/history/"
         case .payment(let id):
-            return "payment/history/\(id)"
+            return "payment/history/\(id)/"
         case .calculate:
             return "payment/calculate"
         case .pay:
