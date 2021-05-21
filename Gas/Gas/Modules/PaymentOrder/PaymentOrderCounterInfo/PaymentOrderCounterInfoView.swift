@@ -36,6 +36,7 @@ class PaymentOrderCounterInfoView: UIView {
     
     var didEnterIndicator: ((Int) -> Void)?
     var didClearIndicator: (() -> Void)?
+    var didTapScan: (() -> Void)?
     
     init() {
         super.init(frame: .zero)
@@ -65,6 +66,10 @@ class PaymentOrderCounterInfoView: UIView {
             guard let decimalIndicator = Int(indicator) else { return }
             self?.didEnterIndicator?(decimalIndicator)
             self?.currentCountView.setValue("\(decimalIndicator) \(UnitVolume.cubicMeters.symbol)")
+        }
+        
+        counterTextField.didTapScan = { [weak self] in
+            self?.didTapScan?()
         }
         
         currentCountView.didTapIconViewClosure = { [weak self] in
@@ -106,6 +111,10 @@ class PaymentOrderCounterInfoView: UIView {
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -LayoutGuidance
                                                 .offsetDouble),
         ])
+    }
+    
+    func setCurrentIndicator(_ indicator: String) {
+        currentCountView.setValue(indicator)
     }
     
     func setUsed(_ used: String) {

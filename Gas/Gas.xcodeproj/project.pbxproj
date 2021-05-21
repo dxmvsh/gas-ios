@@ -1268,6 +1268,7 @@
 				EF18EADE26092B1E00EA1F37 /* Frameworks */,
 				EF18EADF26092B1E00EA1F37 /* Resources */,
 				7F853F1C8AC632768D202CA0 /* [CP] Embed Pods Frameworks */,
+				771193D8840E0E5FE8C99030 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1356,6 +1357,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		771193D8840E0E5FE8C99030 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gas/Pods-Gas-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gas/Pods-Gas-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gas/Pods-Gas-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7F853F1C8AC632768D202CA0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1717,7 +1735,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VCTNRB2WTC;
+				DEVELOPMENT_TEAM = CWQV2UJ2MD;
 				INFOPLIST_FILE = Gas/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1738,7 +1756,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VCTNRB2WTC;
+				DEVELOPMENT_TEAM = CWQV2UJ2MD;
 				INFOPLIST_FILE = Gas/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

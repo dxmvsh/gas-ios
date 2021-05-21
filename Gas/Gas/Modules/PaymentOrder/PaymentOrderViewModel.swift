@@ -38,6 +38,10 @@ class PaymentOrderViewModel: PaymentOrderViewOutput, PaymentOrderModuleInput {
                 print("error: \(error)")
             }
         }
+        router?.routeToScan(completion: { [weak self] result in
+            guard let indicator = Double(result as String) else { return }
+            self?.didSetIndicator(Int(indicator))
+        })
     }
     
     func didSetIndicator(_ indicator: Int) {
@@ -50,10 +54,18 @@ class PaymentOrderViewModel: PaymentOrderViewOutput, PaymentOrderModuleInput {
             case .success(let model):
                 self?.payload.principal = model.amount
                 self?.view?.display(calculation: model)
+                self?.view?.set(currentIndicator: "\(Decimal(indicator)) \(UnitVolume.cubicMeters.symbol)")
             case .failure(let error):
                 print("error: \(error)")
             }
         }
+    }
+    
+    func didTapScan() {
+        router?.routeToScan(completion: { [weak self] result in
+            guard let indicator = Double(result as String) else { return }
+            self?.didSetIndicator(Int(indicator))
+        })
     }
     
     func configure(account: AccountInformationDataModel) {

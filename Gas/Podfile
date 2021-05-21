@@ -6,5 +6,5 @@ target 'Gas' do
   pod 'Moya', '~> 14.0'
   pod 'SwiftGen', '~> 6.0'
   pod 'KeychainSwift', '~> 19.0'
-  pod 'PPBlinkOCR', '~> 5.0.0'
+  pod ‘Anyline’
 end

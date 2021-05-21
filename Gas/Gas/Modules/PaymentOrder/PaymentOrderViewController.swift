@@ -69,6 +69,10 @@ class PaymentOrderViewController: BaseViewController, PaymentOrderViewInput {
             self?.button.setDisabled()
         }
         
+        counterInfoView.didTapScan = { [weak self] in
+            self?.output?.didTapScan()
+        }
+        
         NSLayoutConstraint.activate([
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -96,6 +100,10 @@ class PaymentOrderViewController: BaseViewController, PaymentOrderViewInput {
     
     func set(lastIndicator: String) {
         counterInfoView.setLastIndicator("\(lastIndicator) \(UnitVolume.cubicMeters.symbol)")
+    }
+    
+    func set(currentIndicator: String) {
+        counterInfoView.setCurrentIndicator(currentIndicator)
     }
     
     @objc

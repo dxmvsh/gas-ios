@@ -11,12 +11,14 @@ protocol PaymentOrderViewInput: class {
     func display(account: AccountInformationDataModel)
     func display(calculation: CalculationDataModel)
     func set(lastIndicator: String)
+    func set(currentIndicator: String)
 }
 
 protocol PaymentOrderViewOutput {
     func didLoad()
     func didSetIndicator(_ indicator: Int)
     func didTapPay()
+    func didTapScan()
 }
 
 protocol PaymentOrderModuleOutput {
@@ -35,6 +37,7 @@ protocol PaymentOrderRouterInput {
                                   subtitle: String,
                                   image: UIImage,
                                   completion: @escaping (() -> Void))
+    func routeToScan(completion: ((NSString) -> Void)?)
 }
 
 typealias PaymentOrderConfiguration = (PaymentOrderModuleInput) -> PaymentOrderModuleOutput?
