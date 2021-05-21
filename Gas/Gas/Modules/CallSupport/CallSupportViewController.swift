@@ -22,6 +22,9 @@ class CallSupportViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupDefaultNavigationBarStyle()
+        setupBackButton()
+        title = "Вызов специалиста"
         [textLabel, commentTextField, button].forEach {
             view.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false

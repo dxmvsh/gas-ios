@@ -38,13 +38,18 @@ class PaymentHistoryViewModel: PaymentHistoryViewOutput, PaymentHistoryModuleInp
     }
     
     func didSelectPayment(at index: Int) {
-        dataProvider.getPayment(id: payments[index].id) { result in
-            switch  result {
-            case .success(let url):
-                self.router?.showShareActivity(for: url)
-            case .failure(let error):
-                print("error: \(error)")
+        let id = payments[index].id
+        if output == nil {
+            dataProvider.getPaymentWeb(id: id) { [weak self] result in
+                switch result {
+                case .success(let html):
+                    self?.router?.routeToReceipt(paymentId: id, htmlCode: html)
+                case .failure(let error):
+                    print("error: \(error)")
+                }
             }
+        } else {
+            output?.didSelect(paymentId: id)
         }
     }
     

@@ -54,6 +54,7 @@
 		EF54EA4626578C5E000CF45C /* CommonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF54EA4526578C5E000CF45C /* CommonService.swift */; };
 		EF54EA4A26578C7C000CF45C /* CommonTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF54EA4926578C7C000CF45C /* CommonTarget.swift */; };
 		EF54EA4E26578F44000CF45C /* CountDownAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF54EA4D26578F44000CF45C /* CountDownAlertView.swift */; };
+		EF54EA522657A405000CF45C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF54EA512657A405000CF45C /* WebViewController.swift */; };
 		EF77B8A5263802FE00B34B3E /* PasscodeStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77B8A4263802FE00B34B3E /* PasscodeStatusView.swift */; };
 		EF7965E326152D800052751C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7965E226152D800052751C /* Constants.swift */; };
 		EF7965F626152FEC0052751C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7965F526152FEC0052751C /* Colors.swift */; };
@@ -230,6 +231,7 @@
 		EF54EA4526578C5E000CF45C /* CommonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonService.swift; sourceTree = "<group>"; };
 		EF54EA4926578C7C000CF45C /* CommonTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTarget.swift; sourceTree = "<group>"; };
 		EF54EA4D26578F44000CF45C /* CountDownAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownAlertView.swift; sourceTree = "<group>"; };
+		EF54EA512657A405000CF45C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		EF77B8A4263802FE00B34B3E /* PasscodeStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeStatusView.swift; sourceTree = "<group>"; };
 		EF7965E226152D800052751C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EF7965F526152FEC0052751C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -668,6 +670,7 @@
 				EF06607B264DEAE20067FD89 /* CheckBoxDescriptionView.swift */,
 				EF0660AE264E15440067FD89 /* TextViewController.swift */,
 				EF54EA4D26578F44000CF45C /* CountDownAlertView.swift */,
+				EF54EA512657A405000CF45C /* WebViewController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1522,6 +1525,7 @@
 				EF9D0BE42636D6E8006E5472 /* PasscodeAssembly.swift in Sources */,
 				EF7B0A662649661800307772 /* PaymentHistoryViewController.swift in Sources */,
 				EF1407102649BD57003722CD /* AccountInfoKeyValueView.swift in Sources */,
+				EF54EA522657A405000CF45C /* WebViewController.swift in Sources */,
 				EF0952062623393300AD02BB /* LabeledTextField.swift in Sources */,
 				EF7B0A2C2649527F00307772 /* AccessRecoveryCoordinator.swift in Sources */,
 				EF92E75A261DA43E00E9ECEA /* RegistrationCoordinator.swift in Sources */,

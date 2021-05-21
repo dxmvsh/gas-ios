@@ -16,10 +16,10 @@ class MainPageViewModel: PaymentHistoryModuleOutput {
     }
     
     func didSelect(paymentId: Int) {
-        paymentProvider.getPayment(id: paymentId) { [weak self] result in
+        paymentProvider.getPaymentWeb(id: paymentId) { [weak self] result in
             switch result {
-            case .success(let url):
-                self?.router?.showShareActivity(for: url)
+            case .success(let html):
+                self?.router?.routeToReceipt(paymentId: paymentId, htmlCode: html)
             case .failure(let error):
                 print("error: \(error)")
             }

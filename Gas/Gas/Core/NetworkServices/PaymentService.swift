@@ -11,6 +11,7 @@ import Moya
 protocol PaymentServiceProtocol {
     func getHistory(dateFrom: String?, dateTo: String?, completion: @escaping ResponseCompletion<[PaymentHistoryItemDataModel]>)
     func getPayment(id: Int, completion: @escaping ResponseCompletion<URL>)
+    func getPaymentWeb(id: Int, completion: @escaping ResponseCompletion<String>)
     func calculate(data: [String: Any], completion: @escaping ResponseCompletion<CalculationDataModel>)
     func pay(params: [String: Any], completion: @escaping ResponseCompletion<String>)
 }
@@ -85,6 +86,21 @@ class PaymentService: PaymentServiceProtocol {
                     return
                 }
                 completion(.success(model.payment_url))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func getPaymentWeb(id: Int, completion: @escaping ResponseCompletion<String>) {
+        dataProvider.request(.paymentWeb(id: id)) { (result) in
+            switch result {
+            case .success(let response):
+                guard let html = try? response.mapString() else {
+                    completion(.failure(.custom("parsing error")))
+                    return
+                }
+                completion(.success(html))
             case .failure(let error):
                 completion(.failure(error))
             }

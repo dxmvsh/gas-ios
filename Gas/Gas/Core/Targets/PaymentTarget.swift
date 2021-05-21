@@ -11,6 +11,7 @@ enum PaymentTarget: TargetType, AccessTokenAuthorizable {
     
     case history(from: String?, to: String?)
     case payment(id: Int)
+    case paymentWeb(id: Int)
     case calculate(data: [String: Any])
     case pay(params: [String: Any])
     
@@ -23,6 +24,8 @@ enum PaymentTarget: TargetType, AccessTokenAuthorizable {
         case .history:
             return "payment/history/"
         case .payment(let id):
+            return "payment/history/\(id)/download/"
+        case .paymentWeb(let id):
             return "payment/history/\(id)/"
         case .calculate:
             return "payment/calculate"
@@ -33,7 +36,7 @@ enum PaymentTarget: TargetType, AccessTokenAuthorizable {
     
     var method: Moya.Method {
         switch self {
-        case .history, .payment, .calculate:
+        case .history, .payment, .calculate, .paymentWeb:
             return .get
         case .pay:
             return .post
@@ -55,7 +58,7 @@ enum PaymentTarget: TargetType, AccessTokenAuthorizable {
                 params["date_to"] = to
             }
             return .requestParameters(parameters: params, encoding: QueryEncoding.default)
-        case .payment:
+        case .payment, .paymentWeb:
             return .requestPlain
         case .pay(let params):
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
