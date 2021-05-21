@@ -92,6 +92,10 @@ class ProfileViewController: BaseViewController {
         ])
     }
     
+    private func showSnackbar(text: String) {
+        let alertView = CountDownAlertView(message: text, appearanceStyle: .bottomup)
+        alertView.show(in: view)
+    }
 }
 
 extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
@@ -153,6 +157,13 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
                 let view = HelpViewController()
                 view.hidesBottomBarWhenPushed = true
                 navigationController?.pushViewController(view, animated: true)
+            case .callSpecialist:
+                let view = CallSupportViewController()
+                view.hidesBottomBarWhenPushed = true
+                view.completionHandler = { [weak self] in
+                    self?.showSnackbar(text: "Ваша заявка на вызов специалиста отправлена")
+                }
+                navigationController?.pushViewController(view, animated: true)
             default:
                 break
             }
@@ -171,6 +182,7 @@ extension ProfileViewController: AddEmailModuleOutput, EmailVerificationModuleOu
     
     func didSucceedEmailVerification(email: String) {
         navigationController?.popToViewController(self, animated: true)
+        showSnackbar(text: "Вы успешно сменили эл. почту")
     }
     
     func didFailEmailVerification() {
@@ -185,6 +197,7 @@ extension ProfileViewController: AddEmailModuleOutput, EmailVerificationModuleOu
     
     func didSucceed(phoneNumber: String) {
         navigationController?.popToViewController(self, animated: true)
+        showSnackbar(text: "Вы успешно сменили номер телефона")
     }
     
     func didFail() {
@@ -193,6 +206,7 @@ extension ProfileViewController: AddEmailModuleOutput, EmailVerificationModuleOu
     
     func didSucceedPasswordSet() {
         navigationController?.popToViewController(self, animated: true)
+        showSnackbar(text: "Вы успешно сменили пароль")
     }
     
     func didFailPasswordSet() {
