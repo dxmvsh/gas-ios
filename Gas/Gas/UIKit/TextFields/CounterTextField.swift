@@ -10,7 +10,7 @@ import UIKit
 class CounterTextField: UITextField {
     
     var didEnterCode: ((String) -> Void)?
-    
+    var didTapScan: (() -> Void)?
     var placeholderCharacter = "0"
     
     private var count: Int
@@ -58,7 +58,7 @@ class CounterTextField: UITextField {
         addGestureRecognizer(tapGestureRecognizer)
          
         scanButton.setBackgroundImage(Asset.iconScanSmall.image, for: .normal)
-        
+        scanButton.addTarget(self, action: #selector(didTapScanButton), for: .touchUpInside)
         [stackView, scanButton, bottomLine].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             addSubview($0)
@@ -79,6 +79,11 @@ class CounterTextField: UITextField {
             bottomLine.widthAnchor.constraint(equalTo: widthAnchor),
             bottomLine.heightAnchor.constraint(equalToConstant: 1)
         ])
+    }
+    
+    @objc
+    private func didTapScanButton() {
+        didTapScan?()
     }
     
     private func configureTextField() {

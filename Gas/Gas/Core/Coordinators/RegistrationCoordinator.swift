@@ -36,7 +36,7 @@ class RegistrationCoordinatorManager: RegistrationCoordinator {
     }
     
     func start() {
-        moveToResultPage()
+        moveToPersonalAccount()
     }
     
     func moveToPersonalAccount() {
