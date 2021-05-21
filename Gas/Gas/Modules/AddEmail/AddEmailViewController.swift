@@ -15,14 +15,23 @@ class AddEmailViewController: BaseViewController, AddEmailViewInput {
     
     var output: AddEmailViewOutput?
     
+    var titleText: String?
+    var subtitleText: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupDefaultNavigationBarStyle()
         setupBackButton()
         setupContactSupportButton()
-        addTitleAndSubtitleLabels(title: Text.userRegistration,
+        if let titleText = titleText,
+           let subtitleText = subtitleText {
+            addTitleAndSubtitleLabels(title: titleText, subtitle: subtitleText)
+        } else {
+            addTitleAndSubtitleLabels(title: Text.userRegistration,
                                   subtitle: Text.pleaseEnterEmail)
+            
+        }
         
         emailTextField.title = Text.email
         emailTextField.keyboardType = .emailAddress
@@ -58,7 +67,7 @@ class AddEmailViewController: BaseViewController, AddEmailViewInput {
     }
     
     func setTitleAndSubtitle(title: String, subtitle: String) {
-        titleLabel.text = title
-        subtitleLabel.text = subtitle
+        titleText = title
+        subtitleText = subtitle
     }
 }

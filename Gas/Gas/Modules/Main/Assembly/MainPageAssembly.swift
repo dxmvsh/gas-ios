@@ -9,6 +9,7 @@ import UIKit
 
 protocol MainPageRouterInput {
     func showShareActivity(for url: URL)
+    func routeToReceipt(paymentId: Int, htmlCode: String)
 }
 
 class MainPageAssembly {

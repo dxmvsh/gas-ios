@@ -46,4 +46,13 @@ class PaymentHistoryRouter: PaymentHistoryRouterInput {
         viewController?.present(activity, animated: true, completion: nil)
     }
     
+    func routeToReceipt(paymentId: Int, htmlCode: String) {
+        let view = WebViewController()
+        view.setTitle("Квитанция")
+        view.setId(id: paymentId)
+        view.setHtmlCode(htmlCode: htmlCode)
+        view.hidesBottomBarWhenPushed = true
+        viewController?.navigationController?.pushViewController(view, animated: true)
+    }
+    
 }

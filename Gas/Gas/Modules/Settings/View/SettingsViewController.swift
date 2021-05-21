@@ -30,15 +30,12 @@ enum SettingsNotificationItem {
 }
 
 enum SettingsOtherItem: CaseIterable {
-    case language
     case publicOffer
     case security
     case about
     
     var localizedDescription: String {
         switch self {
-        case .language:
-            return "Язык приложения"
         case .publicOffer:
             return "Публичная оферта"
         case .security:
@@ -142,6 +139,10 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
             view.setText(SettingsOtherItem.sectionTitle)
         }
         return view
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

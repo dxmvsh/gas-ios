@@ -50,6 +50,11 @@
 		EF4428CF263ADFF000ADD537 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4428CE263ADFF000ADD537 /* ResultViewController.swift */; };
 		EF54EA07265778D0000CF45C /* FileWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF54EA06265778D0000CF45C /* FileWriter.swift */; };
 		EF54EA0C26577AB3000CF45C /* MainPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF54EA0B26577AB3000CF45C /* MainPageRouter.swift */; };
+		EF54EA4026578A15000CF45C /* CallSupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF54EA3F26578A15000CF45C /* CallSupportViewController.swift */; };
+		EF54EA4626578C5E000CF45C /* CommonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF54EA4526578C5E000CF45C /* CommonService.swift */; };
+		EF54EA4A26578C7C000CF45C /* CommonTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF54EA4926578C7C000CF45C /* CommonTarget.swift */; };
+		EF54EA4E26578F44000CF45C /* CountDownAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF54EA4D26578F44000CF45C /* CountDownAlertView.swift */; };
+		EF54EA522657A405000CF45C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF54EA512657A405000CF45C /* WebViewController.swift */; };
 		EF77B8A5263802FE00B34B3E /* PasscodeStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77B8A4263802FE00B34B3E /* PasscodeStatusView.swift */; };
 		EF7965E326152D800052751C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7965E226152D800052751C /* Constants.swift */; };
 		EF7965F626152FEC0052751C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7965F526152FEC0052751C /* Colors.swift */; };
@@ -222,6 +227,11 @@
 		EF4428CE263ADFF000ADD537 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		EF54EA06265778D0000CF45C /* FileWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWriter.swift; sourceTree = "<group>"; };
 		EF54EA0B26577AB3000CF45C /* MainPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageRouter.swift; sourceTree = "<group>"; };
+		EF54EA3F26578A15000CF45C /* CallSupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallSupportViewController.swift; sourceTree = "<group>"; };
+		EF54EA4526578C5E000CF45C /* CommonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonService.swift; sourceTree = "<group>"; };
+		EF54EA4926578C7C000CF45C /* CommonTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTarget.swift; sourceTree = "<group>"; };
+		EF54EA4D26578F44000CF45C /* CountDownAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownAlertView.swift; sourceTree = "<group>"; };
+		EF54EA512657A405000CF45C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		EF77B8A4263802FE00B34B3E /* PasscodeStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeStatusView.swift; sourceTree = "<group>"; };
 		EF7965E226152D800052751C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EF7965F526152FEC0052751C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -487,6 +497,7 @@
 		EF1D782426152A5300168CF9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EF54EA3E26578A08000CF45C /* CallSupport */,
 				EF066076264DE9180067FD89 /* PaymentListFilter */,
 				EF9C2744264D6972006DEFED /* PaymentOrderAccountInfo */,
 				EF9C26ED264CECA3006DEFED /* PaymentOrder */,
@@ -580,6 +591,14 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		EF54EA3E26578A08000CF45C /* CallSupport */ = {
+			isa = PBXGroup;
+			children = (
+				EF54EA3F26578A15000CF45C /* CallSupportViewController.swift */,
+			);
+			path = CallSupport;
+			sourceTree = "<group>";
+		};
 		EF77B8A3263802EE00B34B3E /* Status */ = {
 			isa = PBXGroup;
 			children = (
@@ -650,6 +669,8 @@
 				EF140719264A7F41003722CD /* BottomSheetContainerViewController.swift */,
 				EF06607B264DEAE20067FD89 /* CheckBoxDescriptionView.swift */,
 				EF0660AE264E15440067FD89 /* TextViewController.swift */,
+				EF54EA4D26578F44000CF45C /* CountDownAlertView.swift */,
+				EF54EA512657A405000CF45C /* WebViewController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -675,6 +696,7 @@
 				EF7B09D526456A3200307772 /* AuthTarget.swift */,
 				EF7B0AB7264997E800307772 /* UserTarget.swift */,
 				EF140735264AB103003722CD /* PaymentTarget.swift */,
+				EF54EA4926578C7C000CF45C /* CommonTarget.swift */,
 			);
 			path = Targets;
 			sourceTree = "<group>";
@@ -685,6 +707,7 @@
 				EF7B09DB26456B9600307772 /* AuthorizationService.swift */,
 				EF7B0AC42649A5A000307772 /* UserService.swift */,
 				EF140731264AB0E1003722CD /* PaymentService.swift */,
+				EF54EA4526578C5E000CF45C /* CommonService.swift */,
 			);
 			path = NetworkServices;
 			sourceTree = "<group>";
@@ -1441,6 +1464,7 @@
 				EFAB6C772629372600250F4B /* AddPhoneViewModel.swift in Sources */,
 				EF14071A264A7F41003722CD /* BottomSheetContainerViewController.swift in Sources */,
 				EF79661626153F810052751C /* MaskedTextField.swift in Sources */,
+				EF54EA4E26578F44000CF45C /* CountDownAlertView.swift in Sources */,
 				EFAB6C5D2629181000250F4B /* UserInformationViewModel.swift in Sources */,
 				EF7B0A592649659F00307772 /* ProfileViewController.swift in Sources */,
 				EF796610261536CC0052751C /* SpaceFactory.swift in Sources */,
@@ -1501,12 +1525,14 @@
 				EF9D0BE42636D6E8006E5472 /* PasscodeAssembly.swift in Sources */,
 				EF7B0A662649661800307772 /* PaymentHistoryViewController.swift in Sources */,
 				EF1407102649BD57003722CD /* AccountInfoKeyValueView.swift in Sources */,
+				EF54EA522657A405000CF45C /* WebViewController.swift in Sources */,
 				EF0952062623393300AD02BB /* LabeledTextField.swift in Sources */,
 				EF7B0A2C2649527F00307772 /* AccessRecoveryCoordinator.swift in Sources */,
 				EF92E75A261DA43E00E9ECEA /* RegistrationCoordinator.swift in Sources */,
 				EF9C26DD264BFB89006DEFED /* AccountListViewModel.swift in Sources */,
 				EF7B0A9D264980CE00307772 /* AnalyticsAssembly.swift in Sources */,
 				EFAB6C54262912FA00250F4B /* CustomToolbar.swift in Sources */,
+				EF54EA4A26578C7C000CF45C /* CommonTarget.swift in Sources */,
 				EF92E6BB261D778400E9ECEA /* ViewExtension.swift in Sources */,
 				EF9C26F7264CEF28006DEFED /* PaymentOrderViewController.swift in Sources */,
 				EF7B09C92645685F00307772 /* Converter.swift in Sources */,
@@ -1554,6 +1580,7 @@
 				EFAB6C90262AFCD400250F4B /* SmsVerificationViewModel.swift in Sources */,
 				EF7966052615336F0052751C /* LabelFactory.swift in Sources */,
 				EF9D0BD72636BD95006E5472 /* PasswordCheckerService.swift in Sources */,
+				EF54EA4626578C5E000CF45C /* CommonService.swift in Sources */,
 				EF18EAE526092B1E00EA1F37 /* AppDelegate.swift in Sources */,
 				EF2E936E262906F400C0ADD9 /* BaseViewController.swift in Sources */,
 				EF7B0A6E264969B800307772 /* SettingsAssembly.swift in Sources */,
@@ -1569,6 +1596,7 @@
 				EF7B0ADD2649B85200307772 /* AccountInformationAssembly.swift in Sources */,
 				EF7B0ACD2649B46D00307772 /* AnalyticsDataModel.swift in Sources */,
 				EF066082264DEBE10067FD89 /* PaymentFilterDateSelectionView.swift in Sources */,
+				EF54EA4026578A15000CF45C /* CallSupportViewController.swift in Sources */,
 				EF7B0AB8264997E800307772 /* UserTarget.swift in Sources */,
 				EF7B0AD12649B55800307772 /* AnalyticsViewAdapter.swift in Sources */,
 				EF9D0BEB2636D710006E5472 /* PasscodeViewModel.swift in Sources */,

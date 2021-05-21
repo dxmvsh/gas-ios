@@ -44,6 +44,7 @@ internal enum Asset {
   internal static let iconEyeOpen = ImageAsset(name: "icon_eye_open")
   internal static let iconNext = ImageAsset(name: "icon_next")
   internal static let iconScanSmall = ImageAsset(name: "icon_scan_small")
+  internal static let icondownload = ImageAsset(name: "icondownload")
   internal static let infoIcon = ImageAsset(name: "info_icon")
   internal static let initialImage = ImageAsset(name: "initial_image")
   internal static let lineGraph = ImageAsset(name: "line_graph")
